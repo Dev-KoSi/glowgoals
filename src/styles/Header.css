@@ -72,6 +72,10 @@ svg{
     width: 100%;
 }
 
+.header-search-input:focus-within{
+    border: 1px solid #FF008C;
+}
+
 .header-search-input input {
     outline: none;
     border: none;
@@ -102,6 +106,12 @@ svg{
     margin: 0 0 0 10px;
     border-radius: 5px;
     color: black;
+}
+
+.header-cart svg:hover,
+.header-wishlist svg:hover {
+    color: #FF008C;
+    border: 1px solid #FF008C;
 }
 
 .header-cart-count,

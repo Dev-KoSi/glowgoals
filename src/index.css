@@ -7,8 +7,14 @@ a{
   text-decoration: none;
 }
 
+button{
+  cursor: pointer;
+  white-space: nowrap;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -17,7 +23,7 @@ a{
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #ffb6c1;
+  background-color: #FF008C;
   border-radius: 10px;
   border: 2px solid #f5f5f5;
 }
