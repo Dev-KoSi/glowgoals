@@ -1,0 +1,123 @@
+svg{
+    cursor: pointer;
+}
+
+.header{
+    background-color: white;
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 15px 35px;
+    border-bottom: 1px solid  #FFC0C0;
+    z-index: 999;
+}
+
+.header-logo-app-name {
+    display: flex;
+    color: #FF008C;
+    width: 40%;
+    white-space: nowrap;
+}
+
+.header-logo {
+    height: fit-content;
+    padding: 8px;
+    background-color: #FF008C;
+    color: white;
+    border-radius: 5px;
+    margin: 0 10px 0 0;
+}
+
+.header-app-name :first-child {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header-app-name :nth-child(2){
+    font-size: 13px;
+}
+
+.header-nav-links {
+    width: 60%;
+    margin: 20px 0 0 0;
+    position: relative;
+    line-height: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-nav-links span {
+    margin-left: 20px;
+    font-size: 16px;
+    color: black;
+    white-space: nowrap;
+}
+
+.header-nav-links span:hover {
+    color: #FF008C;
+}
+
+.header-search-cart-wishlist {
+    display: flex;
+    width: 50%;
+}
+
+.header-search-input {
+    display: flex;
+    border: 1px solid rgb(211, 211, 211);
+    padding: 8px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.header-search-input input {
+    outline: none;
+    border: none;
+    width: 100%;
+    background: transparent;
+}
+
+.header-search-input ::placeholder {
+    font-size: 14px;
+    color: gray;
+}
+
+.header-search-input svg {
+    color: gray;
+    margin: 5px 0 0 0;
+}
+
+.header-cart,
+.header-wishlist {
+    display: flex;
+    cursor: pointer;
+}
+
+.header-cart svg,
+.header-wishlist svg {
+    border: 1px solid lightgray;
+    padding: 12.5px;
+    margin: 0 0 0 10px;
+    border-radius: 5px;
+    color: black;
+}
+
+.header-cart-count,
+.header-wishlist-count {
+    background-color:  #FF008C;
+    margin: -10px 0 0 40px;
+    position: absolute;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 1;
+    overflow: hidden;
+}
