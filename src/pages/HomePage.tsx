@@ -85,7 +85,7 @@ export function HomePage() {
                         </div>
                     </div>}
                     <video  autoPlay muted loop playsInline>
-                        <source src="/public/cosmetics.mp4" type='video/mp4'/>
+                        <source src="/cosmetics.mp4" type='video/mp4'/>
                     </video>
 
                     <div className="overlay"></div>
