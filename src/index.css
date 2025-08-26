@@ -3,6 +3,10 @@ body{
   font-family: 'outfit', sans-serif;
 }
 
+svg{
+  cursor: pointer;
+}
+
 a{
   text-decoration: none;
 }

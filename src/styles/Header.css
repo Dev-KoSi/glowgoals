@@ -3,7 +3,7 @@ svg{
 }
 
 .header{
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.941);
     display: flex;
     position: fixed;
     top: 0;
@@ -53,6 +53,7 @@ svg{
     font-size: 16px;
     color: black;
     white-space: nowrap;
+    transition: 0.3s ease-in-out;
 }
 
 .header-nav-links span:hover {

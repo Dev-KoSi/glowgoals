@@ -139,380 +139,503 @@ export function HomePage() {
                     </div>
                 </div>
 
-                <div className="featured-products">
-                    <div style={{fontFamily: 'Caveat'}} className="head">
-                        Featured Products
+                <div className="featured-products-container">
+                    <div className="section-info">
+                        <div style={{fontFamily: 'Caveat'}} className="head">
+                            Featured Products
+                        </div>
+
+                        <div className="txt">
+                            Handpicked beauty products from our finest collection. Each product is carefully selected for quality and effectiveness.
+                        </div>
                     </div>
 
-                    <div className="txt">
-                        Handpicked beauty products from our finest collection. Each product is carefully selected for quality and effectiveness.
+                    <div className="products-flex">
+                        <div className="product">
+                            <div className="image">
+                                <img style={{width: '100%'}} src="/perfume-spray-bottle-isolated_93675-123583.jpg" alt="" />
+                            </div>
+
+                            <span>ALL TYPES</span>
+
+                            <div className="details">
+                                <div className="type">
+                                    SKINCARE
+                                </div>
+
+                                <div style={{fontFamily: 'Caveat'}} className="name">
+                                    Luxury Anti-Aging Serum
+                                </div>
+
+                                <div className="price">
+                                    GHC 450.00
+                                </div>
+
+                                <div className="btns">
+                                    <button className='add-to-cart'>Add to Cart</button>
+
+                                    <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+
+                                    <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="product">
+                            <div className="image">
+                                <img style={{width: '100%'}} src="/bottle-perfume_266732-14623.jpg" alt="" />
+                            </div>
+
+                            <span>ALL TYPES</span>
+
+                            <div className="details">
+                                <div className="type">
+                                    FRAGRANCE
+                                </div>
+
+                                <div style={{fontFamily: 'Caveat'}} className="name">
+                                    Rose Gold Perfume
+                                </div>
+
+                                <div className="price">
+                                    GHC 750.00
+                                </div>
+
+                                <div className="btns">
+                                    <button className='add-to-cart'>Add to Cart</button>
+
+                                    <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+
+                                    <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="product">
+                            <div className="image">
+                                <img style={{width: '100%'}} src="/high-angle-view-pen-table_1048944-18511898.jpg" alt="" />
+                            </div>
+
+                            <span>ALL TYPES</span>
+
+                            <div className="details">
+                                <div className="type">
+                                    MAKEUP
+                                </div>
+
+                                <div style={{fontFamily: 'Caveat'}} className="name">
+                                    Matte Liquid Lipstick
+                                </div>
+
+                                <div className="price">
+                                    GHC 250.00
+                                </div>
+
+                                <div className="btns">
+                                    <button className='add-to-cart'>Add to Cart</button>
+
+                                    <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+
+                                    <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="product">
+                            <div className="image">
+                                <img style={{width: '100%'}} src="/bottle-perfume_266732-14623.jpg" alt="" />
+                            </div>
+
+                            <span>ALL TYPES</span>
+
+                            <div className="details">
+                                <div className="type">
+                                    SKINCARE
+                                </div>
+
+                                <div style={{fontFamily: 'Caveat'}} className="name">
+                                    Lavender Body Oil
+                                </div>
+
+                                <div className="price">
+                                    GHC 150.00
+                                </div>
+
+                                <div className="btns">
+                                    <button className='add-to-cart'>Add to Cart</button>
+
+                                    <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+
+                                    <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="product">
+                            <div className="image">
+                                <img style={{width: '100%'}} src="/perfume-spray-bottle-isolated_93675-123583.jpg" alt="" />
+                            </div>
+
+                            <span>ALL TYPES</span>
+
+                            <div className="details">
+                                <div className="type">
+                                    SKINCARE
+                                </div>
+
+                                <div style={{fontFamily: 'Caveat'}} className="name">
+                                    Luxury Anti-Aging Serum
+                                </div>
+
+                                <div className="price">
+                                    GHC 450.00
+                                </div>
+
+                                <div className="btns">
+                                    <button className='add-to-cart'>Add to Cart</button>
+
+                                    <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+
+                                    <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="product">
+                            <div className="image">
+                                <img style={{width: '100%'}} src="/bottle-perfume_266732-14623.jpg" alt="" />
+                            </div>
+
+                            <span>ALL TYPES</span>
+
+                            <div className="details">
+                                <div className="type">
+                                    FRAGRANCE
+                                </div>
+
+                                <div style={{fontFamily: 'Caveat'}} className="name">
+                                    Rose Gold Perfume
+                                </div>
+
+                                <div className="price">
+                                    GHC 750.00
+                                </div>
+
+                                <div className="btns">
+                                    <button className='add-to-cart'>Add to Cart</button>
+
+                                    <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+
+                                    <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="product">
+                            <div className="image">
+                                <img style={{width: '100%'}} src="/high-angle-view-pen-table_1048944-18511898.jpg" alt="" />
+                            </div>
+
+                            <span>ALL TYPES</span>
+
+                            <div className="details">
+                                <div className="type">
+                                    MAKEUP
+                                </div>
+
+                                <div style={{fontFamily: 'Caveat'}} className="name">
+                                    Matte Liquid Lipstick
+                                </div>
+
+                                <div className="price">
+                                    GHC 250.00
+                                </div>
+
+                                <div className="btns">
+                                    <button className='add-to-cart'>Add to Cart</button>
+
+                                    <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+
+                                    <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="product">
+                            <div className="image">
+                                <img style={{width: '100%'}} src="/bottle-perfume_266732-14623.jpg" alt="" />
+                            </div>
+
+                            <span>ALL TYPES</span>
+
+                            <div className="details">
+                                <div className="type">
+                                    SKINCARE
+                                </div>
+
+                                <div style={{fontFamily: 'Caveat'}} className="name">
+                                    Lavender Body Oil
+                                </div>
+
+                                <div className="price">
+                                    GHC 150.00
+                                </div>
+
+                                <div className="btns">
+                                    <button className='add-to-cart'>Add to Cart</button>
+
+                                    <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+
+                                    <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="product">
+                            <div className="image">
+                                <img style={{width: '100%'}} src="/perfume-spray-bottle-isolated_93675-123583.jpg" alt="" />
+                            </div>
+
+                            <span>ALL TYPES</span>
+
+                            <div className="details">
+                                <div className="type">
+                                    SKINCARE
+                                </div>
+
+                                <div style={{fontFamily: 'Caveat'}} className="name">
+                                    Luxury Anti-Aging Serum
+                                </div>
+
+                                <div className="price">
+                                    GHC 450.00
+                                </div>
+
+                                <div className="btns">
+                                    <button className='add-to-cart'>Add to Cart</button>
+
+                                    <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+
+                                    <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="product">
+                            <div className="image">
+                                <img style={{width: '100%'}} src="/bottle-perfume_266732-14623.jpg" alt="" />
+                            </div>
+
+                            <span>ALL TYPES</span>
+
+                            <div className="details">
+                                <div className="type">
+                                    FRAGRANCE
+                                </div>
+
+                                <div style={{fontFamily: 'Caveat'}} className="name">
+                                    Rose Gold Perfume
+                                </div>
+
+                                <div className="price">
+                                    GHC 750.00
+                                </div>
+
+                                <div className="btns">
+                                    <button className='add-to-cart'>Add to Cart</button>
+
+                                    <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+
+                                    <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="product">
+                            <div className="image">
+                                <img style={{width: '100%'}} src="/high-angle-view-pen-table_1048944-18511898.jpg" alt="" />
+                            </div>
+
+                            <span>ALL TYPES</span>
+
+                            <div className="details">
+                                <div className="type">
+                                    MAKEUP
+                                </div>
+
+                                <div style={{fontFamily: 'Caveat'}} className="name">
+                                    Matte Liquid Lipstick
+                                </div>
+
+                                <div className="price">
+                                    GHC 250.00
+                                </div>
+
+                                <div className="btns">
+                                    <button className='add-to-cart'>Add to Cart</button>
+
+                                    <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+
+                                    <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="product">
+                            <div className="image">
+                                <img style={{width: '100%'}} src="/bottle-perfume_266732-14623.jpg" alt="" />
+                            </div>
+
+                            <span>ALL TYPES</span>
+
+                            <div className="details">
+                                <div className="type">
+                                    SKINCARE
+                                </div>
+
+                                <div style={{fontFamily: 'Caveat'}} className="name">
+                                    Lavender Body Oil
+                                </div>
+
+                                <div className="price">
+                                    GHC 150.00
+                                </div>
+
+                                <div className="btns">
+                                    <button className='add-to-cart'>Add to Cart</button>
+
+                                    <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+
+                                    <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="view-all-btn">
+                        <button>VIEW ALL PRODUCTS</button>
                     </div>
                 </div>
 
-                <div className="products-flex">
-                    <div className="product">
-                        <div className="image">
-                            <img style={{width: '100%'}} src="/perfume-spray-bottle-isolated_93675-123583.jpg" alt="" />
+                <div className="collections-container">
+                    <div className="section-info">
+                        <div style={{fontFamily: 'Caveat'}} className="head">
+                            Explore Our Collection
                         </div>
 
-                        <span>ALL TYPES</span>
+                        <div className="txt">
+                            From skincare essentials to luxury makeup, find the perfect instrument for your musical journey.
+                        </div>
+                    </div>
 
-                        <div className="details">
-                            <div className="type">
-                                SKINCARE
+                    <div className="collection-flex">
+                        <div className="collection">
+                            <img style={{width: '100%'}} src="/perfume-spray-bottle-isolated_93675-123583.jpg"/>
+
+                            <svg className='path' fill="none" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+
+                            <div className="txt-overlay">
+                                <div style={{fontFamily: 'Caveat'}} className="name">
+                                    Skin Care
+                                </div>
+
+                                <div className="txt">
+                                    Premium skincare products for all skin types and concerns
+                                </div>
                             </div>
+                        </div>
+                        <div className="collection">
+                            <img style={{width: '100%'}} src="/perfume-spray-bottle-isolated_93675-123583.jpg"/>
 
-                            <div style={{fontFamily: 'Caveat'}} className="name">
-                                Luxury Anti-Aging Serum
+                            <svg className='path' fill="none" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+
+                            <div className="txt-overlay">
+                                <div style={{fontFamily: 'Caveat'}} className="name">
+                                    Skin Care
+                                </div>
+
+                                <div className="txt">
+                                    Premium skincare products for all skin types and concerns
+                                </div>
                             </div>
+                        </div>
+                        <div className="collection">
+                            <img style={{width: '100%'}} src="/perfume-spray-bottle-isolated_93675-123583.jpg"/>
 
-                            <div className="price">
-                                GHC 450.00
+                            <svg className='path' fill="none" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+
+                            <div className="txt-overlay">
+                                <div style={{fontFamily: 'Caveat'}} className="name">
+                                    Skin Care
+                                </div>
+
+                                <div className="txt">
+                                    Premium skincare products for all skin types and concerns
+                                </div>
                             </div>
+                        </div>
+                        <div className="collection">
+                            <img style={{width: '100%'}} src="/perfume-spray-bottle-isolated_93675-123583.jpg"/>
 
-                            <div className="btns">
-                                <button className='add-to-cart'>Add to Cart</button>
+                            <svg className='path' fill="none" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
 
-                                <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                            <div className="txt-overlay">
+                                <div style={{fontFamily: 'Caveat'}} className="name">
+                                    Skin Care
+                                </div>
 
-                                <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                <div className="txt">
+                                    Premium skincare products for all skin types and concerns
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div className="product">
-                        <div className="image">
-                            <img style={{width: '100%'}} src="/bottle-perfume_266732-14623.jpg" alt="" />
+                    <div className="sale-section">
+                        <img src="/variety-different-cosmetics-display_1161356-153701.jpg" alt="" />
+                        <div className="percent-off">
+                            <div style={{fontFamily: 'Caveat'}} className="num">
+                                70%
+                            </div>
+                            OFF
                         </div>
 
-                        <span>ALL TYPES</span>
-
-                        <div className="details">
-                            <div className="type">
-                                FRAGRANCE
+                        <div className="txt-overlay">
+                            <div className="limited-time">
+                            <div className="txt">
+                                ⏰LIMITED TIME OFFER
                             </div>
 
-                            <div style={{fontFamily: 'Caveat'}} className="name">
-                                Rose Gold Perfume
+                            <div className="count-down">
+                                <span id='num'>23</span>
+                                <span id='colon'>:</span>
+                                <span id='num'>59</span>
+                                <span id='colon'>:</span>
+                                <span id='num'>59</span>
+                            </div>
                             </div>
 
-                            <div className="price">
-                                GHC 750.00
+                            <div style={{fontFamily: 'Caveat'}} className="mega-txt">
+                                MEGA BEAUTY SALE
                             </div>
 
-                            <div className="btns">
-                                <button className='add-to-cart'>Add to Cart</button>
-
-                                <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-
-                                <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                            <div className="discount-info">
+                                Up to 70% OFF on Premium Skincare, Makeup & Fragrance
                             </div>
+
+                        <div className="discount-types">
+                            <span>Free Gift with Purchase</span>
+                            <span>Free Shipping Over GHC 500.00</span>
+                            <span>Premium Brand Only</span>
                         </div>
-                    </div>
 
-                    <div className="product">
-                        <div className="image">
-                            <img style={{width: '100%'}} src="/high-angle-view-pen-table_1048944-18511898.jpg" alt="" />
-                        </div>
+                            <div className='shop-now-btn'>
+                                Shop Now
 
-                        <span>ALL TYPES</span>
-
-                        <div className="details">
-                            <div className="type">
-                                MAKEUP
-                            </div>
-
-                            <div style={{fontFamily: 'Caveat'}} className="name">
-                                Matte Liquid Lipstick
-                            </div>
-
-                            <div className="price">
-                                GHC 250.00
-                            </div>
-
-                            <div className="btns">
-                                <button className='add-to-cart'>Add to Cart</button>
-
-                                <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-
-                                <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                            <svg style={{marginLeft: '10px'}} fill="none" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                             </div>
                         </div>
                     </div>
-
-                    <div className="product">
-                        <div className="image">
-                            <img style={{width: '100%'}} src="/bottle-perfume_266732-14623.jpg" alt="" />
-                        </div>
-
-                        <span>ALL TYPES</span>
-
-                        <div className="details">
-                            <div className="type">
-                                SKINCARE
-                            </div>
-
-                            <div style={{fontFamily: 'Caveat'}} className="name">
-                                Lavender Body Oil
-                            </div>
-
-                            <div className="price">
-                                GHC 150.00
-                            </div>
-
-                            <div className="btns">
-                                <button className='add-to-cart'>Add to Cart</button>
-
-                                <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-
-                                <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="product">
-                        <div className="image">
-                            <img style={{width: '100%'}} src="/perfume-spray-bottle-isolated_93675-123583.jpg" alt="" />
-                        </div>
-
-                        <span>ALL TYPES</span>
-
-                        <div className="details">
-                            <div className="type">
-                                SKINCARE
-                            </div>
-
-                            <div style={{fontFamily: 'Caveat'}} className="name">
-                                Luxury Anti-Aging Serum
-                            </div>
-
-                            <div className="price">
-                                GHC 450.00
-                            </div>
-
-                            <div className="btns">
-                                <button className='add-to-cart'>Add to Cart</button>
-
-                                <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-
-                                <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="product">
-                        <div className="image">
-                            <img style={{width: '100%'}} src="/bottle-perfume_266732-14623.jpg" alt="" />
-                        </div>
-
-                        <span>ALL TYPES</span>
-
-                        <div className="details">
-                            <div className="type">
-                                FRAGRANCE
-                            </div>
-
-                            <div style={{fontFamily: 'Caveat'}} className="name">
-                                Rose Gold Perfume
-                            </div>
-
-                            <div className="price">
-                                GHC 750.00
-                            </div>
-
-                            <div className="btns">
-                                <button className='add-to-cart'>Add to Cart</button>
-
-                                <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-
-                                <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="product">
-                        <div className="image">
-                            <img style={{width: '100%'}} src="/high-angle-view-pen-table_1048944-18511898.jpg" alt="" />
-                        </div>
-
-                        <span>ALL TYPES</span>
-
-                        <div className="details">
-                            <div className="type">
-                                MAKEUP
-                            </div>
-
-                            <div style={{fontFamily: 'Caveat'}} className="name">
-                                Matte Liquid Lipstick
-                            </div>
-
-                            <div className="price">
-                                GHC 250.00
-                            </div>
-
-                            <div className="btns">
-                                <button className='add-to-cart'>Add to Cart</button>
-
-                                <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-
-                                <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="product">
-                        <div className="image">
-                            <img style={{width: '100%'}} src="/bottle-perfume_266732-14623.jpg" alt="" />
-                        </div>
-
-                        <span>ALL TYPES</span>
-
-                        <div className="details">
-                            <div className="type">
-                                SKINCARE
-                            </div>
-
-                            <div style={{fontFamily: 'Caveat'}} className="name">
-                                Lavender Body Oil
-                            </div>
-
-                            <div className="price">
-                                GHC 150.00
-                            </div>
-
-                            <div className="btns">
-                                <button className='add-to-cart'>Add to Cart</button>
-
-                                <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-
-                                <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="product">
-                        <div className="image">
-                            <img style={{width: '100%'}} src="/perfume-spray-bottle-isolated_93675-123583.jpg" alt="" />
-                        </div>
-
-                        <span>ALL TYPES</span>
-
-                        <div className="details">
-                            <div className="type">
-                                SKINCARE
-                            </div>
-
-                            <div style={{fontFamily: 'Caveat'}} className="name">
-                                Luxury Anti-Aging Serum
-                            </div>
-
-                            <div className="price">
-                                GHC 450.00
-                            </div>
-
-                            <div className="btns">
-                                <button className='add-to-cart'>Add to Cart</button>
-
-                                <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-
-                                <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="product">
-                        <div className="image">
-                            <img style={{width: '100%'}} src="/bottle-perfume_266732-14623.jpg" alt="" />
-                        </div>
-
-                        <span>ALL TYPES</span>
-
-                        <div className="details">
-                            <div className="type">
-                                FRAGRANCE
-                            </div>
-
-                            <div style={{fontFamily: 'Caveat'}} className="name">
-                                Rose Gold Perfume
-                            </div>
-
-                            <div className="price">
-                                GHC 750.00
-                            </div>
-
-                            <div className="btns">
-                                <button className='add-to-cart'>Add to Cart</button>
-
-                                <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-
-                                <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="product">
-                        <div className="image">
-                            <img style={{width: '100%'}} src="/high-angle-view-pen-table_1048944-18511898.jpg" alt="" />
-                        </div>
-
-                        <span>ALL TYPES</span>
-
-                        <div className="details">
-                            <div className="type">
-                                MAKEUP
-                            </div>
-
-                            <div style={{fontFamily: 'Caveat'}} className="name">
-                                Matte Liquid Lipstick
-                            </div>
-
-                            <div className="price">
-                                GHC 250.00
-                            </div>
-
-                            <div className="btns">
-                                <button className='add-to-cart'>Add to Cart</button>
-
-                                <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-
-                                <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="product">
-                        <div className="image">
-                            <img style={{width: '100%'}} src="/bottle-perfume_266732-14623.jpg" alt="" />
-                        </div>
-
-                        <span>ALL TYPES</span>
-
-                        <div className="details">
-                            <div className="type">
-                                SKINCARE
-                            </div>
-
-                            <div style={{fontFamily: 'Caveat'}} className="name">
-                                Lavender Body Oil
-                            </div>
-
-                            <div className="price">
-                                GHC 150.00
-                            </div>
-
-                            <div className="btns">
-                                <button className='add-to-cart'>Add to Cart</button>
-
-                                <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-
-                                <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="view-all-btn">
-                    <button>VIEW ALL PRODUCTS</button>
                 </div>
             </div>
         </div>
