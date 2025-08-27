@@ -323,6 +323,7 @@ svg{
     color: white;
     font-weight: bold;
     background-color: #FF008C;
+    cursor: pointer;
 }
 
 .book-beauty-consultation .appointment:hover{
@@ -618,7 +619,7 @@ svg{
 }
 
 .sale-section .txt-overlay{
-    z-index: 999;
+    z-index: 10;
     position: absolute;
     bottom: 0px;
     color: white;
@@ -708,6 +709,7 @@ svg{
 }
 
 .sale-section .shop-now-btn{
+    cursor: pointer;
     position: relative;
     display: flex;
     white-space: nowrap;

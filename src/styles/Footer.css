@@ -1,0 +1,147 @@
+.footer{
+    margin: 50px 35px;
+}
+
+.footer .grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 100px;
+}
+
+.footer h3{
+    margin-top: -5px;
+    font-weight: lighter;
+}
+
+.footer .logo-app-name{
+    display: flex;
+    color: #FF66B3;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer .logo{
+    background-color: #FF66B3;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .app-name :first-child{
+    font-size: 23px;
+}
+
+.footer .info{
+    margin: 20px 0;
+    color: #555555;
+}
+
+.footer .email{
+    color: #555555;
+    font-size: 14px;
+}
+
+.footer .email svg{
+    margin-right: 5px;
+}
+
+.footer .quick-links, .footer .customer-service{
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.footer a{
+    display: block;
+    margin-top: 10px;
+    color: #555555;
+    transition: 0.5s ease-in-out;
+}
+
+.footer a:hover{
+    color: black;
+}
+
+.footer .handles-updates{
+    padding: 30px 0;
+    display: flex;
+    width: 100%;
+}
+
+.footer h4{
+    font-weight: lighter;
+    margin: 0;
+}
+
+.footer .handles{
+    width: 100%;
+}
+
+.footer .handles div, .footer .updates div{
+    display: flex;
+}
+
+.footer .handles svg{
+    border: lightgray 1px solid;
+    padding: 10px;
+    margin-right: 10px;
+    color: #555555;
+    transition: 0.5s ease-in-out;
+}
+
+.footer .handles svg:hover{
+    color: black;
+}
+
+.footer .updates h4{
+    text-align: right;
+}
+
+.footer .updates .input-btn{
+    margin-top: 20px;
+}
+
+.footer .updates input{
+    border: 1px solid lightgray;
+    outline: none;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.footer .updates input:focus{
+    border: 1px solid gray;
+}
+
+.footer .updates button{
+    border: none;
+    background-color: #FF008C;
+    color: white;
+    transition: 0.5s ease-in-out;
+    padding: 0 20px;
+}
+
+.footer .updates button:hover{
+    background-color: #c4026c;
+}
+
+.footer .base{
+    display: flex;
+    margin-top: 20px;
+    color: #555555;
+    font-size: 14px;
+}
+
+.footer .base :first-child{
+    width: 100%;
+}
+
+.footer .base :nth-child(2){
+    display: flex;
+}
+
+.footer .base :nth-child(2) a{
+    white-space: nowrap;
+    margin-left: 20px;
+}

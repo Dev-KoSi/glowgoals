@@ -71,6 +71,7 @@ svg{
     padding: 8px;
     border-radius: 5px;
     width: 100%;
+    background-color: white;
 }
 
 .header-search-input:focus-within{
