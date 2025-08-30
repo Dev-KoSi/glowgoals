@@ -389,12 +389,114 @@ export function Shop() {
                     </div>
                 </div>
 
-                <div id='list' className="all-products">
+                <div id='grid'>
+                    <div className="product">
+                        <div className="image">
+                            <span>ALL TYPES</span>
+
+                            <img style={{width: '100%'}} src="/perfume-spray-bottle-isolated_93675-123583.jpg" alt="" />
+                        </div>
+
+                        <div className="details">
+                            <div className="type">
+                                SKINCARE
+                            </div>
+
+                            <div style={{fontFamily: 'Caveat'}} className="name">
+                                Luxury Anti-Aging Serum
+                            </div>
+
+                            <div className="description">
+                                Advanced anti-aging serum with retinol and hyaluronic acid
+                            </div>
+
+                            <div className="price">
+                                GHC 450.00
+                            </div>
+
+                            <div className="btns">
+                                <button className='add-to-cart'>Add to Cart</button>
+
+                                <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+
+                                <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="product">
+                        <div className="image">
+                            <span>ALL TYPES</span>
+
+                            <img style={{width: '100%'}} src="/bottle-perfume_266732-14623.jpg" alt="" />
+                        </div>
+
+                        <div className="details">
+                            <div className="type">
+                                FRAGRANCE
+                            </div>
+
+                            <div style={{fontFamily: 'Caveat'}} className="name">
+                                Rose Gold Perfume
+                            </div>
+
+                            <div className="description">
+                                Elegant rose fragrance with lasting power
+                            </div>
+
+                            <div className="price">
+                                GHC 750.00
+                            </div>
+
+                            <div className="btns">
+                                <button className='add-to-cart'>Add to Cart</button>
+
+                                <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+
+                                <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="product">
+                        <div className="image">
+                            <span>ALL TYPES</span>
+
+                            <img style={{width: '100%'}} src="/high-angle-view-pen-table_1048944-18511898.jpg" alt="" />
+                        </div>
+
+                        <div className="details">
+                            <div className="type">
+                                MAKEUP
+                            </div>
+
+                            <div style={{fontFamily: 'Caveat'}} className="name">
+                                Matte Liquid Lipstick
+                            </div>
+
+                            <div className="description">
+                                rofessional 8-piece makeup brush set
+                            </div>
+
+                            <div className="price">
+                                GHC 250.00
+                            </div>
+
+                            <div className="btns">
+                                <button className='add-to-cart'>Add to Cart</button>
+
+                                <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+
+                                <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+                
                     <div className="product">
                         <div className="image">
                             
                             <span>ALL TYPES</span>
-                            <img style={{width: '100%'}} src="/bottle-perfume_266732-14623.jpg" alt="" />
+                            <img style={{width: '100%'}} src="/public/perfume-bottles-isolated-against-white_127657-12258.jpg" alt="" />
                         </div>
 
                         <div className="details">
@@ -404,6 +506,10 @@ export function Shop() {
 
                             <div style={{fontFamily: 'Caveat'}} className="name">
                                 Rose Gold Perfume
+                            </div>
+
+                            <div className="description">
+                                Elegant rose fragrance with lasting power
                             </div>
 
                             <div className="price">
@@ -419,13 +525,47 @@ export function Shop() {
                             </div>
                         </div>
                     </div>
-                    
+                
                     <div className="product">
                         <div className="image">
-                            <img style={{width: '100%'}} src="/bottle-perfume_266732-14623.jpg" alt="" />
+                            <span>ALL TYPES</span>
+
+                            <img style={{width: '100%'}} src="/perfume-spray-bottle-isolated_93675-123583.jpg" alt="" />
                         </div>
 
-                        <span>ALL TYPES</span>
+                        <div className="details">
+                            <div className="type">
+                                SKINCARE
+                            </div>
+
+                            <div style={{fontFamily: 'Caveat'}} className="name">
+                                Luxury Anti-Aging Serum
+                            </div>
+
+                            <div className="description">
+                                Advanced anti-aging serum with retinol and hyaluronic acid
+                            </div>
+
+                            <div className="price">
+                                GHC 450.00
+                            </div>
+
+                            <div className="btns">
+                                <button className='add-to-cart'>Add to Cart</button>
+
+                                <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+
+                                <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="product">
+                        <div className="image">
+                            <span>ALL TYPES</span>
+
+                            <img style={{width: '100%'}} src="/bottle-perfume_266732-14623.jpg" alt="" />
+                        </div>
 
                         <div className="details">
                             <div className="type">
@@ -434,6 +574,10 @@ export function Shop() {
 
                             <div style={{fontFamily: 'Caveat'}} className="name">
                                 Rose Gold Perfume
+                            </div>
+
+                            <div className="description">
+                                Elegant rose fragrance with lasting power
                             </div>
 
                             <div className="price">
@@ -449,12 +593,47 @@ export function Shop() {
                             </div>
                         </div>
                     </div>
+
                     <div className="product">
                         <div className="image">
-                            <img style={{width: '100%'}} src="/bottle-perfume_266732-14623.jpg" alt="" />
+                            <span>ALL TYPES</span>
+
+                            <img style={{width: '100%'}} src="/high-angle-view-pen-table_1048944-18511898.jpg" alt="" />
                         </div>
 
-                        <span>ALL TYPES</span>
+                        <div className="details">
+                            <div className="type">
+                                MAKEUP
+                            </div>
+
+                            <div style={{fontFamily: 'Caveat'}} className="name">
+                                Matte Liquid Lipstick
+                            </div>
+
+                            <div className="description">
+                                rofessional 8-piece makeup brush set
+                            </div>
+
+                            <div className="price">
+                                GHC 250.00
+                            </div>
+
+                            <div className="btns">
+                                <button className='add-to-cart'>Add to Cart</button>
+
+                                <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+
+                                <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div className="product">
+                        <div className="image">
+                            
+                            <span>ALL TYPES</span>
+                            <img style={{width: '100%'}} src="/public/perfume-bottles-isolated-against-white_127657-12258.jpg" alt="" />
+                        </div>
 
                         <div className="details">
                             <div className="type">
@@ -463,6 +642,10 @@ export function Shop() {
 
                             <div style={{fontFamily: 'Caveat'}} className="name">
                                 Rose Gold Perfume
+                            </div>
+
+                            <div className="description">
+                                Elegant rose fragrance with lasting power
                             </div>
 
                             <div className="price">
@@ -478,12 +661,47 @@ export function Shop() {
                             </div>
                         </div>
                     </div>
+                
                     <div className="product">
                         <div className="image">
-                            <img style={{width: '100%'}} src="/bottle-perfume_266732-14623.jpg" alt="" />
+                            <span>ALL TYPES</span>
+
+                            <img style={{width: '100%'}} src="/perfume-spray-bottle-isolated_93675-123583.jpg" alt="" />
                         </div>
 
-                        <span>ALL TYPES</span>
+                        <div className="details">
+                            <div className="type">
+                                SKINCARE
+                            </div>
+
+                            <div style={{fontFamily: 'Caveat'}} className="name">
+                                Luxury Anti-Aging Serum
+                            </div>
+
+                            <div className="description">
+                                Advanced anti-aging serum with retinol and hyaluronic acid
+                            </div>
+
+                            <div className="price">
+                                GHC 450.00
+                            </div>
+
+                            <div className="btns">
+                                <button className='add-to-cart'>Add to Cart</button>
+
+                                <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+
+                                <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="product">
+                        <div className="image">
+                            <span>ALL TYPES</span>
+
+                            <img style={{width: '100%'}} src="/bottle-perfume_266732-14623.jpg" alt="" />
+                        </div>
 
                         <div className="details">
                             <div className="type">
@@ -492,6 +710,10 @@ export function Shop() {
 
                             <div style={{fontFamily: 'Caveat'}} className="name">
                                 Rose Gold Perfume
+                            </div>
+
+                            <div className="description">
+                                Elegant rose fragrance with lasting power
                             </div>
 
                             <div className="price">
@@ -507,24 +729,29 @@ export function Shop() {
                             </div>
                         </div>
                     </div>
+
                     <div className="product">
                         <div className="image">
-                            <img style={{width: '100%'}} src="/bottle-perfume_266732-14623.jpg" alt="" />
-                        </div>
+                            <span>ALL TYPES</span>
 
-                        <span>ALL TYPES</span>
+                            <img style={{width: '100%'}} src="/high-angle-view-pen-table_1048944-18511898.jpg" alt="" />
+                        </div>
 
                         <div className="details">
                             <div className="type">
-                                FRAGRANCE
+                                MAKEUP
                             </div>
 
                             <div style={{fontFamily: 'Caveat'}} className="name">
-                                Rose Gold Perfume
+                                Matte Liquid Lipstick
+                            </div>
+
+                            <div className="description">
+                                rofessional 8-piece makeup brush set
                             </div>
 
                             <div className="price">
-                                GHC 750.00
+                                GHC 250.00
                             </div>
 
                             <div className="btns">
@@ -536,12 +763,13 @@ export function Shop() {
                             </div>
                         </div>
                     </div>
+                
                     <div className="product">
                         <div className="image">
-                            <img style={{width: '100%'}} src="/bottle-perfume_266732-14623.jpg" alt="" />
+                            
+                            <span>ALL TYPES</span>
+                            <img style={{width: '100%'}} src="/public/perfume-bottles-isolated-against-white_127657-12258.jpg" alt="" />
                         </div>
-
-                        <span>ALL TYPES</span>
 
                         <div className="details">
                             <div className="type">
@@ -552,91 +780,8 @@ export function Shop() {
                                 Rose Gold Perfume
                             </div>
 
-                            <div className="price">
-                                GHC 750.00
-                            </div>
-
-                            <div className="btns">
-                                <button className='add-to-cart'>Add to Cart</button>
-
-                                <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-
-                                <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <div className="image">
-                            <img style={{width: '100%'}} src="/bottle-perfume_266732-14623.jpg" alt="" />
-                        </div>
-
-                        <span>ALL TYPES</span>
-
-                        <div className="details">
-                            <div className="type">
-                                FRAGRANCE
-                            </div>
-
-                            <div style={{fontFamily: 'Caveat'}} className="name">
-                                Rose Gold Perfume
-                            </div>
-
-                            <div className="price">
-                                GHC 750.00
-                            </div>
-
-                            <div className="btns">
-                                <button className='add-to-cart'>Add to Cart</button>
-
-                                <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-
-                                <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <div className="image">
-                            <img style={{width: '100%'}} src="/bottle-perfume_266732-14623.jpg" alt="" />
-                        </div>
-
-                        <span>ALL TYPES</span>
-
-                        <div className="details">
-                            <div className="type">
-                                FRAGRANCE
-                            </div>
-
-                            <div style={{fontFamily: 'Caveat'}} className="name">
-                                Rose Gold Perfume
-                            </div>
-
-                            <div className="price">
-                                GHC 750.00
-                            </div>
-
-                            <div className="btns">
-                                <button className='add-to-cart'>Add to Cart</button>
-
-                                <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-
-                                <svg fill="none" width="18" height="18" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <div className="image">
-                            <img style={{width: '100%'}} src="/bottle-perfume_266732-14623.jpg" alt="" />
-                        </div>
-
-                        <span>ALL TYPES</span>
-
-                        <div className="details">
-                            <div className="type">
-                                FRAGRANCE
-                            </div>
-
-                            <div style={{fontFamily: 'Caveat'}} className="name">
-                                Rose Gold Perfume
+                            <div className="description">
+                                Elegant rose fragrance with lasting power
                             </div>
 
                             <div className="price">

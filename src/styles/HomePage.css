@@ -372,6 +372,7 @@ svg{
 .products-flex .image{
     overflow: hidden;
     height: 220px;
+    position: relative;
 }
 
 .products-flex img{
@@ -415,13 +416,18 @@ svg{
     font-size: 14px;
     padding: 5px 10px;
     border-radius: 20px;
-    position: relative;
-    top: -205px;
+    position: absolute;
     margin: 10px;
+    z-index: 10;
+}
+
+.products-flex .product:hover span{
+    filter: brightness(70%);
 }
 
 .products-flex .details{
-    margin: 0 20px;
+    margin: 10px 20px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .products-flex .details div{
@@ -631,7 +637,7 @@ svg{
     position: absolute;
     right: 0;
     top: 0;
-    z-index: 999;
+    z-index: 10;
     border: 1px solid #FF008C;
     color: #FF008C;
     border-radius: 20px;

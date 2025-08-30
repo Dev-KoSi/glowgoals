@@ -276,34 +276,162 @@
 
 /* ALL PRODUCTS */
 
-/* #list{
+#list{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-}
-
-#list .product{
-    display: flex;
-} */
-
-.all-products{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
-    padding: 50px 35PX;
+    gap: 20px;
+    padding: 50px 35px;
     background-color: #FFC5E5;
     margin-bottom: 50px;
 }
 
-.all-products .image{
+#list .product{
+    display: flex;
+    position: relative;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    transition:  0.3s ease-in-out;
+}
+
+#list .product .image{
+    height: 250px;
+    width: 300px;
     overflow: hidden;
 }
 
-.all-products img{
-    border-radius: 5px 5px 0 0 ;
+#list .product img{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px  0 0 5px;
+    transition: transform 0.3s ease-in-out;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+#list .product:hover{
+    border: 1px solid #FF66B3;
+    overflow: hidden;
+    box-shadow: 0 5px 10px lightgray;
+}
+
+#list .product:hover img{
+    border-radius: 0;
+    transform: scale(1.1);
+    overflow: hidden;
+    filter: brightness(70%);
+}
+
+#list .product:hover .image{
+    overflow: hidden;
+}
+
+#list .product span{
+    color: white;
+    background-color: #FF008C;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    position: absolute;
+    margin: 10px;
+    z-index: 10;
+}
+
+#list .details{
+    width: 100%;
+    margin: 20px;
+    position: relative;
+}
+
+#list .details div{
+    margin-bottom: 10px;
+}
+
+#list .type{
+    color: #FF008C;
+}
+
+#list .name{
+    font-size: 20px;
+    /* font-weight: bold; */
+    transition: 0.3s ease-in-out;
+}
+
+#list .description{
+    font-size: 14px;
+    display: block;
+}
+
+#list .product:hover .name{
+    color: #FF008C;
+}
+
+#list .price{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#list .btns{
+    display: flex;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+#list .btns button{
+    width: 100%;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF008C;
+    padding: 5px 0px;
+    font-size: 16px;
     transition: transform 0.3s ease-in-out;
 }
 
-.all-products .product{
+#list button:hover, .view-all-btn button:hover {
+    background-color: #c4026c;
+    position: relative;
+    z-index: 1;
+    transform: scale(1.05);
+}
+
+#list .btns svg{
+    border: 1px solid lightgray;
+    padding: 10px 13px;
+    margin: 0 0 0 15px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.17);
+    transition: 0.5s ease-in-out;
+}
+
+#list .btns svg:hover{
+    border: 1px solid #FF008C;
+    color: #FF008C;
+    background-color: #FFC5E5;
+}
+
+#grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    padding: 50px 35px;
+    background-color: #FFC5E5;
+    margin-bottom: 50px;
+}
+
+#grid .image{
+    overflow: hidden;
+    height: 200px;
+}
+
+#grid img{
+    border-radius: 5px 5px 0 0 ;
+    height: 200px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#grid .product{
     width: 280px;
     border-radius: 5px;
     box-shadow: 0 0 3px 0 gray;
@@ -313,78 +441,87 @@
     background-color: white;
 }
 
-.all-products .product:hover{
+#grid .product:hover{
     border: 1px solid #FF66B3;
     overflow: hidden;
     transform: translateY(-5px);
 }
 
-.all-products .product:hover img{
+#grid .product:hover img{
     border-radius: 0;
     transform: scale(1.1);
     overflow: hidden;
     filter: brightness(70%);
 }
 
-.all-products .product:hover .image{
+#grid .product:hover .image{
     overflow: hidden;
 }
 
-.all-products span{
+#grid .product:hover span{
+    filter: brightness(70%);
+}
+
+#grid span{
     color: white;
     background-color: #FF008C;
     font-size: 14px;
     padding: 5px 10px;
     border-radius: 20px;
     position: absolute;
-    top: -175px;
     margin: 10px;
+    z-index: 10;
 }
 
-.all-products .details{
-    margin: 0 20px;
+#grid .details{
+    margin: 10px 20px;
+    transition: 0.3s ease-in-out;
 }
 
-.all-products .details div{
+#grid .details div{
     margin-bottom: 10px;
 }
 
-.all-products .type{
+#grid .type{
     color: #FF008C;
 }
 
-.all-products .name{
+#grid .name{
     font-size: 20px;
     font-weight: bold;
 }
 
-.all-products .price{
+#grid .description{
+    display: none;
+}
+
+#grid .price{
     font-size: 20px;
     font-weight: bold;
 }
 
-.all-products .btns{
+#grid .btns{
     display: flex;
 }
 
-.all-products .btns button{
+#grid .btns button{
     color: white;
     border: none;
     border-radius: 5px;
     background-color: #FF008C;
     padding: 5px 25px;
     font-size: 16px;
-    transition: transform 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
-.all-products button:hover, .view-all-btn button:hover {
+#grid button:hover, .view-all-btn button:hover {
     background-color: #c4026c;
     position: relative;
     z-index: 1;
     transform: scale(1.05);
 }
 
-.all-products .btns svg{
+#grid .btns svg{
     border: 1px solid lightgray;
     padding: 10px;
     margin: 0 0 0 15px;
@@ -393,7 +530,7 @@
     transition: 0.5s ease-in-out;
 }
 
-.all-products .btns svg:hover{
+#grid .btns svg:hover{
     border: 1px solid #FF008C;
     color: #FF008C;
     background-color: #FFC5E5;
