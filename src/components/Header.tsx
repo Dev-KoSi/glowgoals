@@ -24,7 +24,7 @@ export function Header() {
                 </div>
 
                 <nav className='header-nav-links'>
-                    <a href=""><span className="header-ourshop">Our Shop</span></a>
+                    <a href="/cosmetics"><span className="header-ourshop">Our Shop</span></a>
 
                     <a href=""><span className="header-services">Services</span></a>
 

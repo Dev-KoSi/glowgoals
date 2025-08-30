@@ -636,8 +636,6 @@ export function HomePage() {
                             </div>
                         </div>
                     </div>
-
-                    <div style={{borderBottom: '1px solid lightgray'}}></div>
                 </div>
             </div>
         </div>

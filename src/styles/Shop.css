@@ -1,0 +1,400 @@
+.shop-container .top-display{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/makeup-brush-decorative-cosmetics-red-background-with-empty-space-top-view_250469-11169.jpg);
+}
+
+.shop-container .top-display::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.473);
+    z-index: 1;
+}
+
+.shop-container .overlay{
+    color: white;
+    text-align: center;
+    z-index: 10;
+    position: relative;
+    top: 10%;
+}
+
+.shop-container .overlay :first-child{
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.shop-container .overlay .txt {
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.shop-container .filters{
+    display: flex;
+    background-color: #FFC5E5;
+    padding: 40px 35px;
+}
+
+.shop-container .search-container{
+    width: 100%;
+}
+
+.shop-container .search{
+    display: flex;
+    border: 1px solid #FF66B3;
+    width: 400px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.shop-container .search:focus-within{
+    box-shadow: 0 0 5px #FF66B3;
+}
+
+.shop-container .search input{
+    border: none;
+    outline: none;
+    width: 400px;
+    background-color: transparent;
+}
+
+.shop-container .search svg{
+    color: #FF66B3;
+}
+
+.shop-container .customize{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.shop-container .customize .select{
+    position: relative;
+}
+
+.shop-container .customize .select .default{
+    background-color: white;
+    border: 1px solid #FF66B3;
+    position: relative;
+    border-radius: 5px;
+    padding: 10px;
+    width: 180px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.shop-container .customize .select .default:focus-within{
+    box-shadow: 0 0 5px #FF66B3;
+}
+
+.shop-container .customize .select .default svg{
+    position: absolute;
+    right: 5px;
+    color: #555555;
+}
+
+.shop-container .customize .options{
+    position: absolute;
+    display: block;
+    background-color: white;
+    border-radius: 5px;
+    padding: 0 5px;
+    margin-top: 5px;
+    z-index: 10;
+    border: 1px solid lightgray;
+    transition: 0.5s ease-in-out;
+    display: none;
+}
+
+.shop-container .customize .options button{
+    background-color: white;
+    margin: 5px 0;
+    border-radius: 5px;
+    padding: 10px;
+    width: 140px;
+    text-align: left;
+    border: none;
+    display: flex;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+}
+
+.shop-container .customize .options button:hover{
+    background-color: #FFC5E5;
+}
+
+.shop-container .customize .options  svg{
+    position: absolute;
+    right: 10px;
+    color: #555555;
+    opacity: 0;
+}
+
+.shop-container .customize #first-option-1{
+    background-color: #FFC5E5;
+}
+
+.shop-container .customize #first-option-1 svg{
+    opacity: 1;
+}
+
+.shop-container .customize .grid{
+    display: flex;
+    border: 1px solid #FF66B3;
+    border-radius: 5px;
+}
+
+.shop-container .customize .grid button{
+    display: flex;
+    align-items: center;
+    border: none;    
+    padding: 10px;
+    transition: 0.5s ease-in-out;
+}
+
+.shop-container .customize .grid svg, .shop-container .customize .list svg{
+    margin-right: 5px;
+}
+
+.shop-container .customize .grid .grid-btn{
+    border-radius: 5px 0 0 5px;
+    background-color: #FF66B3;
+}
+
+.shop-container .customize .grid .list-btn{
+    border-radius: 0 5px 5px 0;
+}
+
+.shop-container .customize .list .grid-btn{
+    border-radius: 5px 0 0 5px;
+}
+
+.shop-container .customize .list .list-btn{
+    border-radius: 0 5px 5px 0;
+    background-color: #FF66B3;
+}
+
+/* SORTING */
+
+.shop-container .sort{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 30px 0;
+    margin: 0 35px;
+}
+
+.shop-container .sort .txt{
+    color: #c4026c;
+    margin-bottom: 5px;
+}
+
+.shop-container .sort .select{
+    position: relative;
+}
+
+.shop-container .sort .select .default{
+    background-color: white;
+    border: 1px solid #FF66B3;
+    position: relative;
+    border-radius: 5px;
+    padding: 10px;
+    width: 180px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.shop-container .sort .select .default:focus-within{
+    box-shadow: 0 0 5px #FF66B3;
+}
+
+.shop-container .sort .select .default svg{
+    position: absolute;
+    right: 5px;
+    color: #555555;
+}
+
+.shop-container .sort .options{
+    position: absolute;
+    display: block;
+    background-color: white;
+    border-radius: 5px;
+    padding: 0 5px;
+    margin-top: 5px;
+    z-index: 10;
+    border: 1px solid lightgray;
+    transition: 0.5s ease-in-out;
+    display: none;
+}
+
+.shop-container .sort .options button{
+    background-color: white;
+    margin: 5px 0;
+    border-radius: 5px;
+    padding: 10px;
+    width: 168px;
+    text-align: left;
+    border: none;
+    display: flex;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+}
+
+.shop-container .sort .options button:hover{
+    background-color: #FFC5E5;
+}
+
+.shop-container .sort .options  svg{
+    position: absolute;
+    right: 10px;
+    color: #555555;
+    opacity: 0;
+}
+
+.shop-container .sort #first-option-1{
+    background-color: #FFC5E5;
+}
+
+.shop-container .sort #first-option-1 svg{
+    opacity: 1;
+}
+
+
+/* ALL PRODUCTS */
+
+/* #list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#list .product{
+    display: flex;
+} */
+
+.all-products{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    padding: 50px 35PX;
+    background-color: #FFC5E5;
+    margin-bottom: 50px;
+}
+
+.all-products .image{
+    overflow: hidden;
+}
+
+.all-products img{
+    border-radius: 5px 5px 0 0 ;
+    transition: transform 0.3s ease-in-out;
+}
+
+.all-products .product{
+    width: 280px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px 0 gray;
+    transition: transform 0.3s ease-in-out;
+    padding-bottom: 10px;
+    border: 1px solid lightgray;
+    background-color: white;
+}
+
+.all-products .product:hover{
+    border: 1px solid #FF66B3;
+    overflow: hidden;
+    transform: translateY(-5px);
+}
+
+.all-products .product:hover img{
+    border-radius: 0;
+    transform: scale(1.1);
+    overflow: hidden;
+    filter: brightness(70%);
+}
+
+.all-products .product:hover .image{
+    overflow: hidden;
+}
+
+.all-products span{
+    color: white;
+    background-color: #FF008C;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    position: absolute;
+    top: -175px;
+    margin: 10px;
+}
+
+.all-products .details{
+    margin: 0 20px;
+}
+
+.all-products .details div{
+    margin-bottom: 10px;
+}
+
+.all-products .type{
+    color: #FF008C;
+}
+
+.all-products .name{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.all-products .price{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.all-products .btns{
+    display: flex;
+}
+
+.all-products .btns button{
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF008C;
+    padding: 5px 25px;
+    font-size: 16px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.all-products button:hover, .view-all-btn button:hover {
+    background-color: #c4026c;
+    position: relative;
+    z-index: 1;
+    transform: scale(1.05);
+}
+
+.all-products .btns svg{
+    border: 1px solid lightgray;
+    padding: 10px;
+    margin: 0 0 0 15px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.17);
+    transition: 0.5s ease-in-out;
+}
+
+.all-products .btns svg:hover{
+    border: 1px solid #FF008C;
+    color: #FF008C;
+    background-color: #FFC5E5;
+}

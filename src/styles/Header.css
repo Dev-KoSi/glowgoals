@@ -75,7 +75,7 @@ svg{
 }
 
 .header-search-input:focus-within{
-    border: 1px solid #FF008C;
+    box-shadow: 0 0 2px #FF008C;
 }
 
 .header-search-input input {

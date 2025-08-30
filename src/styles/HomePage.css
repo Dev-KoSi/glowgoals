@@ -503,6 +503,7 @@ svg{
 .collection-flex .collection::after {
     content: "";
     position: absolute;
+    color: #FF66B3;
     bottom: 0;
     left: 0;
     width: 100%;

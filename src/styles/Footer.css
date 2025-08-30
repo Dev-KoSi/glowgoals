@@ -1,3 +1,7 @@
+.footer-container{
+    border-top: 1px solid lightgray;
+}
+
 .footer{
     margin: 50px 35px;
 }
