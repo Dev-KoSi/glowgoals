@@ -1,6 +1,29 @@
+import { useState } from 'react'
 import '../styles/Shop.css'
 
 export function Shop() {
+
+    const [shopLayout, setShopLayout] = useState<string>('grid');
+    
+    const [filterMenu, setFilterMenu] = useState<boolean>(false);
+    const [filterSelected, setFilterSelected] = useState<string>('Featured');
+    const [filterOption, setFilterOption] = useState<string>('');
+
+    const [categoryMenu, setCategoryMenu] = useState<boolean>(false);
+    const [categorySelected, setCategorySelected] = useState<string>('All');
+    const [categoryOption, setCategoryOption] = useState<string>('');
+
+    const [brandMenu, setBrandMenu] = useState<boolean>(false);
+    const [brandSelected, setBrandSelected] = useState<string>('All');
+    const [brandOption, setBrandOption] = useState<string>('');
+
+    const [skinTypeMenu, setSkinTypeMenu] = useState<boolean>(false);
+    const [skinTypeSelected, setSkinTypeSelected] = useState<string>('All');
+    const [skinTypeOption, setSkinTypeOption] = useState<string>('');
+
+    const [priceRangeMenu, setPriceRangeMenu] = useState<boolean>(false);
+    const [priceRangeSelected, setPriceRangeSelected] = useState<string>('All');
+    const [priceRangeOption, setPriceRangeOption] = useState<string>('');
 
     return (
         <div className="shop-container">
@@ -26,14 +49,24 @@ export function Shop() {
 
                     <div className="customize">
                         <div className='select'>
-                            <button className='default'>
-                                Featured
+                            <button onClick={() => {
+                                setFilterMenu((f) => !f);
+                            }} className='default'>
+                                {filterSelected}
                                 
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
                             </button>
 
-                            <div className="options">
-                                <button id='first-option-1'>
+                            {filterMenu && <div className="options">
+                                <button onClick={() => {
+
+                                    setFilterSelected('Featured');
+
+                                    setFilterOption('1');
+
+                                    setFilterMenu((f) => !f);   
+
+                                }} id={`first-option-${filterOption}`}>
                                     Featured
                                     
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
@@ -41,7 +74,15 @@ export function Shop() {
                                     </svg>
                                 </button>
 
-                                <button id='second-option-2'>
+                                <button onClick={() => {
+
+                                    setFilterSelected('Price: Low to High');
+
+                                    setFilterOption('2');
+
+                                    setFilterMenu((f) => !f);
+
+                                }} id={`second-option-${filterOption}`}>
                                     Price: Low to High
                                     
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
@@ -49,7 +90,15 @@ export function Shop() {
                                     </svg>
                                 </button>
 
-                                <button id='third-option-3'>
+                                <button onClick={() => {
+
+                                    setFilterSelected('Price: High to Low');
+
+                                    setFilterOption('3');
+
+                                    setFilterMenu((f) => !f);
+
+                                }} id={`third-option-${filterOption}`}>
                                     Price: High to Low
                                     
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
@@ -57,7 +106,15 @@ export function Shop() {
                                     </svg>
                                 </button>
 
-                                <button id='fourth-option-4'>
+                                <button onClick={() => {
+
+                                    setFilterSelected('Highest Rated');
+
+                                    setFilterOption('4');
+
+                                    setFilterMenu((f) => !f);
+
+                                }} id={`fourth-option-${filterOption}`}>
                                     Highest Rated
                                     
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
@@ -65,24 +122,36 @@ export function Shop() {
                                     </svg>
                                 </button>
 
-                                <button id='fifth-option-5'>
+                                <button onClick={() => {
+
+                                    setFilterSelected('Name A-Z');
+
+                                    setFilterOption('5');
+
+                                    setFilterMenu((f) => !f);
+
+                                }} id={`fifth-option-${filterOption}`}>
                                     Name A-Z
                                     
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
                                         <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                                     </svg>
                                 </button>
-                            </div>
+                            </div>}
                         </div>
 
-                        <div className="grid list">
-                            <button className='grid-btn'>
+                        <div className={`${shopLayout}`}>
+                            <button onClick={() => {
+                                setShopLayout('grid')
+                            }} className='grid-btn'>
                                 <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
 
                                 Grid
                             </button>
 
-                            <button className='list-btn'>
+                            <button onClick={() => {
+                                setShopLayout('list')
+                            }}  className='list-btn'>
                                 <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
 
                                 List
@@ -93,303 +162,203 @@ export function Shop() {
 
                 <div className="sort">
                     <div className="category">
-                        <div className="txt">
-                            Category
-                        </div>
-
+                        <div className="txt">Category</div>
                         <div className='select'>
-                            <button className='default'>
-                                All
-                                
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+                            <button onClick={() => setCategoryMenu((c) => !c)} className='default'>
+                                {categorySelected}
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
                             </button>
 
-                            <div className="options">
-                                <button id='first-option-1'>
+                            {categoryMenu && <div className="options">
+                                <button onClick={() => { setCategorySelected('All'); setCategoryOption('1'); setCategoryMenu(false); }} id={`first-category-option-${categoryOption}`}>
                                     All
-                                    
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
-                                        <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none"><path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
                                 </button>
-
-                                <button id='second-option-2'>
+                                <button onClick={() => { setCategorySelected('Skincare'); setCategoryOption('2'); setCategoryMenu(false); }} id={`second-category-option-${categoryOption}`}>
                                     Skincare
-                                    
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
-                                        <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none"><path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
                                 </button>
-
-                                <button id='third-option-3'>
+                                <button onClick={() => { setCategorySelected('Makeup'); setCategoryOption('3'); setCategoryMenu(false); }} id={`third-category-option-${categoryOption}`}>
                                     Makeup
-                                    
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
-                                        <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none"><path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
                                 </button>
-
-                                <button id='fourth-option-4'>
+                                <button onClick={() => { setCategorySelected('Fragrance'); setCategoryOption('4'); setCategoryMenu(false); }} id={`fourth-category-option-${categoryOption}`}>
                                     Fragrance
-                                    
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
-                                        <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none"><path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
                                 </button>
-
-                                <button id='fifth-option-5'>
+                                <button onClick={() => { setCategorySelected('Hair Care'); setCategoryOption('5'); setCategoryMenu(false); }} id={`fifth-category-option-${categoryOption}`}>
                                     Hair Care
-                                    
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
-                                        <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none"><path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
                                 </button>
-
-                                <button id='sixth-option-6'>
-                                    Body Care
-                                    
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
-                                        <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </button>
-
-                                <button id='seventh-option-7'>
-                                    Tools & Accessories
-                                    
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
-                                        <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </button>
-
-                                <button id='eighth-option-8'>
-                                    Men's Grooming
-                                    
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
-                                        <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </button>
-                            </div>
+                            </div>}
                         </div>
                     </div>
 
-                    <div className="Brand">
-                        <div className="txt">
-                            Brand
-                        </div>
-                        
+                    <div className="brand">
+                        <div className="txt">Brand</div>
                         <div className='select'>
-                            <button className='default'>
-                                All
-                                
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+                            <button onClick={() => setBrandMenu((b) => !b)} className='default'>
+                                {brandSelected}
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
                             </button>
 
-                            <div className="options">
-                                <button id='first-option-1'>
+                            {brandMenu && <div className="options">
+                                <button onClick={() => { setBrandSelected('All'); setBrandOption('1'); setBrandMenu(false); }} id={`first-brand-option-${brandOption}`}>
                                     All
-                                    
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
-                                        <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none"><path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
                                 </button>
-
-                                <button id='second-option-2'>
+                                <button onClick={() => { setBrandSelected('Luxe Beauty'); setBrandOption('2'); setBrandMenu(false); }} id={`second-brand-option-${brandOption}`}>
                                     Luxe Beauty
-                                    
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
-                                        <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none"><path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
                                 </button>
-
-                                <button id='third-option-3'>
-                                    Glow Cosmetics
-                                    
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
-                                        <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
+                                <button onClick={() => { setBrandSelected('Nature Glow'); setBrandOption('3'); setBrandMenu(false); }} id={`third-brand-option-${brandOption}`}>
+                                    Nature Glow
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none"><path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
                                 </button>
-
-                                <button id='fourth-option-4'>
-                                    Pure Skin
-                                    
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
-                                        <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
+                                <button onClick={() => { setBrandSelected('Urban Chic'); setBrandOption('4'); setBrandMenu(false); }} id={`fourth-brand-option-${brandOption}`}>
+                                    Urban Chic
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none"><path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
                                 </button>
-
-                                <button id='fifth-option-5'>
-                                    Lash Luxe
-                                    
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
-                                        <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
+                                <button onClick={() => { setBrandSelected('Glow Essence'); setBrandOption('5'); setBrandMenu(false); }} id={`fifth-brand-option-${brandOption}`}>
+                                    Glow Essence
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none"><path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
                                 </button>
-
-                                <button id='sixth-option-6'>
-                                    Aroma Luxe
-                                    
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
-                                        <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </button>
-
-                                <button id='seventh-option-7'>
-                                    Gentlemen's Choice
-                                    
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
-                                        <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </button>
-                            </div>
+                            </div>}
                         </div>
                     </div>
 
                     <div className="skin-type">
-                        <div className="txt">
-                            Skin Type
-                        </div>
-                        
-                        <div className='select'>
-                            <button className='default'>
-                                All
-                                
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+                        <div className="txt">Skin Type</div>
+                        <div className="select">
+                            <button onClick={() => setSkinTypeMenu((s) => !s)} className="default">
+                                {skinTypeSelected}
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="m6 9 6 6 6-6"></path>
+                                </svg>
                             </button>
 
-                            <div className="options">
-                                <button id='first-option-1'>
-                                    All
-                                    
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
-                                        <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </button>
+                            {skinTypeMenu && (
+                                <div className="options">
+                                    <button onClick={() => { setSkinTypeSelected('All'); setSkinTypeOption('1'); setSkinTypeMenu(false); }} id={`first-skin-type-option-${skinTypeOption}`}>
+                                        All
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none">
+                                            <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                        </svg>
+                                    </button>
 
-                                <button id='second-option'>
-                                    All Types
-                                    
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
-                                        <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </button>
+                                    <button onClick={() => { setSkinTypeSelected('All Types'); setSkinTypeOption('2'); setSkinTypeMenu(false); }} id={`second-skin-type-option-${skinTypeOption}`}>
+                                        All Types
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none">
+                                            <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                        </svg>
+                                    </button>
 
-                                <button id='third-option'>
-                                    Oily Skin
-                                    
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
-                                        <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </button>
+                                    <button onClick={() => { setSkinTypeSelected('Oily Skin'); setSkinTypeOption('3'); setSkinTypeMenu(false); }} id={`third-skin-type-option-${skinTypeOption}`}>
+                                        Oily Skin
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none">
+                                            <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                        </svg>
+                                    </button>
 
-                                <button id='fourth-option'>
-                                    Dry Skin
-                                    
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
-                                        <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </button>
+                                    <button onClick={() => { setSkinTypeSelected('Dry Skin'); setSkinTypeOption('4'); setSkinTypeMenu(false); }} id={`fourth-skin-type-option-${skinTypeOption}`}>
+                                        Dry Skin
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none">
+                                            <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                        </svg>
+                                    </button>
 
-                                <button id='fifth-option'>
-                                    Combination Skin
-                                    
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
-                                        <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </button>
+                                    <button onClick={() => { setSkinTypeSelected('Combination Skin'); setSkinTypeOption('5'); setSkinTypeMenu(false); }} id={`fifth-skin-type-option-${skinTypeOption}`}>
+                                        Combination Skin
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none">
+                                            <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                        </svg>
+                                    </button>
 
-                                <button id='sixth-option'>
-                                    Acne-Prone Skin
-                                    
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
-                                        <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </button>
+                                    <button onClick={() => { setSkinTypeSelected('Acne-Prone Skin'); setSkinTypeOption('6'); setSkinTypeMenu(false); }} id={`sixth-skin-type-option-${skinTypeOption}`}>
+                                        Acne-Prone Skin
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none">
+                                            <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                        </svg>
+                                    </button>
 
-                                <button id='seventh-option'>
-                                    Sensitive Skin
-                                    
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
-                                        <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </button>
+                                    <button onClick={() => { setSkinTypeSelected('Sensitive Skin'); setSkinTypeOption('7'); setSkinTypeMenu(false); }} id={`seventh-skin-type-option-${skinTypeOption}`}>
+                                        Sensitive Skin
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none">
+                                            <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                        </svg>
+                                    </button>
 
-                                <button id='eighth-option'>
-                                    Matured Skin
-                                    
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
-                                        <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </button>
-                            </div>
+                                    <button onClick={() => { setSkinTypeSelected('Matured Skin'); setSkinTypeOption('8'); setSkinTypeMenu(false); }} id={`eighth-skin-type-option-${skinTypeOption}`}>
+                                        Matured Skin
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none">
+                                            <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            )}
                         </div>
                     </div>
 
                     <div className="price-range">
-                        <div className="txt">
-                            Price Range
-                        </div>
-                        
-                        <div className='select'>
-                            <button className='default'>
-                                All
-                                
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+                        <div className="txt">Price Range</div>
+                        <div className="select">
+                            <button onClick={() => setPriceRangeMenu((p) => !p)} className="default">
+                                {priceRangeSelected}
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="m6 9 6 6 6-6"></path>
+                                </svg>
                             </button>
 
-                            <div className="options">
-                                <button id='first-option-1'>
-                                    All
-                                    
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
-                                        <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </button>
+                            {priceRangeMenu && (
+                                <div className="options">
+                                    <button onClick={() => { setPriceRangeSelected('All'); setPriceRangeOption('1'); setPriceRangeMenu(false); }} id={`first-price-range-option-${priceRangeOption}`}>
+                                        All
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none">
+                                            <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                        </svg>
+                                    </button>
 
-                                <button id='second-option-2'>
-                                    Under GHC 100
-                                    
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
-                                        <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </button>
+                                    <button onClick={() => { setPriceRangeSelected('Under GHC 100'); setPriceRangeOption('2'); setPriceRangeMenu(false); }} id={`second-price-range-option-${priceRangeOption}`}>
+                                        Under GHC 100
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none">
+                                            <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                        </svg>
+                                    </button>
 
-                                <button id='third-option-3'>
-                                    GHC 100 - GHC 500
-                                    
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
-                                        <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </button>
+                                    <button onClick={() => { setPriceRangeSelected('GHC 100 - GHC 500'); setPriceRangeOption('3'); setPriceRangeMenu(false); }} id={`third-price-range-option-${priceRangeOption}`}>
+                                        GHC 100 - GHC 500
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none">
+                                            <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                        </svg>
+                                    </button>
 
-                                <button id='fourth-option-4'>
-                                    GHC 500 - GHC 1,000
-                                    
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
-                                        <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </button>
+                                    <button onClick={() => { setPriceRangeSelected('GHC 500 - GHC 1,000'); setPriceRangeOption('4'); setPriceRangeMenu(false); }} id={`fourth-price-range-option-${priceRangeOption}`}>
+                                        GHC 500 - GHC 1,000
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none">
+                                            <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                        </svg>
+                                    </button>
 
-                                <button id='fifth-option-5'>
-                                    GHC 1,000 - GHC 5,000
-                                    
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
-                                        <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </button>
+                                    <button onClick={() => { setPriceRangeSelected('GHC 1,000 - GHC 5,000'); setPriceRangeOption('5'); setPriceRangeMenu(false); }} id={`fifth-price-range-option-${priceRangeOption}`}>
+                                        GHC 1,000 - GHC 5,000
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none">
+                                            <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                        </svg>
+                                    </button>
 
-                                <button id='sixth-option-6'>
-                                    Above GHC 5,000
-                                    
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
-                                        <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </button>
-                            </div>
+                                    <button onClick={() => { setPriceRangeSelected('Above GHC 5,000'); setPriceRangeOption('6'); setPriceRangeMenu(false); }} id={`sixth-price-range-option-${priceRangeOption}`}>
+                                        Above GHC 5,000
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none">
+                                            <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>
 
-                <div id='grid'>
+                <div id={`${shopLayout}`}>
                     <div className="product">
                         <div className="image">
                             <span>ALL TYPES</span>

@@ -113,10 +113,9 @@
     border-radius: 5px;
     padding: 0 5px;
     margin-top: 5px;
-    z-index: 10;
+    z-index: 999;
     border: 1px solid lightgray;
     transition: 0.5s ease-in-out;
-    display: none;
 }
 
 .shop-container .customize .options button{
@@ -124,7 +123,7 @@
     margin: 5px 0;
     border-radius: 5px;
     padding: 10px;
-    width: 140px;
+    width: 169px;
     text-align: left;
     border: none;
     display: flex;
@@ -143,13 +142,22 @@
     opacity: 0;
 }
 
-.shop-container .customize #first-option-1{
+.shop-container .customize #first-option-1,
+.shop-container .customize #second-option-2,
+.shop-container .customize #third-option-3,
+.shop-container .customize #fourth-option-4,
+.shop-container .customize #fifth-option-5 {
     background-color: #FFC5E5;
 }
 
-.shop-container .customize #first-option-1 svg{
+.shop-container .customize #first-option-1 svg,
+.shop-container .customize #second-option-2 svg,
+.shop-container .customize #third-option-3 svg,
+.shop-container .customize #fourth-option-4 svg,
+.shop-container .customize #fifth-option-5 svg {
     opacity: 1;
 }
+
 
 .shop-container .customize .grid{
     display: flex;
@@ -167,6 +175,20 @@
 
 .shop-container .customize .grid svg, .shop-container .customize .list svg{
     margin-right: 5px;
+}
+
+.shop-container .customize .list{
+    display: flex;
+    border: 1px solid #FF66B3;
+    border-radius: 5px;
+}
+
+.shop-container .customize .list button{
+    display: flex;
+    align-items: center;
+    border: none;    
+    padding: 10px;
+    transition: 0.5s ease-in-out;
 }
 
 .shop-container .customize .grid .grid-btn{
@@ -235,10 +257,9 @@
     border-radius: 5px;
     padding: 0 5px;
     margin-top: 5px;
-    z-index: 10;
+    z-index: 999;
     border: 1px solid lightgray;
     transition: 0.5s ease-in-out;
-    display: none;
 }
 
 .shop-container .sort .options button{
@@ -265,13 +286,70 @@
     opacity: 0;
 }
 
-.shop-container .sort #first-option-1{
+.shop-container .sort #first-category-option-1,
+.shop-container .sort #second-category-option-2,
+.shop-container .sort #third-category-option-3,
+.shop-container .sort #fourth-category-option-4,
+.shop-container .sort #fifth-category-option-5,
+.shop-container .sort #sixth-category-option-6,
+.shop-container .sort #seventh-category-option-7,
+.shop-container .sort #eighth-category-option-8,
+.shop-container .sort #first-brand-option-1,
+.shop-container .sort #second-brand-option-2,
+.shop-container .sort #third-brand-option-3,
+.shop-container .sort #fourth-brand-option-4,
+.shop-container .sort #fifth-brand-option-5,
+.shop-container .sort #sixth-brand-option-6,
+.shop-container .sort #seventh-brand-option-7,
+.shop-container .sort #first-skin-type-option-1,
+.shop-container .sort #second-skin-type-option-2,
+.shop-container .sort #third-skin-type-option-3,
+.shop-container .sort #fourth-skin-type-option-4,
+.shop-container .sort #fifth-skin-type-option-5,
+.shop-container .sort #sixth-skin-type-option-6,
+.shop-container .sort #seventh-skin-type-option-7,
+.shop-container .sort #eighth-skin-type-option-8,
+.shop-container .sort #first-price-range-option-1,
+.shop-container .sort #second-price-range-option-2,
+.shop-container .sort #third-price-range-option-3,
+.shop-container .sort #fourth-price-range-option-4,
+.shop-container .sort #fifth-price-range-option-5,
+.shop-container .sort #sixth-price-range-option-6 {
     background-color: #FFC5E5;
 }
 
-.shop-container .sort #first-option-1 svg{
+.shop-container .sort #first-category-option-1 svg,
+.shop-container .sort #second-category-option-2 svg,
+.shop-container .sort #third-category-option-3 svg,
+.shop-container .sort #fourth-category-option-4 svg,
+.shop-container .sort #fifth-category-option-5 svg,
+.shop-container .sort #sixth-category-option-6 svg,
+.shop-container .sort #seventh-category-option-7 svg,
+.shop-container .sort #eighth-category-option-8 svg,
+.shop-container .sort #first-brand-option-1 svg,
+.shop-container .sort #second-brand-option-2 svg,
+.shop-container .sort #third-brand-option-3 svg,
+.shop-container .sort #fourth-brand-option-4 svg,
+.shop-container .sort #fifth-brand-option-5 svg,
+.shop-container .sort #sixth-brand-option-6 svg,
+.shop-container .sort #seventh-brand-option-7 svg,
+.shop-container .sort #first-skin-type-option-1 svg,
+.shop-container .sort #second-skin-type-option-2 svg,
+.shop-container .sort #third-skin-type-option-3 svg,
+.shop-container .sort #fourth-skin-type-option-4 svg,
+.shop-container .sort #fifth-skin-type-option-5 svg,
+.shop-container .sort #sixth-skin-type-option-6 svg,
+.shop-container .sort #seventh-skin-type-option-7 svg,
+.shop-container .sort #eighth-skin-type-option-8 svg,
+.shop-container .sort #first-price-range-option-1 svg,
+.shop-container .sort #second-price-range-option-2 svg,
+.shop-container .sort #third-price-range-option-3 svg,
+.shop-container .sort #fourth-price-range-option-4 svg,
+.shop-container .sort #fifth-price-range-option-5 svg,
+.shop-container .sort #sixth-price-range-option-6 svg {
     opacity: 1;
 }
+
 
 
 /* ALL PRODUCTS */
