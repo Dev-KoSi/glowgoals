@@ -436,6 +436,88 @@ export function Services() {
                         </div>
                     </div>
                 </div>
+
+                <div className="why">
+                    <div className="info">
+                        <div style={{fontFamily: 'Caveat'}}>
+                            Why Choose Our Service?
+                        </div>
+
+                        <p className="txt">
+                            We combine expertise, premium products, and personalized care to deliver exceptional results
+                        </p>
+                    </div>
+
+                    <div className="points">
+                        <div className="point">
+                            <svg fill="none" width="40" height="40" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+
+                            <div style={{fontFamily: 'Caveat'}} className="head">
+                                Expert Professionals
+                            </div>
+
+                            <div className="txt">
+                                Certified and experienced beauty specialist
+                            </div>
+                        </div>
+                        
+                        <div className="point">
+                            <svg fill="none" width="40" height="40" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+
+                            <div style={{fontFamily: 'Caveat'}} className="head">
+                                Premium Products
+                            </div>
+
+                            <div className="txt">
+                                High-quality, safe, and effective products
+                            </div>
+                        </div>
+                        
+                        <div className="point">
+                            <svg fill="none" width="40" height="40" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+
+                            <div style={{fontFamily: 'Caveat'}} className="head">
+                                Personalized Care
+                            </div>
+
+                            <div className="txt">
+                                Tailored treatments for your unique needs
+                            </div>
+                        </div>
+                        
+                        <div className="point">
+                            <svg fill="none" width="40" height="40" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+
+                            <div style={{fontFamily: 'Caveat'}} className="head">
+                                Convenient Booking
+                            </div>
+
+                            <div className="txt">
+                                Easy online booking and flexible scheduling
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="suggestion">
+                    <div style={{fontFamily: 'Caveat'}} className="head">
+                        Ready to Transform Your Beauty?
+                    </div>
+
+                    <div className="txt">
+                        Book your appointment today and experience the difference
+                    </div>
+
+                    <div className="btns">
+                        <button>
+                            Book Appointment
+                        </button>
+
+                        <button>
+                            Contact Us
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     )
