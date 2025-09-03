@@ -1,0 +1,177 @@
+.services-container .top-display{
+    width: 100%;
+    height: 450px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/top-display.jpg);
+    background-size: cover;
+}
+
+.services-container .top-display::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.473);
+    z-index: 1;
+}
+
+.services-container .overlay{
+    color: white;
+    text-align: center;
+    z-index: 10;
+    position: relative;
+    top: 10%;
+}
+
+.services-container .overlay :first-child{
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.services-container .overlay .txt {
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-size: 19px;
+}
+
+.services-container .grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 80px 35px;
+    gap: 30px;
+}
+
+.services-container .service{
+    border-radius: 20px;
+    border: 1px solid lightgray;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 5px lightgray;
+    background-color: white;
+}
+
+.services-container .service:hover{
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px lightgray;
+}
+
+.services-container .service .img{
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+}
+
+.services-container .service .img span{
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    background-color: #FF008C;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin: 20px;
+    z-index: 1;
+}
+
+.services-container .service img{
+    width: 100%;
+    z-index: -1;
+    filter: brightness(85%);
+    transition: 0.3s ease-in-out;
+}
+
+.services-container .service:hover img{
+    transform: scale(1.05);
+}
+
+.services-container .service .txt{
+    position: absolute;
+    bottom: 0;
+    margin: 20px;
+    color: white;
+}
+
+.services-container .service .name{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.services-container .service .details{
+    margin: 30px;
+    color: #555555;
+}
+
+.services-container .service .info{
+    margin-bottom: 20px;
+}
+
+.services-container .service .includes .what{
+    font-size: 18px;
+    color: black;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.services-container .service .includes .what div{
+    background-color: #FF008C;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.services-container .service .offer{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.services-container .service .offer svg{
+    margin-right: 10px;
+    color: #FF008C;
+}
+
+.services-container .service .btns{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+}
+
+.services-container .service .btns button{
+    border: none;
+    width: 50%;
+    padding: 15px 0px;
+    margin-right: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    z-index: 10;
+    transition: 0.3s ease-in-out;
+}
+
+.services-container .service .btns :first-child{
+    border: 1px solid lightgray;
+}
+
+.services-container .service .btns :first-child:hover{
+    background-color: lightgray;
+}
+
+.services-container .service .btns :nth-child(2){
+    background-color: #FF008C;
+    color: white;
+    width: 100%;
+    margin-right: 0;
+}
+
+.services-container .service .btns :nth-child(2):hover{
+    transform: scale(1.02);
+    filter: brightness(80%);
+}

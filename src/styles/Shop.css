@@ -6,6 +6,7 @@
     justify-content: center;
     align-items: center;
     background-image: url(/makeup-brush-decorative-cosmetics-red-background-with-empty-space-top-view_250469-11169.jpg);
+    background-size: cover;
 }
 
 .shop-container .top-display::after{
@@ -28,7 +29,7 @@
 }
 
 .shop-container .overlay :first-child{
-    font-size: 45px;
+    font-size: 50px;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -37,7 +38,7 @@
     max-width: 650px;
     margin: 0 auto;
     line-height: 1.5;
-    font-size: 18px;
+    font-size: 19px;
 }
 
 .shop-container .filters{

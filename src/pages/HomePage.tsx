@@ -97,7 +97,7 @@ export function HomePage() {
                             </div>
 
                             <div>
-                                YourBeauty, Your Goals.
+                                Your Beauty, Your Goals.
                             </div>
                         </div>
 

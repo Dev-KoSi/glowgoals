@@ -26,7 +26,7 @@ export function Header() {
                 <nav className='header-nav-links'>
                     <a href="/cosmetics"><span className="header-ourshop">Our Shop</span></a>
 
-                    <a href=""><span className="header-services">Services</span></a>
+                    <a href="/services"><span className="header-services">Services</span></a>
 
                     <a href=""><span className="header-booking">Booking</span></a>
 
