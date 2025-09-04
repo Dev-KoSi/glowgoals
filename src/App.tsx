@@ -5,6 +5,7 @@ import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 import { Shop } from './pages/Shop'
 import { Services } from './pages/Services'
+import { Booking } from './pages/Booking'
 
 export function App() {
 
@@ -34,6 +35,16 @@ export function App() {
         <div>
           <Header/>
           <Services/>
+          <Footer/>
+        </div>
+      )
+    },
+    {
+      path: '/booking',
+      element: (
+        <div>
+          <Header/>
+          <Booking/>
           <Footer/>
         </div>
       )

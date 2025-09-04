@@ -1,0 +1,210 @@
+.booking-container .top-display{
+    width: 100%;
+    height: 350px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/book-calendar.jpg);
+    background-size: cover;
+}
+
+.booking-container .top-display::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.581);
+    z-index: 1;
+}
+
+.booking-container .overlay{
+    color: white;
+    text-align: center;
+    z-index: 10;
+    position: relative;
+    top: 10%;
+}
+
+.booking-container .overlay :first-child{
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.booking-container .overlay .txt {
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-size: 20px;
+}
+
+.booking-container .book{
+    background-color: #FFC5E5;
+    padding: 50px 300px;
+}
+
+.booking-container .schedule-session{
+    padding: 30px 50px 30px 30px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 20px gray;
+}
+
+.booking-container .schedule-session .head{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.booking-container .schedule-session .txt{
+    color: #555555;
+    margin-bottom: 10px;
+}
+
+.booking-container .schedule-session .name-phone,
+.booking-container .schedule-session .date-time{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+}
+
+.booking-container .schedule-session .booking-details :first-child{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    gap: 10px;
+}
+
+.booking-container .schedule-session .booking-details input{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 15px;
+    width: 100%;
+    margin: 10px 0 20px 0;
+    outline: none;
+}
+
+.booking-container .schedule-session .booking-details input:focus-within{
+    border: 1px solid #FFC5E5;
+    box-shadow: 0 0 5px #FFC5E5;
+}
+
+.booking-container .the-service .select{
+    position: relative;
+}
+
+.booking-container .the-service .select .default{
+    background-color: white;
+    border: 1px solid lightgray;
+    position: relative;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.booking-container .the-service .select .default:focus-within{
+    box-shadow: 0 0 5px #FFC5E5;
+    border: 1px solid #FFC5E5;
+}
+
+.booking-container .the-service .select .default svg{
+    position: absolute;
+    right: 5px;
+    color: #555555;
+}
+
+.booking-container .the-service .options{
+    position: absolute;
+    display: block;
+    background-color: white;
+    border-radius: 5px;
+    padding: 0 5px;
+    margin-top: 5px;
+    z-index: 999;
+    border: 1px solid lightgray;
+    transition: 0.5s ease-in-out;
+}
+
+.booking-container .the-service .options button{
+    background-color: white;
+    margin: 5px 0;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    display: flex;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+}
+
+.booking-container .the-service .options button:hover{
+    background-color: #FFC5E5;
+}
+
+.booking-container .the-service .options  svg{
+    position: absolute;
+    right: 10px;
+    color: #555555;
+    opacity: 0;
+}
+
+.booking-container .the-service #first-option-1,
+.booking-container .the-service #second-option-2,
+.booking-container .the-service #third-option-3,
+.booking-container .the-service #fourth-option-4,
+.booking-container .the-service #fifth-option-5,
+.booking-container .the-service #sixth-option-6 {
+    background-color: #FFC5E5;
+}
+
+.booking-container .the-service #first-option-1 svg,
+.booking-container .the-service #second-option-2 svg,
+.booking-container .the-service #third-option-3 svg,
+.booking-container .the-service #fourth-option-4 svg,
+.booking-container .the-service #fifth-option-5 svg,
+.booking-container .the-service #sixth-option-6 svg {
+    opacity: 1;
+}
+
+.booking-container .schedule-session textarea::-webkit-scrollbar {
+    display: none;
+}
+
+.booking-container .schedule-session textarea{
+    margin: 10px 0;
+    width: 100%;
+    resize: none;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 15px;
+    outline: none;
+}
+
+.booking-container .schedule-session textarea::placeholder{
+    font-family: 'outfit', sans-serif;
+    font-size: 14px;
+}
+
+.booking-container .schedule-session textarea:focus-within{
+    box-shadow: 0 0 5px #FFC5E5;
+    border: 1px solid #FFC5E5;
+}
+
+.booking-container .schedule-session .btn button{
+    width: 100%;
+    border: none;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555555;
+    cursor: not-allowed;
+}

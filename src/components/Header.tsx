@@ -28,7 +28,7 @@ export function Header() {
 
                     <a href="/services"><span className="header-services">Services</span></a>
 
-                    <a href=""><span className="header-booking">Booking</span></a>
+                    <a href="/booking"><span className="header-booking">Booking</span></a>
 
                     <a href=""><span className="header-contact">Contact</span></a>
 
