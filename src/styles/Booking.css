@@ -43,14 +43,17 @@
 
 .booking-container .book{
     background-color: #FFC5E5;
-    padding: 50px 300px;
+    padding: 80px 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
 }
 
 .booking-container .schedule-session{
-    padding: 30px 50px 30px 30px;
+    padding: 30px;
     background-color: white;
     border-radius: 20px;
-    box-shadow: 0 15px 20px gray;
+    box-shadow: 0 10px 20px lightgray;
 }
 
 .booking-container .schedule-session .head{
@@ -68,7 +71,8 @@
 .booking-container .schedule-session .date-time{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 100px;
+    gap: 50px;
+    padding-right: 30px;
 }
 
 .booking-container .schedule-session .booking-details :first-child{
@@ -76,6 +80,10 @@
     align-items: center;
     font-size: 14px;
     gap: 10px;
+}
+
+.booking-container .schedule-session .email{
+    padding-right: 30px;
 }
 
 .booking-container .schedule-session .booking-details input{
@@ -174,6 +182,10 @@
     opacity: 1;
 }
 
+.booking-container .schedule-session .special{
+    padding-right: 30px;
+}
+
 .booking-container .schedule-session textarea::-webkit-scrollbar {
     display: none;
 }
@@ -207,4 +219,58 @@
     font-weight: bold;
     color: #555555;
     cursor: not-allowed;
+}
+
+.booking-container .why{
+    padding: 20px 30px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px lightgray;
+    margin-bottom: 20px;
+}
+
+.booking-container .why .head{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.booking-container .why .point{
+    color: #555555;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.booking-container .why .point :first-child{
+    background-color: #FF008C;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.booking-container .get-in-touch{
+    padding: 30px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px lightgray;
+}
+
+.booking-container .get-in-touch .head{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.booking-container .get-in-touch .info{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.booking-container .get-in-touch .info svg{
+    color: #FF008C;
 }

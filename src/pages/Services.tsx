@@ -22,7 +22,7 @@ export function Services() {
                                 60-90 MINUTES
                             </span>
 
-                            <img src="/public/skin-treatment.webp" alt="" />
+                            <img src="/skin-treatment.webp" alt="" />
 
                             <div className="txt">
                                 <div style={{fontFamily: 'Caveat'}} className="name">
