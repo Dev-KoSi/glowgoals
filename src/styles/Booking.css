@@ -42,7 +42,6 @@
 }
 
 .booking-container .book{
-    background-color: #FFC5E5;
     padding: 80px 150px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -50,6 +49,7 @@
 }
 
 .booking-container .schedule-session{
+    border: 1px solid #FFC5E5;
     padding: 30px;
     background-color: white;
     border-radius: 20px;
@@ -193,6 +193,7 @@
 .booking-container .schedule-session textarea{
     margin: 10px 0;
     width: 100%;
+    height: 80px;
     resize: none;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -202,7 +203,7 @@
 
 .booking-container .schedule-session textarea::placeholder{
     font-family: 'outfit', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .booking-container .schedule-session textarea:focus-within{
@@ -222,6 +223,7 @@
 }
 
 .booking-container .why{
+    border: 1px solid #FFC5E5;
     padding: 20px 30px;
     background-color: white;
     border-radius: 20px;
@@ -252,6 +254,7 @@
 }
 
 .booking-container .get-in-touch{
+    border: 1px solid #FFC5E5;
     padding: 30px;
     background-color: white;
     border-radius: 20px;

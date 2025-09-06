@@ -30,7 +30,7 @@ export function Header() {
 
                     <a href="/booking"><span className="header-booking">Booking</span></a>
 
-                    <a href=""><span className="header-contact">Contact</span></a>
+                    <a href="/contact"><span className="header-contact">Contact</span></a>
 
                     <a href=""><span className="header-about">About</span></a>
                 </nav>

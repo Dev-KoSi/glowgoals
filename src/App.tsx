@@ -6,6 +6,7 @@ import { Header } from './components/Header'
 import { Shop } from './pages/Shop'
 import { Services } from './pages/Services'
 import { Booking } from './pages/Booking'
+import { Contact } from './pages/Contact'
 
 export function App() {
 
@@ -45,6 +46,16 @@ export function App() {
         <div>
           <Header/>
           <Booking/>
+          <Footer/>
+        </div>
+      )
+    },
+    {
+      path: '/contact',
+      element: (
+        <div>
+          <Header/>
+          <Contact/>
           <Footer/>
         </div>
       )

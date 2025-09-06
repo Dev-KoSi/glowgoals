@@ -1,0 +1,209 @@
+.contact-container .top-display{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/contact-us.jpg);
+    background-size: cover;
+}
+
+.contact-container .top-display::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.473);
+    z-index: 1;
+}
+
+.contact-container .overlay{
+    color: white;
+    text-align: center;
+    z-index: 10;
+    position: relative;
+    top: 10%;
+}
+
+.contact-container .overlay :first-child{
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contact-container .overlay .txt {
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-size: 19px;
+}
+
+.contact-container .contact-us{
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contact-container .send-msg{
+    border: 1px solid #FFC5E5;
+    padding: 30px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px lightgray;
+}
+
+.contact-container .send-msg .head{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contact-container .send-msg .txt{
+    color: #555555;
+    margin-bottom: 10px;
+}
+
+.contact-container .msg-details{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.input{
+    padding-right: 30px;
+}
+
+.contact-container .msg-details input{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 15px;
+    width: 100%;
+    margin: 10px 0 20px 0;
+    outline: none;
+}
+
+.contact-container .msg-details input:focus-within{
+    border: 1px solid #FFC5E5;
+    box-shadow: 0 0 5px #FFC5E5;
+}
+
+.contact-container .select{
+    position: relative;
+}
+
+.contact-container .select .default{
+    background-color: white;
+    border: 1px solid lightgray;
+    position: relative;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.contact-container .select .default:focus-within{
+    box-shadow: 0 0 5px #FFC5E5;
+    border: 1px solid #FFC5E5;
+}
+
+.contact-container .select .default svg{
+    position: absolute;
+    right: 5px;
+    color: #555555;
+}
+
+.contact-container .options{
+    position: absolute;
+    display: block;
+    background-color: white;
+    border-radius: 5px;
+    padding: 0 5px;
+    margin-top: 5px;
+    z-index: 999;
+    border: 1px solid lightgray;
+    transition: 0.5s ease-in-out;
+}
+
+.contact-container .options button{
+    background-color: white;
+    margin: 5px 0;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    display: flex;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+}
+
+.contact-container .options button:hover{
+    background-color: #FFC5E5;
+}
+
+.contact-container .options  svg{
+    position: absolute;
+    right: 10px;
+    color: #555555;
+    opacity: 0;
+}
+
+.contact-container #first-option-1,
+.contact-container #second-option-2,
+.contact-container #third-option-3,
+.contact-container #fourth-option-4,
+.contact-container #fifth-option-5,
+.contact-container #sixth-option-6 {
+    background-color: #FFC5E5;
+}
+
+.contact-container #first-option-1 svg,
+.contact-container #second-option-2 svg,
+.contact-container #third-option-3 svg,
+.contact-container #fourth-option-4 svg,
+.contact-container #fifth-option-5 svg,
+.contact-container #sixth-option-6 svg {
+    opacity: 1;
+}
+
+.contact-container .msg{
+    padding-right: 30px;
+}
+
+.contact-container .msg textarea{
+    margin: 10px 0;
+    width: 100%;
+    height: 80px;
+    resize: none;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 15px;
+    outline: none;
+}
+
+.contact-container .msg textarea::placeholder{
+    font-family: 'outfit', sans-serif;
+    font-size: 16px;
+}
+
+.contact-container .msg textarea:focus-within{
+    box-shadow: 0 0 5px #FFC5E5;
+    border: 1px solid #FFC5E5;
+}
+
+.contact-container .btn button{
+    width: 100%;
+    border: none;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555555;
+    cursor: not-allowed;
+}
