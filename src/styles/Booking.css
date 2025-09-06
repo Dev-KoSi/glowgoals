@@ -274,3 +274,48 @@
 .booking-container .get-in-touch .info svg{
     color: #FF008C;
 }
+
+.booking-container .suggestion{
+    background-color: #FF008C;
+    color: white;
+    text-align: center;
+    padding: 70px 0;
+    margin-bottom: 50px;
+}
+
+.booking-container .suggestion .head{
+    font-size: 50px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.booking-container .suggestion .txt{
+    font-size: 19px;
+    margin: 20px 0;
+}
+
+.booking-container .suggestion .btns{
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+}
+
+.booking-container .suggestion button{
+    width: 100%;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.booking-container .suggestion .btns :first-child{
+    border: 1px solid white;
+    color: #FF008C;
+}
+
+.booking-container .suggestion .btns :first-child:hover{
+    transform: scale(1.03);
+    filter: brightness(90%);
+}

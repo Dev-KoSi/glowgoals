@@ -290,6 +290,21 @@ export function Booking() {
                         </div>
                     </div>
                 </div>
+                <div className="suggestion">
+                    <div style={{fontFamily: 'Caveat'}} className="head">
+                        Ready to Shop Our Products?
+                    </div>
+
+                    <div className="txt">
+                        While you wait for your consultation, explore our premium collection of skincare, makeup, and fragrance products.
+                    </div>
+
+                    <div className="btns">
+                        <button>
+                            Shop Products
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     )
