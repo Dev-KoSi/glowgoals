@@ -45,13 +45,14 @@
     padding: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 30px;
 }
 
 .contact-container .send-msg{
     border: 1px solid #FFC5E5;
     padding: 30px;
     background-color: white;
+    height: fit-content;
     border-radius: 20px;
     box-shadow: 0 10px 20px lightgray;
 }
@@ -59,12 +60,12 @@
 .contact-container .send-msg .head{
     font-size: 25px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .contact-container .send-msg .txt{
     color: #555555;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .contact-container .msg-details{
@@ -177,7 +178,7 @@
 }
 
 .contact-container .msg textarea{
-    margin: 10px 0;
+    margin: 10px 0 20px 0;
     width: 100%;
     height: 80px;
     resize: none;
@@ -206,4 +207,132 @@
     font-weight: bold;
     color: #555555;
     cursor: not-allowed;
+}
+
+.contact-container .contact-info{
+    border: 1px solid #FFC5E5;
+    padding: 30px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px lightgray;
+    margin-bottom: 20px;
+}
+
+.contact-container .contact-info .head{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: black;
+}
+
+.contact-container .contact-info .info{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.contact-container .contact-info svg{
+    color: #FF008C;
+    background-color: #FFC5E5;
+    padding: 12px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.contact-container .contact-info h4{
+    margin: 0 0 10px 0;
+    color: black;
+}
+
+.contact-container .contact-info div{
+    color: #555555;
+}
+
+.contact-container .handles{
+    border: 1px solid #FFC5E5;
+    padding: 30px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px lightgray;
+}
+
+.contact-container .handles .head{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.contact-container .handles .txt{
+    color: #555555;
+}
+
+.contact-container .handles .icons{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.contact-container .handles svg{
+    color: #555555;
+    background-color: lightgray;
+    padding: 10px;
+    border: 1px solid #555555;
+    border-radius: 5px;
+}
+
+.contact-container .suggestion{
+    background-color: #FF008C;
+    color: white;
+    text-align: center;
+    padding: 70px 0;
+    margin-bottom: 50px;
+}
+
+.contact-container .suggestion .head{
+    font-size: 50px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.contact-container .suggestion .txt{
+    font-size: 19px;
+    margin: 20px 0;
+}
+
+.contact-container .suggestion .btns{
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+}
+
+.contact-container .suggestion button{
+    width: 100%;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.contact-container .suggestion .btns :first-child{
+    border: 1px solid white;
+    color: #FF008C;
+}
+
+.contact-container .suggestion .btns :first-child:hover{
+    transform: scale(1.03);
+    filter: brightness(90%);
+}
+
+.contact-container .suggestion .btns :nth-child(2){
+    border: 1px solid white;
+    background-color: #FF008C;
+    color: white;
+}
+
+.contact-container .suggestion .btns :nth-child(2):hover{
+    background-color: white;
+    color: #FF008C;
 }
