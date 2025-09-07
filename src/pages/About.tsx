@@ -84,6 +84,114 @@ export function About() {
                         </div>
                     </div>
                 </div>
+
+                <div className="why-us">
+                    <div style={{fontFamily: 'Caveat'}} id="head">
+                        Why Choose Glow Goals
+                    </div>
+
+                    <div className="points">
+                        <div>
+                            <div className="point">
+                                <div>
+                                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                </div>
+
+                                <div>
+                                    <div style={{fontFamily: 'Caveat'}} className="head">
+                                        Expert Knowledge
+                                    </div>
+
+                                    <div className="txt">
+                                        Our team consists of certified beauty therapists and skincare specialists who understand the nuances of different skin types and can guide you to the perfect treatments and products.
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div className="point">
+                                <div>
+                                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                </div>
+
+                                <div>
+                                    <div style={{fontFamily: 'Caveat'}} className="head">
+                                        Quality Assurance
+                                    </div>
+
+                                    <div className="txt">
+                                        Every product and treatment in our salon is carefully selected and tested to ensure optimal results and safety for all skin types.
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div className="point">
+                                <div>
+                                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                </div>
+
+                                <div>
+                                    <div style={{fontFamily: 'Caveat'}} className="head">
+                                        Ongoing Support
+                                    </div>
+
+                                    <div className="txt">
+                                        We provide ongoing support for all our clients, including follow-up consultations, skincare advice, and product recommendations.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div>
+                            <div className="point">
+                                <div>
+                                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                </div>
+
+                                <div>
+                                    <div style={{fontFamily: 'Caveat'}} className="head">
+                                        Comprehensive Services
+                                    </div>
+
+                                    <div className="txt">
+                                        From facial treatments to makeup services, we offer a complete range of beauty and wellness services to meet all your needs.
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div className="point">
+                                <div>
+                                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                </div>
+
+                                <div>
+                                    <div style={{fontFamily: 'Caveat'}} className="head">
+                                        Beauty Events
+                                    </div>
+
+                                    <div className="txt">
+                                        Join our community through workshops, beauty consultations, and events designed to help you learn about skincare and beauty techniques.
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div className="point">
+                                <div>
+                                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                </div>
+
+                                <div>
+                                    <div style={{fontFamily: 'Caveat'}} className="head">
+                                        Fair Pricing
+                                    </div>
+
+                                    <div className="txt">
+                                        We believe quality beauty services should be accessible to everyone, which is why we offer competitive pricing and flexible booking options.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )
