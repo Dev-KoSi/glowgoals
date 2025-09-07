@@ -58,3 +58,37 @@
 .about-container .story .txt{
     color: #555555;
 }
+
+.about-container .our-values{
+    padding: 100px 25px;
+    text-align: center;
+}
+
+.about-container .our-values #head{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.about-container .the-values{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin: 0 20px;
+}
+
+.about-container .value svg{
+    color: white;
+    padding: 20px;
+    background-color: #FF008C;
+    border-radius: 50%;
+}
+.about-container .value .head{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.about-container .value .txt{
+    color: #555555;
+}
