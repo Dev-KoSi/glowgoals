@@ -1,0 +1,42 @@
+.about-container .top-display{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/makeup-about.jpg);
+    background-size: cover;
+}
+
+.about-container .top-display::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.473);
+    z-index: 1;
+}
+
+.about-container .overlay{
+    color: white;
+    text-align: center;
+    z-index: 10;
+    position: relative;
+    top: 10%;
+}
+
+.about-container .overlay :first-child{
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.about-container .overlay .txt {
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-size: 19px;
+}

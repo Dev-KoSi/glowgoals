@@ -32,7 +32,7 @@ export function Header() {
 
                     <a href="/contact"><span className="header-contact">Contact</span></a>
 
-                    <a href=""><span className="header-about">About</span></a>
+                    <a href="/about"><span className="header-about">About</span></a>
                 </nav>
 
                 <div className="header-search-cart-wishlist">

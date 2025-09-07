@@ -7,6 +7,7 @@ import { Shop } from './pages/Shop'
 import { Services } from './pages/Services'
 import { Booking } from './pages/Booking'
 import { Contact } from './pages/Contact'
+import { About } from './pages/About'
 
 export function App() {
 
@@ -56,6 +57,16 @@ export function App() {
         <div>
           <Header/>
           <Contact/>
+          <Footer/>
+        </div>
+      )
+    },
+    {
+      path: '/about',
+      element: (
+        <div>
+          <Header/>
+          <About/>
           <Footer/>
         </div>
       )
