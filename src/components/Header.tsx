@@ -1,6 +1,24 @@
+import { useLocation } from 'react-router-dom'
 import '../styles/Header.css'
+import { useEffect, useState } from 'react';
 
 export function Header() {
+    const location:any = useLocation();
+    const [loc, setLoc] = useState<string>('');
+
+    useEffect(() => {
+        if(location.pathname === '/cosmetics') {
+            setLoc('1');
+        } else if(location.pathname === '/services') {
+            setLoc('2');
+        } else if(location.pathname === '/booking') {
+            setLoc('3');
+        } else if(location.pathname === '/contact') {
+            setLoc('4');
+        } else if(location.pathname === '/about') {
+            setLoc('5');
+        }
+    }, [location]);
 
     return (
         <div className="header-container">
@@ -24,15 +42,15 @@ export function Header() {
                 </div>
 
                 <nav className='header-nav-links'>
-                    <a href="/cosmetics"><span className="header-ourshop">Our Shop</span></a>
+                    <a href="/cosmetics"><span className="header-ourshop $" id={`ourshop-${loc}`}>Our Shop</span></a>
 
-                    <a href="/services"><span className="header-services">Services</span></a>
+                    <a href="/services"><span className="header-services" id={`services-${loc}`}>Services</span></a>
 
-                    <a href="/booking"><span className="header-booking">Booking</span></a>
+                    <a href="/booking"><span className="header-booking" id={`booking-${loc}`}>Booking</span></a>
 
-                    <a href="/contact"><span className="header-contact">Contact</span></a>
+                    <a href="/contact"><span className="header-contact" id={`contact-${loc}`}>Contact</span></a>
 
-                    <a href="/about"><span className="header-about">About</span></a>
+                    <a href="/about"><span className="header-about" id={`about-${loc}`}>About</span></a>
                 </nav>
 
                 <div className="header-search-cart-wishlist">

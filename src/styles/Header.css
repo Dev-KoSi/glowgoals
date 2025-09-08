@@ -54,9 +54,16 @@ svg{
     color: black;
     white-space: nowrap;
     transition: 0.3s ease-in-out;
+    padding-bottom: 5px;
 }
 
 .header-nav-links span:hover {
+    color: #FF008C;
+    border-bottom: 2px solid #FF008C;
+}
+
+#ourshop-1, #services-2, #booking-3, #contact-4, #about-5{
+    border-bottom: 2px solid #FF008C;
     color: #FF008C;
 }
 
@@ -108,6 +115,7 @@ svg{
     margin: 0 0 0 10px;
     border-radius: 5px;
     color: black;
+    transition: 0.3s ease-in-out;
 }
 
 .header-cart svg:hover,
