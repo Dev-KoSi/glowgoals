@@ -2,7 +2,7 @@ svg{
     cursor: pointer;
 }
 
-.header{
+.header-header{
     background-color: rgba(255, 255, 255, 0.941);
     display: flex;
     position: fixed;

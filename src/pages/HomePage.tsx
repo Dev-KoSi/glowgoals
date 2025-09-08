@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react'
-import { Header } from '../components/Header'
 import '../styles/HomePage.css'
 import '../styles/Header.css'
+import { useNavigate } from 'react-router-dom';
 
 export function HomePage() {
 
-    const [toggleHeader, setToggleHeader] = useState<boolean>(false);
+    const navigate = useNavigate();
+
+    const [toggleHeader, setToggleHeader] = useState<string>('homepage');
     
     useEffect(() => {
     const handleScroll = () => {
@@ -13,9 +15,9 @@ export function HomePage() {
         console.log(currentScroll)
 
         if (currentScroll < 50) {
-            setToggleHeader(false);
+            setToggleHeader('homepage');
         } else {
-            setToggleHeader(true);
+            setToggleHeader('header');
         }
     };
 
@@ -26,13 +28,10 @@ export function HomePage() {
 
     return (
         <div className="homepage-container">
-            {toggleHeader && <div className="header-cover">
-                <Header/>
-            </div>}
             <div className="homepage">
                 <div className="landingpage">
-                    {!toggleHeader && <div className="homepage-header">
-                        <div className="logo-app-name">
+                    <div className={`${toggleHeader}-header`}>
+                        <div className={`${toggleHeader}-logo-app-name`}>
                             <a style={{width: 'fit-content'}} href="/"><div className="trans-logo-app-name">
                                 <div className="logo">
                                     <svg fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1H5C3.89 1 3 1.89 3 3V21C3 22.11 3.89 23 5 23H19C20.11 23 21 22.11 21 21V9M19 9H14V4H5V21H19V9Z"></path></svg>
@@ -50,40 +49,40 @@ export function HomePage() {
                             </div></a>
                         </div>
                         
-                        <nav className='nav-links'>
-                            <a href=""><span className="ourshop">Our Shop</span></a>
+                        <nav className={`${toggleHeader}-nav-links`}>
+                            <a href="/cosmetics"><span className={`${toggleHeader}-ourshop`}>Our Shop</span></a>
 
-                            <a href=""><span className="services">Services</span></a>
+                            <a href="/services"><span className={`${toggleHeader}-services`}>Services</span></a>
 
-                            <a href=""><span className="booking">Booking</span></a>
+                            <a href="/booking"><span className={`${toggleHeader}-booking`}>Booking</span></a>
 
-                            <a href=""><span className="contact">Contact</span></a>
+                            <a href="/contact"><span className={`${toggleHeader}-contact`}>Contact</span></a>
 
-                            <a href=""><span className="about">About</span></a>
+                            <a href="/about"><span className={`${toggleHeader}-about`}>About</span></a>
                         </nav>
 
-                        <div className="search-cart-wishlist">
-                            <div className="search-input">
+                        <div className={`${toggleHeader}-search-cart-wishlist`}>
+                            <div className={`${toggleHeader}-search-input`}>
                                 <input type="text" placeholder="Search products..." />
 
-                                <div className="search-icon">
+                                <div className={`${toggleHeader}-search-icon`}>
                                     <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                                 </div>
                             </div>
 
-                            <a className='cart' href="">
+                            <a className={`${toggleHeader}-cart`} href="">
                                 <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
 
-                                <span className="cart-count">99+</span>
+                                <span className={`${toggleHeader}-cart-count`}>99+</span>
                             </a>
 
-                            <a className='wishlist' href="">
+                            <a className={`${toggleHeader}-wishlist`} href="">
                                 <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
 
-                                <span className="wishlist-count">1</span>
+                                <span className={`${toggleHeader}-wishlist-count`}>1</span>
                             </a>
                         </div>
-                    </div>}
+                    </div>
                     <video  autoPlay muted loop playsInline>
                         <source src="/cosmetics.mp4" type='video/mp4'/>
                     </video>
@@ -106,11 +105,17 @@ export function HomePage() {
                         </div>
 
                         <div className="landingpage-btns">
-                            <button>
+                            <button onClick={() => {
+                                navigate('/cosmetics')
+                            }}>
                                 SHOP COLLECTIONS
                             </button>
                             
-                            <button>BOOK NOW</button>
+                            <button onClick={() => {
+                                navigate('/booking')
+                            }}>
+                                BOOK NOW
+                            </button>
                         </div>
                     </div>
                 </div>

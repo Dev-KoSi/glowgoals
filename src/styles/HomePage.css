@@ -66,7 +66,7 @@ svg{
     left: 0;
 }
 
-.logo-app-name{
+.homepage-logo-app-name{
     width: 40%;
 }
 
@@ -101,7 +101,7 @@ svg{
     font-size: 13px;
 }
 
-.nav-links{
+.homepage-nav-links{
     width: 60%;
     margin: 20px 0 0 0;
     position: relative;
@@ -109,22 +109,24 @@ svg{
     align-items: center;
     justify-content: center;
 }
-.nav-links span{
+.homepage-nav-links span{
     margin-left: 20px;
     font-size: 16px;
     color: white;
     white-space: nowrap;
+    transition: 0.3s ease-in-out;
 }
-.nav-links span:hover{
+
+.homepage-nav-links span:hover{
     color:  #FF008C;
 }
 
-.search-cart-wishlist{
+.homepage-search-cart-wishlist{
     display: flex;
     width: 50%;
 }
 
-.search-input{
+.homepage-search-input{
     display: flex;
     border: 1px solid lightgray;
     padding: 8px;
@@ -133,29 +135,29 @@ svg{
     background-color: rgba(255, 255, 255, 0.17);
 }
 
-.search-input input{
+.homepage-search-input input{
     outline: none;
     border: none;
     width: 100%;
     background: transparent;
 }
 
-.search-input ::placeholder{
+.homepage-search-input ::placeholder{
     font-size: 14px;
     color: lightgray;
 }
 
-.search-input svg{
+.homepage-search-input svg{
     color: lightgray;
     margin: 5px 0 0 0;
 }
 
-.cart, .wishlist{
+.homepage-cart, .homepage-wishlist{
     display: flex;
     cursor: pointer;
 }
 
-.cart svg, .wishlist svg{
+.homepage-cart svg, .homepage-wishlist svg{
     border: 1px solid lightgray;
     padding: 12.5px;
     margin: 0 0 0 10px;
@@ -164,7 +166,7 @@ svg{
     background-color: rgba(255, 255, 255, 0.17);
 }
 
-.cart-count, .wishlist-count{
+.homepage-cart-count, .homepage-wishlist-count{
     background-color:  #FF008C;
     margin: -10px 0 0 40px;
     position: absolute;
@@ -324,6 +326,7 @@ svg{
     font-weight: bold;
     background-color: #FF008C;
     cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
 
 .book-beauty-consultation .appointment:hover{

@@ -465,7 +465,7 @@ export function Shop() {
                         <div className="image">
                             
                             <span>ALL TYPES</span>
-                            <img style={{width: '100%'}} src="/public/perfume-bottles-isolated-against-white_127657-12258.jpg" alt="" />
+                            <img style={{width: '100%'}} src="/perfume-bottles-isolated-against-white_127657-12258.jpg" alt="" />
                         </div>
 
                         <div className="details">
@@ -601,7 +601,7 @@ export function Shop() {
                         <div className="image">
                             
                             <span>ALL TYPES</span>
-                            <img style={{width: '100%'}} src="/public/perfume-bottles-isolated-against-white_127657-12258.jpg" alt="" />
+                            <img style={{width: '100%'}} src="/perfume-bottles-isolated-against-white_127657-12258.jpg" alt="" />
                         </div>
 
                         <div className="details">
@@ -737,7 +737,7 @@ export function Shop() {
                         <div className="image">
                             
                             <span>ALL TYPES</span>
-                            <img style={{width: '100%'}} src="/public/perfume-bottles-isolated-against-white_127657-12258.jpg" alt="" />
+                            <img style={{width: '100%'}} src="/perfume-bottles-isolated-against-white_127657-12258.jpg" alt="" />
                         </div>
 
                         <div className="details">

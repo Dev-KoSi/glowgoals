@@ -4,7 +4,7 @@ export function Header() {
 
     return (
         <div className="header-container">
-            <div className="header">
+            <div className="header-header">
                 <div className="header-logo-app-name">
                     <a style={{width: 'fit-content'}} href="/"><div className="trans-logo-app-name">
                         <div className="logo">
