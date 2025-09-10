@@ -8,6 +8,7 @@ import { Services } from './pages/Services'
 import { Booking } from './pages/Booking'
 import { Contact } from './pages/Contact'
 import { About } from './pages/About'
+import { Cart } from './store/Cart'
 
 export function App() {
 
@@ -67,6 +68,16 @@ export function App() {
         <div>
           <Header/>
           <About/>
+          <Footer/>
+        </div>
+      )
+    },
+    {
+      path: '/cart',
+      element: (
+        <div>
+          <Header/>
+          <Cart/>
           <Footer/>
         </div>
       )
