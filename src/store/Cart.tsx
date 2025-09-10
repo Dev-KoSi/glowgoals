@@ -53,20 +53,23 @@ export function Cart() {
 
                 <div className="cart-display">
                     <div className='cart-summary'>
-                        <div className="cart-items">
+
+                        {/* CART */}
+
+                        <div className="cart-section">
                             <div className="header">
                                 <div style={{fontFamily: 'Caveat'}} className="head">
                                     Cart Items (2)
                                 </div>
 
                                 <div className="clear">
-                                    Cleat Cart
+                                    Clear Cart
                                 </div>
                             </div>
 
                             <div className="item">
                                 <div className="img">
-                                    <img src="/public/perfume-spray-bottle-isolated_93675-123583.jpg" alt="" />
+                                    <img src="/perfume-spray-bottle-isolated_93675-123583.jpg" alt="" />
                                 </div>
 
                                 <div className="details">
@@ -87,7 +90,7 @@ export function Cart() {
                                     </div>
 
                                     <div style={{fontFamily: 'Caveat'}} className="price">
-                                        GHC 25,000
+                                        GHC 500
                                     </div>
 
                                     <div className="quantity">
@@ -102,7 +105,7 @@ export function Cart() {
                                         </div>
 
                                         <div style={{fontFamily: 'Caveat'}} className="sum">
-                                            GHC 50,000
+                                            GHC 1000
                                         </div>
                                     </div>
                                 </div>
@@ -110,12 +113,20 @@ export function Cart() {
 
                             <div className="item">
                                 <div className="img">
-                                    <img src="/public/perfume-spray-bottle-isolated_93675-123583.jpg" alt="" />
+                                    <img src="/perfume-spray-bottle-isolated_93675-123583.jpg" alt="" />
                                 </div>
 
                                 <div className="details">
-                                    <div style={{fontFamily: 'Caveat'}} className="name">
-                                        Luxury Lipstick Set - Nude Collection
+                                    <div style={{fontFamily: 'Caveat'}} className="name-cmds">
+                                        <div className="name">
+                                            Luxury Lipstick Set - Nude Collection
+                                        </div>
+
+                                        <div className="cmds">
+                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M18 2H6c-1.103 0-2 .897-2 2v18l8-4.572L20 22V4c0-1.103-.897-2-2-2zm0 16.553-6-3.428-6 3.428V4h12v14.553z"></path></svg>
+
+                                            <svg height="16" width="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                                        </div>
                                     </div>
 
                                     <div className="category">
@@ -123,7 +134,7 @@ export function Cart() {
                                     </div>
 
                                     <div style={{fontFamily: 'Caveat'}} className="price">
-                                        GHC 25,000
+                                        GHC 500
                                     </div>
 
                                     <div className="quantity">
@@ -136,6 +147,112 @@ export function Cart() {
                                             <div id='num'>2</div>
                                             <div>+</div>
                                         </div>
+
+                                        <div style={{fontFamily: 'Caveat'}} className="sum">
+                                            GHC 1000
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* SAVE FOR LATER */}
+                        
+                        <div className="cart-section">
+                            <div className="header">
+                                <div style={{fontFamily: 'Caveat'}} className="head">
+                                    Save for Later (2)
+                                </div>
+
+                                <div className="clear">
+                                    Clear All
+                                </div>
+                            </div>
+
+                            <div className="item">
+                                <div className="img">
+                                    <img src="/perfume-spray-bottle-isolated_93675-123583.jpg" alt="" />
+                                </div>
+
+                                <div className="details">
+                                    <div style={{fontFamily: 'Caveat'}} className="name-cmds">
+                                        <div className="name">
+                                            Luxury Lipstick Set - Nude Collection
+                                        </div>
+
+                                        <div className="cmds">
+                                            <svg height="16" width="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                                        </div>
+                                    </div>
+
+                                    <div className="category">
+                                        GlowGoals • Makeup • All Types
+                                    </div>
+
+                                    <div style={{fontFamily: 'Caveat'}} className="price">
+                                        GHC 500
+                                    </div>
+
+                                    <div className="date">
+                                        Saved on 10/8/2025
+                                    </div>
+
+                                    <div className="btns">
+                                        <button id='cart'>
+                                            <svg fill="none" stroke="currentColor" width="16" height="16" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+
+                                            Move to Cart
+                                        </button>
+
+                                        <button id='wish'>
+                                            <svg fill="none" stroke="currentColor" width="16" height="16" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+
+                                            Add to Wishlist
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="item">
+                                <div className="img">
+                                    <img src="/perfume-spray-bottle-isolated_93675-123583.jpg" alt="" />
+                                </div>
+
+                                <div className="details">
+                                    <div style={{fontFamily: 'Caveat'}} className="name-cmds">
+                                        <div className="name">
+                                            Luxury Lipstick Set - Nude Collection
+                                        </div>
+
+                                        <div className="cmds">
+                                            <svg height="16" width="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                                        </div>
+                                    </div>
+
+                                    <div className="category">
+                                        GlowGoals • Makeup • All Types
+                                    </div>
+
+                                    <div style={{fontFamily: 'Caveat'}} className="price">
+                                        GHC 500
+                                    </div>
+
+                                    <div className="date">
+                                        Saved on 10/8/2025
+                                    </div>
+
+                                    <div className="btns">
+                                        <button id='cart'>
+                                            <svg fill="none" stroke="currentColor" width="16" height="16" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+
+                                            Move to Cart
+                                        </button>
+
+                                        <button id='wish'>
+                                            <svg fill="none" stroke="currentColor" width="16" height="16" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+
+                                            Add to Wishlist
+                                        </button>
                                     </div>
                                 </div>
                             </div>
