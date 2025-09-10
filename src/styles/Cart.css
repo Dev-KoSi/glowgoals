@@ -4,7 +4,7 @@
     position: relative;
     display: flex;
     justify-content: center;
-    align-section: center;
+    align-items: center;
     background-image: url(/empty-cart.jpg);
     background-size: cover;
 }
@@ -127,9 +127,6 @@
 
 .cart-container .cart-display{
     padding: 50px;
-}
-
-.cart-container .cart-summary{
 }
 
 .cart-container .cart-summary .cart-section{
