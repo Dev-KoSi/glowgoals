@@ -2,11 +2,11 @@ import { useState } from 'react'
 import '../styles/Cart.css'
 
 export function Cart() {
-    const [emptyCart, setEmptyCart] = useState<boolean>(false);
+    // const [emptyCart, setEmptyCart] = useState<boolean>(false);
 
     return (
         <div className="cart-container">
-            {emptyCart && <div className="empty-cart">
+            {/* {emptyCart && <div className="empty-cart">
                 <div className="top-display">
                     <div className="overlay">
                         <div style={{fontFamily: 'Caveat'}}>
@@ -36,7 +36,7 @@ export function Cart() {
                         BROWSE PRODUCTS
                     </div></a>
                 </div>
-            </div>}
+            </div>} */}
 
             <div className="cart">
                 <div className="top-display">
