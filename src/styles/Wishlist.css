@@ -90,3 +90,101 @@
     background-color: #c4026c;
     transform: scale(1.05);
 }
+
+.wishlist-container .all{
+    padding: 80px 150px 0 150px;
+    background-color: #FFE6F2;
+    margin-bottom: 50px;
+}
+
+.wishlist-container .all .header{
+    box-shadow: 0 0 2px #FF66B3;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.wishlist-container .all .header :first-child{
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.wishlist-container .all .header .head{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.wishlist-container .all .header #amount{
+    color: #FF008C;
+}
+
+.wishlist-container .all .header :nth-child(2){
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    color: #555555;
+}
+
+.wishlist-container .all .header .count{
+    font-size: 16px;
+    font-weight: normal;
+    width: 100%;
+}
+
+.wishlist-container #grid{
+    padding: 50px 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.wishlist-container #grid .product:hover .name{
+    color: #c4026c;
+}
+
+.wishlist-container #grid #del{
+    right: 0;
+    padding: 0;
+    padding: 10px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #FF008C;
+    margin: 10px;
+    color: white;
+    transition: 0.5s ease-in-out;
+    display: none;
+    z-index: 10;
+    opacity: 0;
+}
+
+.wishlist-container #grid #wish-icon{
+    border: 1px solid #FF008C;
+    color: #FF008C;
+    background-color: #FFE6F2;
+    fill: #FF008C;
+}
+
+.wishlist-container .all .btn{
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.wishlist-container .all .btn button{
+    border: none;
+    background: linear-gradient(to right, #FF008C, #FF66B3);
+    color: white;
+    border-radius: 10px;
+    padding: 20px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    transition: 0.3s ease-in-out;
+}
+
+.wishlist-container .all .btn button:hover{
+    background: linear-gradient(to right, #c4026c, #FF008C);
+    transform: scale(1.05);
+}
