@@ -9,6 +9,7 @@ import { Booking } from './pages/Booking'
 import { Contact } from './pages/Contact'
 import { About } from './pages/About'
 import { Cart } from './store/Cart'
+import { Wishlist } from './store/Wishlist'
 
 export function App() {
 
@@ -78,6 +79,16 @@ export function App() {
         <div>
           <Header/>
           <Cart/>
+          <Footer/>
+        </div>
+      )
+    },
+    {
+      path: '/wishlist',
+      element: (
+        <div>
+          <Header/>
+          <Wishlist/>
           <Footer/>
         </div>
       )

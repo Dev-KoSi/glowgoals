@@ -1,0 +1,92 @@
+.wishlist-container .wishlist .top-display{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/ws.avif);
+    background-size: cover;
+}
+
+.wishlist-container .wishlist .top-display::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.473);
+    z-index: 1;
+}
+
+.wishlist-container .wishlist .overlay{
+    color: white;
+    text-align: center;
+    z-index: 10;
+    position: relative;
+    top: 10%;
+}
+
+.wishlist-container .wishlist .overlay :first-child{
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.wishlist-container .wishlist .overlay .txt {
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-size: 19px;
+}
+
+.wishlist-container .wishlist .gist{
+    background-color: rgba(230, 230, 230, 0.164);
+    padding: 80px 35px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.wishlist-container .gist .emoji{
+    font-size: 100px;
+    animation: bounce 1.5s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.wishlist-container .gist .head{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.wishlist-container .gist .txt{
+    width: 500px;
+    margin: 0 auto;
+    color: #555555;
+}
+
+.wishlist-container .gist .btn{
+    color: white;
+    background-color: #FF008C;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 15px 30px;
+    border-radius: 5px;
+    margin-top: 30px;
+    z-index: 1;
+    transition: 0.3s ease-in-out;
+}
+
+.wishlist-container .gist .btn:hover{
+    background-color: #c4026c;
+    transform: scale(1.05);
+}
