@@ -77,7 +77,7 @@
 }
 
 .cart-container .gist .btn:hover{
-    filter: brightness(90%);
+    background-color: #c4026c;
     transform: scale(1.05);
 }
 
@@ -126,7 +126,15 @@
 }
 
 .cart-container .cart-display{
-    padding: 80px 35px;
+    padding: 80px 35px 0px 35px;
+    display: flex;
+    gap: 30px;
+    background-color: rgba(230, 230, 230, 0.164);
+    margin-bottom: 50px;
+}
+
+.cart-container .cart-summary{
+    width: 65%;
 }
 
 .cart-container .cart-summary .cart-section{
@@ -134,6 +142,7 @@
     box-shadow: 0 0 2px lightgray;
     border-radius: 5px;
     margin-bottom: 50px;
+    background-color: white;
 }
 
 .cart-container .cart-display .header{
@@ -297,7 +306,7 @@
 }
 
 .cart-container .cart-display .item .btns #cart:hover{
-    filter: brightness(90%);
+    background-color: #c4026c;
 }
 
 .cart-container .cart-display .item .btns #wish{
@@ -312,7 +321,8 @@
 }
 
 .cart-container .cart-display #products-flex{
-    margin: 10px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .cart-container .cart-display #products-flex::-webkit-scrollbar{
@@ -343,4 +353,135 @@
     color: #FF008C;
     background-color: #FFC5E5;
     filter: brightness(100%);
+}
+
+.cart-container .order-summary{
+    width: 35%;
+    height: fit-content;
+    border: lightgray 1px solid;
+    box-shadow: 0 0 2px lightgray;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: white;
+    transition: 0.3s ease-in-out;
+}
+
+.cart-container .order-summary:hover{
+    box-shadow: 0 6px 15px -2px lightgray;
+    transform: translateY(-2px);
+}
+
+.cart-container .order-summary .head{
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.cart-container .order-summary .subtotal, .cart-container .order-summary .shipping, .cart-container .order-summary .total{
+    display: flex;
+    white-space: nowrap;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.cart-container .order-summary .subtotal .txt, .cart-container .order-summary .shipping .txt{
+    color: #555555;
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.cart-container .order-summary .shipping{
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 10px;
+}
+
+.cart-container .order-summary .shipping .fee{
+    color: #16A34A;
+}
+
+.cart-container .order-summary .total{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.cart-container .order-summary .total .head{
+    width: 100%;
+    font-size: 20px;
+}
+
+.cart-container .order-summary .total .amount{
+    color: #FF008C;
+    font-size: 20px;
+}
+
+.cart-container .order-summary .tip{
+    background-color:  #f0fdf4;
+    border: 1px solid #bbf7d0;
+    color: #16A34A;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.cart-container .order-summary button{
+    border: none;
+    width: 100%;
+    color: white;
+    background-color: #FF008C;
+    transition: 0.3s ease-in-out;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.cart-container .order-summary button:hover{
+    background-color: #c4026c;
+}
+
+.cart-container .order-summary .dir{
+    text-align: center;
+    font-size: 14px;
+    border-bottom: 1px solid lightgray;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.cart-container .order-summary #a{
+    color: #555555;
+    transition: 0.3s ease-in-out;
+}
+
+.cart-container .order-summary #a:hover{
+    color: #FF008C;
+}
+
+.cart-container .order-summary .strategy{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    font-size: 12px;
+    color: #555555;
+}
+
+.cart-container .order-summary .strategy div{
+    transition: 0.3s ease-in-out;
+}
+
+.cart-container .order-summary .strategy svg{
+    color: #FF008C;
+    transition: 0.3s ease-in-out;
+}
+
+.cart-container .order-summary .secure:hover, .cart-container .order-summary .fast:hover{
+    transform: translateY(-2px);
+    color: #FF008C;
+}
+
+.cart-container .order-summary .secure:hover svg, .cart-container .order-summary .fast:hover svg{
+    transform: scale(1.1);
 }
