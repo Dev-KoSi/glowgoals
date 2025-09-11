@@ -43,7 +43,7 @@
 
 .shop-container .filters{
     display: flex;
-    background-color: #FFC5E5;
+    background-color: #FFE6F2;
     padding: 40px 35px;
 }
 
@@ -133,7 +133,7 @@
 }
 
 .shop-container .customize .options button:hover{
-    background-color: #FFC5E5;
+    background-color: #FFE6F2;
 }
 
 .shop-container .customize .options  svg{
@@ -148,7 +148,7 @@
 .shop-container .customize #third-option-3,
 .shop-container .customize #fourth-option-4,
 .shop-container .customize #fifth-option-5 {
-    background-color: #FFC5E5;
+    background-color: #FFE6F2;
 }
 
 .shop-container .customize #first-option-1 svg,
@@ -277,7 +277,7 @@
 }
 
 .shop-container .sort .options button:hover{
-    background-color: #FFC5E5;
+    background-color: #FFE6F2;
 }
 
 .shop-container .sort .options  svg{
@@ -316,7 +316,7 @@
 .shop-container .sort #fourth-price-range-option-4,
 .shop-container .sort #fifth-price-range-option-5,
 .shop-container .sort #sixth-price-range-option-6 {
-    background-color: #FFC5E5;
+    background-color: #FFE6F2;
 }
 
 .shop-container .sort #first-category-option-1 svg,
@@ -360,7 +360,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding: 50px 35px;
-    background-color: #FFC5E5;
+    background-color: #FFE6F2;
     margin-bottom: 50px;
 }
 
@@ -487,7 +487,7 @@
 #list .btns svg:hover{
     border: 1px solid #FF008C;
     color: #FF008C;
-    background-color: #FFC5E5;
+    background-color: #FFE6F2;
 }
 
 #grid{
@@ -495,7 +495,7 @@
     grid-template-columns: repeat(5, 1fr);
     gap: 15px;
     padding: 50px 35px;
-    background-color: #FFC5E5;
+    background-color: #FFE6F2;
     margin-bottom: 50px;
 }
 
@@ -612,5 +612,5 @@
 #grid .btns svg:hover{
     border: 1px solid #FF008C;
     color: #FF008C;
-    background-color: #FFC5E5;
+    background-color: #FFE6F2;
 }

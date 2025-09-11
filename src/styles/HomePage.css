@@ -276,7 +276,7 @@ svg{
     display: flex;
     border-bottom: 1px solid  #FF66B3;
     padding: 40px 35px;
-    background-color: #FFC5E5;
+    background-color: #FFE6F2;
 }
 
 .book-beauty-consultation :first-child{
@@ -484,7 +484,7 @@ svg{
 .products-flex .btns svg:hover{
     border: 1px solid #FF008C;
     color: #FF008C;
-    background-color: #FFC5E5;
+    background-color: #FFE6F2;
 }
 
 .view-all-btn{
