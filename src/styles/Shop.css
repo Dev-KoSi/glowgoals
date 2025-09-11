@@ -502,12 +502,14 @@
 #grid .image{
     overflow: hidden;
     height: 200px;
+    position: relative;
+    transition: 0.5s ease-in-out;
 }
 
 #grid img{
     border-radius: 5px 5px 0 0 ;
     height: 200px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
 #grid .product{
@@ -538,7 +540,13 @@
 }
 
 #grid .product:hover span{
-    filter: brightness(70%);
+    filter: brightness(90%);
+}
+
+#grid .product:hover #del{
+    display: block;
+    filter: brightness(90%);
+    opacity: 1;
 }
 
 #grid span{
@@ -568,6 +576,7 @@
 #grid .name{
     font-size: 20px;
     font-weight: bold;
+    transition: 0.3s ease-in-out;
 }
 
 #grid .description{
@@ -589,7 +598,8 @@
     border-radius: 5px;
     background-color: #FF008C;
     padding: 5px 25px;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 600;
     transition: 0.3s ease-in-out;
 }
 

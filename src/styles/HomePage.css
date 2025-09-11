@@ -323,7 +323,7 @@ svg{
     padding: 10px 20px;
     border-radius: 5px;
     color: white;
-    font-weight: bold;
+    font-weight: 600;
     background-color: #FF008C;
     cursor: pointer;
     transition: 0.3s ease-in-out;
@@ -460,15 +460,16 @@ svg{
     border: none;
     border-radius: 5px;
     background-color: #FF008C;
-    padding: 5px 35px;
-    font-size: 16px;
+    padding: 5px 40px;
+    font-size: 14px;
+    font-weight: 600;
     transition: transform 0.3s ease-in-out;
 }
 
 .products-flex button:hover, .view-all-btn button:hover {
     background-color: #c4026c;
     position: relative;
-    z-index: 1;
+    z-index: 10;
     transform: scale(1.03);
 }
 
@@ -498,6 +499,7 @@ svg{
     border-radius: 5px;
     background-color: #FF008C;
     font-size: 16px;
+    font-weight: 600;
     padding: 15px 30px;
     transition: transform 0.3s ease-in-out;
 }
@@ -725,11 +727,11 @@ svg{
     white-space: nowrap;
     padding: 15px 20px;
     border-radius: 5px;
-    font-weight: bold;
+    font-weight: 600;
     background-color: #FF008C;
     width: fit-content;
     transition: 0.5s ease-in-out;
-    z-index: 1;
+    z-index: 10;
 }
 
 .sale-section .shop-now-btn:hover{

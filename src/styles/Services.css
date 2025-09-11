@@ -106,10 +106,12 @@
 .services-container .service .details{
     margin: 30px;
     color: #555555;
+    height: 100%;
 }
 
 .services-container .service .info{
     margin-bottom: 20px;
+    height: 40px;
 }
 
 .services-container .service .includes .what{
@@ -151,9 +153,10 @@
     width: 50%;
     padding: 15px 0px;
     margin-right: 10px;
-    font-size: 15px;
+    font-size: 16px;
     border-radius: 10px;
     z-index: 10;
+    /* font-weight: 600; */
     transition: 0.3s ease-in-out;
 }
 

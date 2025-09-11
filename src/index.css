@@ -15,6 +15,7 @@ button{
   cursor: pointer;
   white-space: nowrap;
   color: black;
+  font-family: 'outfit', sans-serif;
 }
 
 ::-webkit-scrollbar {

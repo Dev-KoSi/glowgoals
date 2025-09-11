@@ -342,7 +342,7 @@
     border: 1px solid lightgray;
     background-color: white;
     transition: transform 0.3s ease-in-out;
-    color: black;
+    color: #555555;
     font-size: 14px;
     padding: 0 40px;
 }
