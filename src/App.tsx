@@ -10,6 +10,7 @@ import { Contact } from './pages/Contact'
 import { About } from './pages/About'
 import { Cart } from './store/Cart'
 import { Wishlist } from './store/Wishlist'
+import { ViewProduct } from './pages/ViewProduct'
 
 export function App() {
 
@@ -89,6 +90,16 @@ export function App() {
         <div>
           <Header/>
           <Wishlist/>
+          <Footer/>
+        </div>
+      )
+    },
+    {
+      path: '/cosmetics/:id',
+      element: (
+        <div>
+          <Header/>
+          <ViewProduct/>
           <Footer/>
         </div>
       )

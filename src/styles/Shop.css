@@ -610,6 +610,10 @@
     transform: scale(1.05);
 }
 
+#grid .btns a{
+    color: black;
+}
+
 #grid .btns svg{
     border: 1px solid lightgray;
     padding: 10px;
