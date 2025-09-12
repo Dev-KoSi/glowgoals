@@ -21,6 +21,7 @@
 .viewproduct .overview{
     display: flex;
     gap: 50px;
+    margin-bottom: 80px;
 }
 
 .viewproduct .overview .pics{
@@ -198,4 +199,102 @@
     color: #FF008C;
     background-color: #FFE6F2;
     transform: scale(1.02);
+}
+
+.viewproduct .reviewboard{
+    background-color: #FFE6F2;
+    padding: 30px 40px;
+    border-radius: 20px;
+    margin-bottom: 80px;
+}
+
+.viewproduct .reviewboard #head{
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.viewproduct .reviewboard #head svg{
+    color: #FF008C;
+}
+
+.viewproduct .reviewboard .flex{
+    display: flex;
+    align-items: center;
+}
+
+.viewproduct .reviewboard .ratings{
+    display: flex;
+    width: 100%;
+    gap: 30px;
+}
+
+.viewproduct .reviewboard .ratings .main{
+    text-align: center;
+}
+
+.viewproduct .reviewboard .ratings .num{
+    font-size: 50px;
+    font-weight: bold;
+    color: #FF008C;
+}
+
+.viewproduct .reviewboard .ratings svg{
+    color: #facc15;
+}
+
+.viewproduct .reviewboard .ratings .txt{
+    font-size: 14px;
+    font-weight: 500;
+    color: #555555;
+}
+
+.viewproduct .reviewboard .ratings .chat{
+    font-size: 14px;
+    color: #555555;
+}
+
+.viewproduct .reviewboard .ratings .chat div{
+    margin-bottom: 5px;
+}
+
+.viewproduct .reviewboard .ratings .chat .sub{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.viewproduct .reviewboard .ratings .chat .sub #nth{
+    width: 10px;
+    text-align: center;
+}
+
+.viewproduct .reviewboard .ratings .chat .sub .lenght{
+    background-color: #e5e7eb;
+    width: 90px;
+    height: 7px;
+    border-radius: 10px;
+}
+
+.viewproduct .reviewboard .flex button{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    background-color: #FF008C;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 20px;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.viewproduct .reviewboard .flex button:hover{
+    background-color: #c4026c;
+    transform: translateY(-2px);
 }
