@@ -42,7 +42,7 @@
 }
 
 .cart-container .empty-cart .gist{
-    background-color: rgba(230, 230, 230, 0.164);
+    background-color: #fafafa;
     padding: 80px 35px;
     margin-bottom: 50px;
     text-align: center;
@@ -129,7 +129,7 @@
     padding: 80px 35px 0px 35px;
     display: flex;
     gap: 30px;
-    background-color: rgba(230, 230, 230, 0.164);
+    background-color: #fafafa;
     margin-bottom: 50px;
 }
 
@@ -228,6 +228,7 @@
     color: #FF008C;
     border-radius: 50%;
     transform: rotate(15deg) scale(1.1);
+    background-color: #FFE6F2;
 }
 
 .cart-container .cart-display .item .category{
