@@ -479,7 +479,7 @@ svg{
     margin: 0 0 0 15px;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.17);
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 .products-flex .btns svg:hover{
@@ -558,7 +558,7 @@ svg{
     padding: 10px;
     margin: 10px 0 0 0;
     transform: translateX(60px);
-    transition: transform 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
     z-index: 1;
 }
 

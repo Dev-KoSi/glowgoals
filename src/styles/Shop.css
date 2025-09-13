@@ -116,7 +116,7 @@
     margin-top: 5px;
     z-index: 999;
     border: 1px solid lightgray;
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 .shop-container .customize .options button{
@@ -129,7 +129,7 @@
     border: none;
     display: flex;
     align-items: center;
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 .shop-container .customize .options button:hover{
@@ -171,7 +171,7 @@
     align-items: center;
     border: none;    
     padding: 10px;
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 .shop-container .customize .grid svg, .shop-container .customize .list svg{
@@ -189,7 +189,7 @@
     align-items: center;
     border: none;    
     padding: 10px;
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 .shop-container .customize .grid .grid-btn{
@@ -260,7 +260,7 @@
     margin-top: 5px;
     z-index: 999;
     border: 1px solid lightgray;
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 .shop-container .sort .options button{
@@ -273,7 +273,7 @@
     border: none;
     display: flex;
     align-items: center;
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 .shop-container .sort .options button:hover{
@@ -481,7 +481,7 @@
     margin: 0 0 0 15px;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.17);
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 #list .btns svg:hover{
@@ -509,7 +509,7 @@
 #grid img{
     border-radius: 5px 5px 0 0 ;
     height: 200px;
-    transition: transform 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 #grid .product{
@@ -620,7 +620,7 @@
     margin: 0 0 0 15px;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.17);
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 #grid .btns svg:hover{
