@@ -1,6 +1,11 @@
+import { useState } from 'react'
 import '../styles/ViewProduct.css'
 
 export function ViewProduct() {
+    const [rating, setRating] = useState<number>(0);
+    const [review, setReview] = useState<string>('')
+
+    const stars = [1, 2, 3, 4, 5];
 
     return (
         <div className="viewproduct-container">
@@ -237,6 +242,86 @@ export function ViewProduct() {
                             <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
 
                             Write a Review
+                        </button>
+                    </div>
+                </div>
+
+                <div className="send-review">
+                    <div style={{fontFamily: 'Caveat'}} id="head">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+
+                        Share Your Experience
+                    </div>
+
+                    <div className="msg-details">
+                        <div className="name input">
+                            <div>
+                                Full Name *
+                            </div>
+
+                            <input type="text" placeholder='Your full name' />
+                        </div>
+                        
+                        <div className="email input">
+                            <div>
+                                Email Address *
+                            </div>
+
+                            <input type="text" placeholder='Your valid email address' />
+                        </div>
+                    </div>
+
+                    <div className="how">
+                        <div className="head">
+                            How would you rate this product? *
+                        </div>
+
+                        <div className="rate">
+                            <div className="stars">
+                                {stars.map((star) => (
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" 
+
+                                    onClick={() => setRating(star)}
+
+                                    fill={`${star <= rating ? '#facc15' : 'none'}`}
+                                    
+                                    color={`${star <= rating ? '#facc15' : 'none'}`}
+                                    
+                                    viewBox="0 0 24 24"stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"  aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                ))}
+                            </div>
+                            
+                            {
+                                rating == 1 ? 'Poor' :
+                                rating == 2 ? 'Fair' :
+                                rating == 3 ? 'Good' :
+                                rating == 4 ? 'Very Good' :
+                                rating == 5 ? 'Excellent' : ''
+                            }
+                        </div>
+                    </div>
+
+                    <div className="msg">
+                        <div>
+                            Your Review (Optional) *
+                        </div>
+
+                        <textarea value={review} onChange={(e) => {
+                            setReview(e.target.value)
+                        }} maxLength={1000} placeholder='Tell others about your experience with this product. What did you like? What could be improved?'></textarea>
+                        
+                        <div style={review.length >= 1000 ? {color: '#FF008C'} : {}} className="count">
+                            {review.length <= 1000 ? review.length : 1000}/1000 characters
+                        </div>
+                    </div>
+
+                    <div className="btns">
+                        <button>
+                            Submit Review
+                        </button>
+
+                        <button>
+                            Cancel
                         </button>
                     </div>
                 </div>

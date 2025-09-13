@@ -298,3 +298,156 @@
     background-color: #c4026c;
     transform: translateY(-2px);
 }
+
+.viewproduct .send-review{
+    box-shadow: 0 0 2px #FF66B3;
+    border-radius: 10px;
+    padding: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+.viewproduct .send-review #head{
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.viewproduct .send-review #head svg{
+    color: #FF008C;
+    background-color: #FFE6F2;
+    padding: 12px;
+    border-radius: 50%;
+}
+
+
+
+.viewproduct .msg-details{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.input{
+    padding-right: 30px;
+}
+
+.viewproduct .msg-details input{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 15px;
+    width: 100%;
+    margin: 10px 0 20px 0;
+    outline: none;
+}
+
+.viewproduct .msg-details input:focus-within{
+    border: 1px solid #FFC5E5;
+    box-shadow: 0 0 5px #FFC5E5;
+}
+
+.viewproduct .how{
+    margin-bottom: 30px;
+}
+
+.viewproduct .how .head{
+    margin-bottom: 10px;
+}
+
+.viewproduct .how .rate{
+    color: #555555;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.viewproduct .how .rate .stars{
+    color: #d1d5db;
+}
+
+.viewproduct .how .rate .stars svg{
+    transition: 0.2s ease-in-out;
+    margin-right: 3px;
+}
+
+.viewproduct .how .rate .stars svg:hover{
+    color: #facc15;
+    transform: scale(1.2);
+}
+
+.viewproduct .msg{
+    padding-right: 30px;
+    margin-bottom: 50px;
+}
+
+.viewproduct .msg textarea{
+    margin: 10px 0 0 0;
+    width: 100%;
+    height: 100px;
+    resize: none;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 15px;
+    outline: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.viewproduct .msg textarea::placeholder{
+    font-family: 'outfit', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.viewproduct .msg textarea:focus-within{
+    box-shadow: 0 0 5px #FFC5E5;
+    border: 1px solid #FFC5E5;
+}
+
+.viewproduct .msg .count{
+    font-size: 12px;
+    color: #555555;
+    z-index: 10;
+}
+
+.viewproduct .btns{
+    display: flex;
+    gap: 10px;
+}
+
+.viewproduct .btns button{
+    align-items: center;
+    color: white;
+    background-color: #FF008C;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 20px;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.viewproduct .btns :first-child{
+    width: 100%;
+}
+
+.viewproduct .btns :first-child:hover{
+    background-color: #c4026c;
+    transform: translateY(-2px);
+}
+
+.viewproduct .btns :nth-child(2){
+    width: 10%;
+    color: #555555;
+    border: 2px solid lightgray;
+    background-color: white;
+}
+
+.viewproduct .btns :nth-child(2):hover{
+    border: 2px solid gray;
+    background-color: #fafafa;
+}

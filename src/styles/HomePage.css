@@ -460,7 +460,7 @@ svg{
     border: none;
     border-radius: 5px;
     background-color: #FF008C;
-    padding: 5px 40px;
+    padding: 5px 20px;
     font-size: 14px;
     font-weight: 600;
     transition: transform 0.3s ease-in-out;
