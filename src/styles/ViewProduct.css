@@ -421,7 +421,7 @@
     gap: 10px;
 }
 
-.viewproduct .btns button{
+.viewproduct .send-review .btns button{
     align-items: center;
     color: white;
     background-color: #FF008C;
@@ -432,23 +432,23 @@
     transition: 0.3s ease-in-out;
 }
 
-.viewproduct .btns :first-child{
+.viewproduct .send-review .btns :first-child{
     width: 100%;
 }
 
-.viewproduct .btns :first-child:hover{
+.viewproduct .send-review .btns :first-child:hover{
     background-color: #c4026c;
     transform: translateY(-2px);
 }
 
-.viewproduct .btns :nth-child(2){
+.viewproduct .send-review .btns :nth-child(2){
     width: 10%;
     color: #555555;
     border: 2px solid lightgray;
     background-color: white;
 }
 
-.viewproduct .btns :nth-child(2):hover{
+.viewproduct .send-review .btns :nth-child(2):hover{
     border: 2px solid gray;
     background-color: #fafafa;
 }
