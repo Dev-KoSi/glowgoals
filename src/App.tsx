@@ -11,6 +11,7 @@ import { About } from './pages/About'
 import { Cart } from './store/Cart'
 import { Wishlist } from './store/Wishlist'
 import { ViewProduct } from './pages/ViewProduct'
+import { Purchase } from './pages/Purchase'
 
 export function App() {
 
@@ -100,6 +101,16 @@ export function App() {
         <div>
           <Header/>
           <ViewProduct/>
+          <Footer/>
+        </div>
+      )
+    },
+    {
+      path: '/purchase/:id',
+      element: (
+        <div>
+          <Header/>
+          <Purchase/>
           <Footer/>
         </div>
       )
