@@ -40,3 +40,130 @@
     line-height: 1.5;
     font-size: 19px;
 }
+
+.checkout-container .grid{
+    padding: 80px 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    background-color: #fafafa;
+    margin-bottom: 50px;
+}
+
+.checkout-container .order-summary{
+    box-shadow: 0 0 5px lightgray;
+    padding: 25px;
+    border-radius: 20px;
+    width: fit-content;
+    height: fit-content;
+    background-color: white;
+}
+
+.checkout-container .order-summary .head{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.checkout-container .order-summary .head svg{
+    color: #FF008C;
+    background-color: #FFE6F2;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.checkout-container .order-summary .flex{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 15px;
+    background-color: #fafafa;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.checkout-container .order-summary .img{
+    width: 70px;
+    height: 70px;
+}
+
+.checkout-container .order-summary .img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.checkout-container .order-summary .details{
+    color: #555555;
+    font-size: 14px;
+}
+
+.checkout-container .order-summary .name{
+    color: black;
+    font-weight: 500;
+}
+
+.checkout-container .order-summary .brand, .checkout-container .order-summary .quantity{
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.checkout-container .order-summary .price{
+    color: #FF008C;
+    font-weight: 600;
+    font-size: 17px;
+    white-space: nowrap;
+}
+
+.checkout-container .order-summary .calc{
+    border-top: 1px solid lightgray;
+    padding-top: 10px;
+}
+
+.checkout-container .order-summary .sub{
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.checkout-container .order-summary .sub .txt{
+    color: #555555;
+    font-size: 16px;
+    width: 100%;
+}
+
+.checkout-container .order-summary .sub .amount{
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.checkout-container .order-summary .shipping{
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 20px;
+}
+
+.checkout-container .order-summary .sub .amount{
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.checkout-container .order-summary .total{
+    width: 100%;
+    display: flex;
+    color: black;
+    white-space: nowrap;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.checkout-container .order-summary .total .txt{
+    width: 100%;
+}
+
+.checkout-container .order-summary .total .amount{
+    color: #FF008C;
+}
