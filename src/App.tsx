@@ -12,6 +12,7 @@ import { Cart } from './store/Cart'
 import { Wishlist } from './store/Wishlist'
 import { ViewProduct } from './pages/ViewProduct'
 import { Purchase } from './pages/Purchase'
+import { Checkout } from './pages/Checkout'
 
 export function App() {
 
@@ -111,6 +112,16 @@ export function App() {
         <div>
           <Header/>
           <Purchase/>
+          <Footer/>
+        </div>
+      )
+    },
+    {
+      path: '/checkout',
+      element: (
+        <div>
+          <Header/>
+          <Checkout/>
           <Footer/>
         </div>
       )

@@ -1,8 +1,11 @@
 // import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import '../styles/Cart.css'
 
 export function Cart() {
     // const [emptyCart, setEmptyCart] = useState<boolean>(false);
+
+    const navigate = useNavigate();
 
     return (
         <div className="cart-container">
@@ -528,7 +531,7 @@ export function Cart() {
                             Free shipping on orders over GHC 1,000
                         </div>
 
-                        <button>
+                        <button onClick={() => navigate('/checkout')}>
                             Proceed to Checkout
                         </button>
 

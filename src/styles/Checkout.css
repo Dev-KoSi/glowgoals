@@ -1,0 +1,42 @@
+.checkout-container .top-display{
+    width: 100%;
+    height: 350px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/pay-card.jpg);
+    background-size: cover;
+}
+
+.checkout-container .top-display::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.473);
+    z-index: 1;
+}
+
+.checkout-container .top-display .overlay{
+    color: white;
+    text-align: center;
+    z-index: 10;
+    position: relative;
+    top: 10%;
+}
+
+.checkout-container .top-display .overlay :first-child{
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.checkout-container .top-display .overlay .txt {
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-size: 19px;
+}
