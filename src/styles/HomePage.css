@@ -274,9 +274,9 @@ svg{
 
 .book-beauty-consultation{
     display: flex;
-    border-bottom: 1px solid  #FF66B3;
+    border-bottom: 1px solid  #FFE6F2;
     padding: 40px 35px;
-    background-color: #FFE6F2;
+    background-color: #FFF5FA;
 }
 
 .book-beauty-consultation :first-child{
@@ -292,7 +292,7 @@ svg{
     overflow: hidden;
     width: 30px;
     height: 30px;
-    background-color: #FF66B3;
+    background-color: #FFE6F2;
     padding: 10px;
     border-radius: 50%;
     margin-right: 10px;

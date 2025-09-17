@@ -43,7 +43,7 @@
 
 .shop-container .filters{
     display: flex;
-    background-color: #FFE6F2;
+    background-color: #FFF5FA;
     padding: 40px 35px;
 }
 
@@ -360,7 +360,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding: 50px 35px;
-    background-color: #FFE6F2;
+    background-color: #FFF5FA;
     margin-bottom: 50px;
 }
 
@@ -495,7 +495,7 @@
     grid-template-columns: repeat(5, 1fr);
     gap: 15px;
     padding: 50px 35px;
-    background-color: #FFE6F2;
+    background-color: #FFF5FA;
     margin-bottom: 50px;
 }
 

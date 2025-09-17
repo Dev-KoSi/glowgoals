@@ -43,10 +43,10 @@
 
 .checkout-container .grid{
     padding: 80px 150px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     gap: 50px;
-    background-color: #fafafa;
+    /* background-color: #FFF5FA; */
+    background-color: #FFFAFC;
     margin-bottom: 50px;
 }
 
@@ -86,8 +86,8 @@
 }
 
 .checkout-container .order-summary .img{
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 80px;
 }
 
 .checkout-container .order-summary .img img{
@@ -166,4 +166,155 @@
 
 .checkout-container .order-summary .total .amount{
     color: #FF008C;
+}
+
+.checkout-container .personal-info{
+    background-color: white;
+    box-shadow: 0 0 5px lightgray;
+    padding: 30px;
+    border-radius: 20px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.checkout-container .personal-info .head{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.checkout-container .personal-info .head-2{
+    margin: 30px 0 20px 0;
+}
+
+.checkout-container .personal-info .head svg{
+    color: #FF008C;
+    background-color: #FFF5FA;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.checkout-container .personal-info .info-details{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    font-size: 14px;
+}
+
+.checkout-container .personal-info .input{
+    padding-right: 30px;
+}
+
+.checkout-container .personal-info .input :first-child{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkout-container .personal-info input{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 15px;
+    width: 100%;
+    margin: 10px 0 20px 0;
+    outline: none;
+}
+
+.checkout-container .personal-info .info-details input:focus-within{
+    border: 1px solid #FFC5E5;
+    box-shadow: 0 0 5px #FFC5E5;
+}
+
+.checkout-container .personal-info .geo{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding-right: 30px;
+}
+
+.checkout-container .payment-method label{
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    border: 1px solid lightgray;
+    margin-bottom: 10px;
+    height: 35px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+.checkout-container .payment-method label:hover{
+    border: 1px solid #FFC5E5;
+}
+
+.checkout-container .payment-method input{
+    width: auto;
+}
+
+.checkout-container .personal-info .note{
+    padding-right: 30px;
+    margin: 30px 0 50px 0;
+}
+
+.checkout-container .personal-info .note textarea{
+    margin: 10px 0 20px 0;
+    width: 100%;
+    height: 80px;
+    resize: none;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 15px;
+    outline: none;
+}
+
+.checkout-container .personal-info .note textarea::placeholder{
+    font-family: 'outfit', sans-serif;
+    font-size: 16px;
+}
+
+.checkout-container .personal-info .note textarea:focus-within, .checkout-container .personal-info input:focus-within{
+    box-shadow: 0 0 5px #FFC5E5;
+    border: 1px solid #FFC5E5;
+}
+
+.checkout-container .personal-info .btns{
+    width: 100;
+    justify-content: right;
+    display: flex;
+    gap: 20px;
+}
+
+.checkout-container .personal-info .btns div{
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 20px 30px;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.checkout-container .personal-info .btns div:hover{
+    background-color: #fafafa;
+}
+
+.checkout-container .personal-info .btns button{
+    background: linear-gradient(to right, #FF008C, #FF66B3);
+    color: white;
+    border-radius: 10px;
+    padding: 20px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.checkout-container .personal-info .btns button:hover{
+    background: linear-gradient(to right, #c4026c, #FF008C);
+    transform: scale(1.03);
 }

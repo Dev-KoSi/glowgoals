@@ -220,11 +220,11 @@
 }
 
 .purchase-container .customer-info .order-summary{
-    border: #FFC5E5 1px solid;
-    box-shadow: 0 0 2px #FFC5E5;
+    border: #FFE6F2 1px solid;
+    box-shadow: 0 0 2px #FFE6F2;
     padding: 20px;
     border-radius: 10px;
-    background-color: #FFE6F2;
+    background-color: #FFF5FA;
 }
 
 .purchase-container .customer-info .order-summary .head{
