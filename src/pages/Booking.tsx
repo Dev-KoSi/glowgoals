@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import '../styles/Booking.css'
+import { useNavigate } from 'react-router-dom';
 
 export function Booking() {
     const [serviceMenu, setServiceMenu] = useState<boolean>(false);
     const [serviceSelected, setServiceSelected] = useState<string>('Select a service');
     const [serviceOption, setServiceOption] = useState<string>('');
+
+    const navigate = useNavigate();
 
     return (
         <div className="booking-container">
@@ -301,7 +304,7 @@ export function Booking() {
                     </div>
 
                     <div className="btns">
-                        <button>
+                        <button onClick={() => navigate('/my-booking')}>
                             View My Bookings
                         </button>
                     </div>

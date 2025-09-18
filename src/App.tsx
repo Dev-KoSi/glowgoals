@@ -13,6 +13,7 @@ import { Wishlist } from './store/Wishlist'
 import { ViewProduct } from './pages/ViewProduct'
 import { Purchase } from './pages/Purchase'
 import { Checkout } from './pages/Checkout'
+import { MyBooking } from './store/MyBooking'
 
 export function App() {
 
@@ -122,6 +123,16 @@ export function App() {
         <div>
           <Header/>
           <Checkout/>
+          <Footer/>
+        </div>
+      )
+    },
+    {
+      path: '/my-booking',
+      element: (
+        <div>
+          <Header/>
+          <MyBooking/>
           <Footer/>
         </div>
       )

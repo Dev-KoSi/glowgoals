@@ -17,6 +17,8 @@ export function Header() {
             setLoc('4');
         } else if(location.pathname === '/about') {
             setLoc('5');
+        } else {
+            setLoc('');
         }
     }, [location]);
 
