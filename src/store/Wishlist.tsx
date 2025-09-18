@@ -97,7 +97,7 @@ export function Wishlist() {
                     </div>
 
                     <div className="btn">
-                        <button>
+                        <button onClick={() => window.location.href = '/cosmetics'}>
                             Continue Shopping
                         </button>
                     </div>

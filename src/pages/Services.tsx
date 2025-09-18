@@ -509,11 +509,11 @@ export function Services() {
                     </div>
 
                     <div className="btns">
-                        <button>
+                        <button onClick={() => window.location.href = '/booking'}>
                             Book Appointment
                         </button>
 
-                        <button>
+                        <button onClick={() => window.location.href = '/contact'}>
                             Contact Us
                         </button>
                     </div>

@@ -301,7 +301,7 @@ export function Booking() {
                     </div>
 
                     <div className="btns">
-                        <button>
+                        <button onClick={() => window.location.href = '/my-booking'}>
                             View My Bookings
                         </button>
                     </div>
@@ -317,7 +317,7 @@ export function Booking() {
                     </div>
 
                     <div className="btns">
-                        <button>
+                        <button onClick={() => window.location.href = '/cosmetics'}>
                             Shop Products
                         </button>
                     </div>

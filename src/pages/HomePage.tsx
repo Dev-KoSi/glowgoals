@@ -137,7 +137,7 @@ export function HomePage() {
                         </div>
                     </div>
 
-                    <div className='appointment'>
+                    <div onClick={() => window.location.href = '/booking'} className='appointment'>
                             Book Appointment
 
                         <svg style={{marginLeft: '10px'}} fill="none" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
@@ -545,7 +545,7 @@ export function HomePage() {
                             <span>Premium Brand Only</span>
                         </div>
 
-                            <div className='shop-now-btn'>
+                            <div onClick={() => window.location.href = '/cosmetics'} className='shop-now-btn'>
                                 Shop Now
 
                             <svg style={{marginLeft: '10px'}} fill="none" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>

@@ -303,11 +303,11 @@ export function Contact() {
                         </div>
 
                         <div className="btns">
-                            <button>
+                            <button onClick={() => window.location.href = '/booking'}>
                                 Book Consultation
                             </button>
 
-                            <button>
+                            <button onClick={() => window.location.href = '/services'}>
                                 View Services
                             </button>
                         </div>
