@@ -290,6 +290,23 @@ export function Booking() {
                         </div>
                     </div>
                 </div>
+                
+                <div className="track">
+                    <div style={{fontFamily: 'Caveat'}} className="head">
+                        Track Your Appointments
+                    </div>
+
+                    <div className="txt">
+                        View all your booking history and keep track of your upcoming appointments.
+                    </div>
+
+                    <div className="btns">
+                        <button>
+                            View My Bookings
+                        </button>
+                    </div>
+                </div>
+
                 <div className="suggestion">
                     <div style={{fontFamily: 'Caveat'}} className="head">
                         Ready to Shop Our Products?

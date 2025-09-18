@@ -278,6 +278,50 @@
     color: #FF008C;
 }
 
+.booking-container .track{
+    background-color: #fafafa;
+    color: black;
+    text-align: center;
+    padding: 70px 0;
+    margin-bottom: 50px;
+}
+
+.booking-container .track .head{
+    font-size: 35px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.booking-container .track .txt{
+    font-size: 19px;
+    margin: 20px 0;
+    color: #555555;
+}
+
+.booking-container .track .btns{
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+}
+
+.booking-container .track button{
+    width: 100%;
+    border-radius: 10px;
+    padding: 20px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: 0.3s ease-in-out;
+    color: white;
+    background-color: #FF008C;
+}
+
+.booking-container .track .btns button:hover{
+    transform: scale(1.03);
+    filter: brightness(90%);
+}
+
 .booking-container .suggestion{
     background-color: #FF008C;
     color: white;
@@ -287,7 +331,7 @@
 }
 
 .booking-container .suggestion .head{
-    font-size: 50px;
+    font-size: 35px;
     font-weight: bold;
     margin: 10px 0;
 }
@@ -306,19 +350,16 @@
 
 .booking-container .suggestion button{
     width: 100%;
-    padding: 15px 30px;
     border-radius: 10px;
-    font-size: 16px;
+    padding: 20px 30px;
+    font-size: 18px;
+    font-weight: 600;
     margin-top: 20px;
     transition: 0.3s ease-in-out;
-}
-
-.booking-container .suggestion .btns :first-child{
-    border: 1px solid white;
     color: #FF008C;
 }
 
-.booking-container .suggestion .btns :first-child:hover{
+.booking-container .suggestion .btns button:hover{
     transform: scale(1.03);
     filter: brightness(90%);
 }
