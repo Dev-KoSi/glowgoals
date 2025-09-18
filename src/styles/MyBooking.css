@@ -1,5 +1,5 @@
 .mybooking{
-    margin: 100px 0 50px 0;
+    margin: 120px 0 50px 0;
 }
 
 .mybooking .header{
@@ -13,4 +13,44 @@
     font-weight: bold;
     color: black;
     margin-bottom: 10px;
+}
+
+.mybooking .no-booking{
+    text-align: center;
+    margin: 120px 0 250px 0;
+}
+
+.mybooking .no-booking div{
+    margin-bottom: 10px;
+}
+
+.mybooking .no-booking svg{
+    background-color: #FFE6F2;
+    color: #FF008C;
+    padding: 25px;
+    border-radius: 50%;
+}
+
+.mybooking .no-booking .head{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.mybooking .no-booking .txt{
+    color: #555555;
+}
+
+.mybooking .no-booking button{
+    padding: 10px 20px;
+    font-size: 14px;
+    color: white;
+    background-color: #FF008C;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.mybooking .no-booking button:hover{
+    background-color: #c4026c;
 }
