@@ -10,9 +10,9 @@ import { Contact } from './pages/Contact'
 import { About } from './pages/About'
 import { Cart } from './store/Cart'
 import { Wishlist } from './store/Wishlist'
-import { ViewProduct } from './pages/ViewProduct'
-import { Purchase } from './pages/Purchase'
-import { Checkout } from './pages/Checkout'
+import { ViewProduct } from './params/ViewProduct'
+import { Purchase } from './params/Purchase'
+import { Checkout } from './params/Checkout'
 import { MyBooking } from './store/MyBooking'
 
 export function App() {
