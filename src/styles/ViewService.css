@@ -85,3 +85,96 @@
     color: #FF008C;
     transform: scale(1.02);
 }
+
+.viewservice  .about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 80px 25px 50px 25px;
+    gap: 65px;
+}
+
+.viewservice  .about .included{
+    background-color: #FFF5FA;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.viewservice  .about .included .head{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.viewservice .included .head svg{
+    color: #FF008C;
+    background-color: #FFE6F2;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.viewservice .included .list div{
+    display: flex;
+    align-items: center;
+    font-size: 19px;
+    color: #555555;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.viewservice .included .list svg{
+    color: white;
+    background-color: #FF008C;
+    padding: 5px;
+    border-radius: 50%;
+    transition: 0.3s ease-in-out;
+}
+
+.viewservice .included .list div:hover svg{
+    transform: scale(1.05);
+}
+
+.viewservice  .about .benefits{
+    background-color: #F0FDFA;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.viewservice  .about .benefits .head{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.viewservice .benefits .head svg{
+    color: #14b8a6;
+    background-color: #CCFBF1;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.viewservice .benefits .list div{
+    display: flex;
+    align-items: center;
+    font-size: 19px;
+    color: #555555;
+    margin-top: 25px;
+    gap: 15px;
+}
+
+.viewservice .benefits .list svg{
+    color: white;
+    background-color: #14b8a6;
+    padding: 5px;
+    border-radius: 50%;
+    transition: 0.3s ease-in-out;
+}
+
+.viewservice .benefits .list div:hover svg{
+    transform: scale(1.05);
+}
