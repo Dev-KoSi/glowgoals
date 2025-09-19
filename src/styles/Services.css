@@ -263,20 +263,21 @@
     font-size: 16px;
     margin-top: 20px;
     transition: 0.3s ease-in-out;
+    border: 2px solid white;
+    font-weight: 500;
 }
 
 .services-container .suggestion .btns :first-child{
-    border: 1px solid white;
     color: #FF008C;
+    background-color: white;
 }
 
 .services-container .suggestion .btns :first-child:hover{
-    transform: scale(1.03);
+    transform: scale(1.02);
     filter: brightness(90%);
 }
 
 .services-container .suggestion .btns :nth-child(2){
-    border: 1px solid white;
     background-color: #FF008C;
     color: white;
 }
@@ -284,4 +285,5 @@
 .services-container .suggestion .btns :nth-child(2):hover{
     background-color: white;
     color: #FF008C;
+    transform: scale(1.02);
 }

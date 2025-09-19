@@ -14,6 +14,7 @@ import { ViewProduct } from './params/ViewProduct'
 import { Purchase } from './params/Purchase'
 import { Checkout } from './params/Checkout'
 import { MyBooking } from './store/MyBooking'
+import { ViewService } from './params/ViewService'
 
 export function App() {
 
@@ -133,6 +134,16 @@ export function App() {
         <div>
           <Header/>
           <MyBooking/>
+          <Footer/>
+        </div>
+      )
+    },
+    {
+      path: '/services/:id',
+      element: (
+        <div>
+          <Header/>
+          <ViewService/>
           <Footer/>
         </div>
       )
