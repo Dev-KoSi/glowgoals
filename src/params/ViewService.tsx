@@ -114,6 +114,26 @@ export function ViewService() {
                         </div>
                     </div>
                 </div>
+
+                <div className="suggestion">
+                    <div style={{fontFamily: 'Caveat'}} className="head">
+                        Ready to Transform Your Beauty?
+                    </div>
+
+                    <div className="txt">
+                        Book your appointment now and experience the difference. Our expert professionals are ready to provide you with the best service.
+                    </div>
+
+                    <div className="btns">
+                        <button onClick={() => window.location.href = '/booking/id'}>
+                            Book Appointment Now
+                        </button>
+
+                        <button onClick={() => window.location.href = '/services'}>
+                            View All Services
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     )
