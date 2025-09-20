@@ -28,11 +28,11 @@ export function ViewService() {
                         </div>
 
                         <div className="btns">
-                            <button>
+                            <button onClick={() => window.location.href = '/booking/id'}>
                                 Book Appointment Now
                             </button>
 
-                            <button>
+                            <button onClick={() => window.location.href = '/services'}>
                                 Back to Services
                             </button>
                         </div>

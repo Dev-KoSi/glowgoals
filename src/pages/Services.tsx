@@ -75,11 +75,11 @@ export function Services() {
                             </div>
 
                             <div className="btns">
-                                <button>
+                                <button onClick={() => window.location.href = '/services/id'}>
                                     View Details
                                 </button>
 
-                                <button>
+                                <button onClick={() => window.location.href = '/booking/id'}>
                                     Book Appointment
                                 </button>
                             </div>
