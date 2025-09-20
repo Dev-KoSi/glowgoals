@@ -12,9 +12,10 @@ import { Cart } from './store/Cart'
 import { Wishlist } from './store/Wishlist'
 import { ViewProduct } from './params/ViewProduct'
 import { Purchase } from './params/Purchase'
-import { Checkout } from './params/Checkout'
+import { Checkout } from './pages/Checkout'
 import { MyBooking } from './store/MyBooking'
 import { ViewService } from './params/ViewService'
+import { BookService } from './params/BookService'
 
 export function App() {
 
@@ -144,6 +145,16 @@ export function App() {
         <div>
           <Header/>
           <ViewService/>
+          <Footer/>
+        </div>
+      )
+    },
+    {
+      path: '/booking/:id',
+      element: (
+        <div>
+          <Header/>
+          <BookService/>
           <Footer/>
         </div>
       )
