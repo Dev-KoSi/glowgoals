@@ -48,15 +48,15 @@ export function Menu({setToggleMenu, toggleMenu}: MenuProp) {
 
             <div className="links">
                 <nav className="nav-links">
-                    <a href="/cosmetics"><span className={`${nav}-ourshop`}>Our Shop</span></a>
+                    <a className={`${nav}-ourshop`} href="/cosmetics"><span>Our Shop</span></a>
 
-                    <a href="/services"><span className={`${nav}-services`}>Services</span></a>
+                    <a className={`${nav}-services`} href="/services"><span>Services</span></a>
 
-                    <a href="/booking"><span className={`${nav}-booking`}>Booking</span></a>
+                    <a className={`${nav}-booking`} href="/booking"><span>Booking</span></a>
 
-                    <a href="/contact"><span className={`${nav}-contact`}>Contact</span></a>
+                    <a className={`${nav}-contact`} href="/contact"><span>Contact</span></a>
 
-                    <a href="/about"><span className={`${nav}-about`}>About</span></a>
+                    <a className={`${nav}-about`} href="/about"><span>About</span></a>
                 </nav>
             </div>
         </div>
