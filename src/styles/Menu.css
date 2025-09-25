@@ -1,0 +1,76 @@
+.menu-container{
+    z-index: 9999;
+    background-color: white;
+    position: fixed;
+    right: 0;
+    width: 60%;
+    padding: 30px 25px;
+    border-left: 1px solid  #FFC5E5;
+    height: 100%;
+    transition: 0.3s ease-in-out;
+    transform: translateX(100%);
+}
+
+.menu-container.open{
+    transform: translateX(0);
+}
+
+.menu-container .head{
+    display: flex;
+    align-items: center;
+    color: #555555;
+    margin-bottom: 30px;
+}
+
+.menu-container .head .txt{
+    font-size: 21px;
+    font-weight: 600;
+    width: 100%;
+    color: black;
+}
+
+.menu-container .search-input {
+    display: flex;
+    border: 1px solid rgb(211, 211, 211);
+    padding: 8px;
+    border-radius: 5px;
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+.menu-container .search-input:focus-within{
+    box-shadow: 0 0 2px #FF008C;
+}
+
+.menu-container .search-input input {
+    outline: none;
+    border: none;
+    width: 100%;
+    background: transparent;
+}
+
+.menu-container .search-input ::placeholder {
+    font-size: 14px;
+    color: gray;
+}
+
+.menu-container .search-input svg {
+    color: gray;
+    margin: 5px 0 0 0;
+}
+
+.menu-container .nav-links a{
+    display: block;
+    padding: 15px;
+    margin-bottom: 20px;
+    color: black;
+    transition: 0.3s ease-in-out;
+}
+
+.menu-container .nav-links a:hover{
+    background-color: #FFC5E5;
+}
+
+.menu-container .ourshop-ourshop, .menu-container .services-services, .menu-container .booking-booking, .menu-container .contact-contact, .menu-container .about-about{
+    background-color: #FFC5E5;
+}

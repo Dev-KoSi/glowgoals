@@ -2,8 +2,11 @@ import { useEffect, useState } from 'react'
 import '../styles/HomePage.css'
 import '../styles/Header.css'
 import { useNavigate } from 'react-router-dom';
+import { Menu } from '../components/Menu';
 
 export function HomePage() {
+
+    const [toggleMenu, setToggleMenu] = useState<boolean>(false);
 
     const navigate = useNavigate();
 
@@ -81,8 +84,19 @@ export function HomePage() {
 
                                 <span className={`${toggleHeader}-wishlist-count`}>1</span>
                             </a>
+
+                            <div className={`${toggleHeader}-menu`}>
+                                <svg onClick={() => setToggleMenu(true)} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="#000000" fill="none">
+                                    <path d="M4 5L20 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M4 12L20 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M4 19L20 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </div>
                         </div>
                     </div>
+
+                    <Menu setToggleMenu={setToggleMenu} toggleMenu={toggleMenu}/>
+
                     <video  autoPlay muted loop playsInline>
                         <source src="/cosmetics.mp4" type='video/mp4'/>
                     </video>
@@ -138,9 +152,9 @@ export function HomePage() {
                     </div>
 
                     <div onClick={() => window.location.href = '/booking'} className='appointment'>
-                            Book Appointment
+                        <div>Book Appointment</div>
 
-                        <svg style={{marginLeft: '10px'}} fill="none" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        <div><svg style={{marginLeft: '10px'}} fill="none" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></div>
                     </div>
                 </div>
 
@@ -518,17 +532,17 @@ export function HomePage() {
 
                         <div className="txt-overlay">
                             <div className="limited-time">
-                            <div className="txt">
-                                ⏰LIMITED TIME OFFER
-                            </div>
+                                <div className="txt">
+                                    ⏰LIMITED TIME OFFER
+                                </div>
 
-                            <div className="count-down">
-                                <span id='num'>23</span>
-                                <span id='colon'>:</span>
-                                <span id='num'>59</span>
-                                <span id='colon'>:</span>
-                                <span id='num'>59</span>
-                            </div>
+                                <div className="count-down">
+                                    <span id='num'>23</span>
+                                    <span id='colon'>:</span>
+                                    <span id='num'>59</span>
+                                    <span id='colon'>:</span>
+                                    <span id='num'>59</span>
+                                </div>
                             </div>
 
                             <div style={{fontFamily: 'Caveat'}} className="mega-txt">
@@ -541,8 +555,9 @@ export function HomePage() {
 
                         <div className="discount-types">
                             <span>Free Gift with Purchase</span>
-                            <span>Free Shipping Over GHC 500.00</span>
                             <span>Premium Brand Only</span>
+                            <p />
+                            <span>Free Shipping Over GHC 500.00</span>
                         </div>
 
                             <div onClick={() => window.location.href = '/cosmetics'} className='shop-now-btn'>

@@ -1,7 +1,3 @@
-svg{
-    cursor: pointer;
-}
-
 .landingpage{
     position: relative;
     width: 100%;
@@ -13,6 +9,7 @@ svg{
     position: absolute;
     top: 50%;
     left: 50%;
+    background-color: #FFC5E5;
     min-width: 100%;
     min-height: 100%;
     width: auto;
@@ -59,7 +56,7 @@ svg{
 
 .homepage-header{
     display: flex;
-    padding: 15px 35px;
+    padding: 20px 35px;
     z-index: 999;
     top: 0;
     right: 0;
@@ -157,7 +154,7 @@ svg{
     cursor: pointer;
 }
 
-.homepage-cart svg, .homepage-wishlist svg{
+.homepage-cart svg, .homepage-wishlist svg, .homepage-menu svg{
     border: 1px solid lightgray;
     padding: 12.5px;
     margin: 0 0 0 10px;
@@ -181,6 +178,10 @@ svg{
     font-weight: bold;
     line-height: 1;
     overflow: hidden;
+}
+
+.homepage-menu{
+    display: none;
 }
 
 .landingpage-contents{
@@ -304,14 +305,10 @@ svg{
 }
 
 .book-beauty-consultation .appointment{
-    position: relative;
     display: flex;
-    line-height: 1;
     align-items: center;
-    justify-content: center;
     white-space: nowrap;
     margin-right: 10px;
-    font-size: px;
     padding: 10px 20px;
     border-radius: 5px;
     color: white;
@@ -702,6 +699,10 @@ svg{
 
 .sale-section .discount-types{
     margin: 20px 0;
+}
+
+.sale-section .discount-types p{
+    display: none;
 }
 
 .sale-section .discount-types span{

@@ -98,11 +98,11 @@ export function Footer() {
                 </div>
 
                 <div className="base">
-                    <div>
+                    <div id='copy'>
                         &copy; 2025  GlowBeauty - Premium Cosmetics. All rights reserved.
                     </div>
 
-                    <div>
+                    <div id='links'>
                         <a href=''>Privacy Policy</a>
                         
                         <a href=''>Terms of Service</a>

@@ -1,9 +1,14 @@
 import { useLocation } from 'react-router-dom'
 import '../styles/Header.css'
 import { useEffect, useState } from 'react';
+import { Menu } from './Menu';
 
 export function Header() {
+
+    const [toggleMenu, setToggleMenu] = useState<boolean>(false);
+
     const location:any = useLocation();
+
     const [loc, setLoc] = useState<string>('');
 
     useEffect(() => {
@@ -76,7 +81,17 @@ export function Header() {
                         <span className="header-wishlist-count">1</span>
                     </a>
                 </div>
+
+                <div className="header-menu">
+                    <svg onClick={() => setToggleMenu(true)} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="#000000" fill="none">
+                        <path d="M4 5L20 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M4 12L20 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M4 19L20 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </div>
             </div>
+            
+            <Menu setToggleMenu={setToggleMenu} toggleMenu={toggleMenu}/>
         </div>
     )
 }
