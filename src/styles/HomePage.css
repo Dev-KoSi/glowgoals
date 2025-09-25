@@ -732,3 +732,198 @@
     background-color: #c4026c;
     transform: scale(1.1);
 }
+
+
+/* FOR MOBILE */
+
+@media screen and (max-width: 480px) {
+
+
+    .landingpage{
+        height: 85vh;
+    }
+
+    .homepage-header{
+        padding: 20px 15px;
+    }
+
+    .homepage-logo-app-name{
+        width: 100%;
+    }
+
+    .homepage-nav-links{
+        display: none;
+    }
+
+    .homepage-search-cart-wishlist{
+        display: flex;
+    }
+
+    .homepage-search-input{
+        display: none;
+    }
+
+    .homepage-menu{
+        display: block;
+    }
+
+    .landingpage-contents{
+        width: fit-content;
+        margin: 0 15px;
+        top: 55%;
+        transform: translateY(-50%);
+    }
+
+    .slogan{
+        font-size: 35px;
+    }
+
+    .brand-info{
+        font-size: 20px;
+        width: 100%;
+    }
+    
+    .landingpage-btns button{
+        width: 100%;
+        display: block;
+        margin: 0 0 20px 0;
+    }
+
+    .book-beauty-consultation{
+        display: block;
+        padding: 40px 15px;
+    }
+
+    .book-beauty-consultation :first-child{
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    .head-txt{
+        position: relative;
+        line-height: 1;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .book-beauty-consultation .head{
+        font-size: 25px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .book-beauty-consultation .appointment{
+        padding: 15px 20px 0 20px ;
+        width: fit-content;
+    }
+
+    .featured-products-container{
+        padding-bottom: 20px;
+        margin-bottom: 50px;
+    }
+
+    .section-info{
+        text-align: center;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .section-info .head{
+        font-size: 25px;
+    }
+
+    .section-info .txt{
+        font-size: 16px;
+        color: gray;
+        width: 350px;
+        margin-bottom: 50px;
+    }
+
+    /* PRODUCTS STYLES */
+
+    .products-flex{
+        margin: 50px 15px;
+    }
+
+    .collection-flex{
+        display: block;
+        margin: 50px 15px;
+        gap: 30px;
+        position: relative;
+    }
+
+    .collection-flex .collection{
+        margin-bottom: 20px;
+    }
+
+    .collection-flex .path{
+        left: 300px;
+        transform: translateX(100px);
+    }
+
+    .sale-section{
+        position: relative;
+        margin: 50px 0px;
+        overflow: hidden;
+        height: 400px;
+    }
+
+    .sale-section img{
+        height: 400px;
+    }
+
+    .sale-section .txt-overlay{
+        margin: 100px 100px 30px 15px;
+        width: 100%;
+    }
+
+    .sale-section .percent-off{
+        transform: translateX(0);
+    }
+
+    .sale-section .limited-time{
+        display: block;
+    }
+
+    .sale-section .limited-time .txt{
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        width: fit-content;
+    }
+
+    .sale-section .mega-txt{
+        font-size: 30px;
+    }
+
+    .sale-section .discount-types{
+        margin: 20px 0;
+    }
+
+    .sale-section .discount-types span{
+        width: fit-content;
+    }
+
+    .sale-section .discount-types p{
+        display: block;
+    }
+
+    .sale-section .shop-now-btn{
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        white-space: nowrap;
+        padding: 15px 20px;
+        border-radius: 5px;
+        font-weight: 600;
+        background-color: #FF008C;
+        width: fit-content;
+        transition: 0.5s ease-in-out;
+        z-index: 10;
+    }
+
+    .sale-section .shop-now-btn:hover{
+        background-color: #c4026c;
+        transform: scale(1.1);
+    }
+}
