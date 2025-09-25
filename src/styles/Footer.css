@@ -149,3 +149,69 @@
     white-space: nowrap;
     margin-left: 20px;
 }
+
+
+/* FOR MOBILE */
+
+@media screen and (max-width: 480px) {
+
+    .footer{
+        margin: 50px 15px;
+    }
+
+    .footer .grid{
+        display: block;
+        padding-bottom: 20px;
+    }
+
+    .footer h3{
+        margin: 20px 0;
+    }
+
+    .footer .quick-links, .footer .customer-service{
+        width: auto;
+        margin: 50px 0 20px 0;
+    }
+
+    .footer a{
+        width: fit-content;
+    }
+
+    .footer .handles-updates{
+        padding: 30px 0;
+        display: block;
+    }
+    
+    .footer .handles{
+        width: fit-content;
+    }
+
+    .footer .updates{
+        margin-top: 20px;
+    }
+
+    .footer .updates h4{
+        text-align: left;
+    }
+
+    .footer .updates .input-btn{
+        margin-top: 10px;
+    }
+
+    .footer .updates input{
+        width: 100%;
+    }
+
+    .footer .base{
+        display: block;
+    }
+
+    .footer .base #copy{
+        margin-bottom: 10px;
+    }
+
+    .footer .base #links a{
+        margin-left: 0;
+        margin-right: 20px;
+    }
+}
