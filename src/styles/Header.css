@@ -176,7 +176,7 @@
 
 /* FOR MOBILE */
 
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 900px) {
 
     .header-header{
         padding: 20px 15px 10px 15px;
