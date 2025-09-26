@@ -358,9 +358,89 @@
     margin-top: 20px;
     transition: 0.3s ease-in-out;
     color: #FF008C;
+    background-color: white;
 }
 
 .booking-container .suggestion .btns button:hover{
     transform: scale(1.03);
     filter: brightness(90%);
+}
+
+/* FOR MOBILE */
+
+@media screen and (max-width: 480px) {
+    .booking-container .top-display{
+        height: 300px;
+    }
+
+    .booking-container .overlay{
+        padding: 0 15px;
+    }
+
+    .booking-container .overlay :first-child{
+        font-size: 35px;
+    }
+
+    .booking-container .overlay .txt {
+        font-size: 18px;
+    }
+
+    .booking-container .book{
+        padding: 50px 15px;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr;
+    }
+
+    .booking-container .schedule-session{
+        padding: 15px;
+    }
+
+    .booking-container .schedule-session .name-phone,
+    .booking-container .schedule-session .date-time{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        padding-right: 30px;
+    }
+
+    .booking-container .the-service .options{
+        width: 97%;
+    }
+
+    .booking-container .track{
+        padding: 20px 0;
+        margin-bottom: 20px;
+    }
+
+    .booking-container .track .head{
+        font-size: 30px;
+    }
+
+    .booking-container .track .txt{
+        font-size: 18px;
+        padding: 0 15px;
+    }
+
+    .booking-container .track button{
+        padding: 15px 30px;
+        font-size: 16px;
+    }
+
+    .booking-container .suggestion{
+        padding: 20px 0;
+    }
+
+    .booking-container .suggestion .head{
+        font-size: 30px;
+    }
+
+    .booking-container .suggestion .txt{
+        font-size: 18px;
+    }
+
+    .booking-container .suggestion button{
+        padding: 15px 30px;
+        font-size: 16px;
+    }
 }
