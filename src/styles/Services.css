@@ -287,3 +287,72 @@
     color: #FF008C;
     transform: scale(1.02);
 }
+
+/* FOR MOBILE */
+
+@media screen and (max-width: 480px) {
+
+    .services-container .top-display{
+        height: 300px;
+    }
+
+    .services-container .overlay :first-child{
+        font-size: 35px;
+    }
+
+    .services-container .overlay .txt {
+        font-size: 18px;
+    }
+
+    .services-container .grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 50px 15px;
+    }
+
+    .services-container .service .btns :first-child{
+        padding: 15px 20px;
+    }
+
+    .services-container .why{
+        padding: 50px 15px;
+    }
+
+    .services-container .why .info{
+        margin-bottom: 50px;
+    }
+
+    .services-container .why .info :first-child{
+        font-size: 35px;
+    }
+
+    .services-container .why .info .txt{
+        font-size: 18px;
+    }
+
+    .services-container .why .points{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .services-container .why .point{
+        margin-top: 30px;
+    }
+
+    .services-container .why .point svg{
+        padding: 15px;
+    }
+    .services-container .suggestion{
+        padding: 30px 15px;
+        margin-bottom: 50px;
+    }
+
+    .services-container .suggestion .head{
+        font-size: 35px;
+        margin: 0;
+    }
+
+    .services-container .suggestion .txt{
+        font-size: 18px;
+        margin: 10px 0;
+    }
+}

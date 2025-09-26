@@ -819,8 +819,12 @@
     }
 
     .shop-container .search{
-        width: 60%;
+        width: 55%;
         margin-bottom: 20px;
+    }
+
+    .shop-container .search input{
+        width: 100%;
     }
 
     .shop-container .customize{
