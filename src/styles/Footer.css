@@ -135,6 +135,7 @@
     margin-top: 20px;
     color: #555555;
     font-size: 14px;
+    align-items: baseline;
 }
 
 .footer .base #copy{

@@ -757,6 +757,7 @@
 
     .homepage-search-cart-wishlist{
         display: flex;
+        width: auto;
     }
 
     .homepage-search-input{
@@ -906,6 +907,181 @@
 
     .sale-section .discount-types p{
         display: block;
+    }
+
+    .sale-section .shop-now-btn{
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        white-space: nowrap;
+        padding: 15px 20px;
+        border-radius: 5px;
+        font-weight: 600;
+        background-color: #FF008C;
+        width: fit-content;
+        transition: 0.5s ease-in-out;
+        z-index: 10;
+    }
+
+    .sale-section .shop-now-btn:hover{
+        background-color: #c4026c;
+        transform: scale(1.1);
+    }
+}
+
+
+/* FOR TABLET */
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+
+    .landingpage{
+        height: 75vh;
+    }
+
+    .homepage-header{
+        padding: 20px 25px;
+    }
+
+    .homepage-logo-app-name{
+        width: 100%;
+    }
+
+    .homepage-nav-links{
+        display: none;
+    }
+
+    .homepage-search-cart-wishlist{
+        width: auto;
+        display: flex;
+    }
+
+    .homepage-search-input{
+        display: none;
+    }
+
+    .homepage-menu{
+        display: block;
+    }
+
+    .landingpage-contents{
+        width: fit-content;
+        margin: 0 25px;
+        top: 55%;
+        transform: translateY(-50%);
+    }
+
+    .slogan{
+        font-size: 45px;
+    }
+
+    .brand-info{
+        font-size: 22px;
+        width: 100%;
+    }
+    
+    .landingpage-btns button{
+        margin: 0 10px 20px 0;
+    }
+
+    .book-beauty-consultation{
+        padding: 40px 25px 20px 25px;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .book-beauty-consultation :first-child{
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    .head-txt{
+        position: relative;
+        line-height: 1;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .book-beauty-consultation .head{
+        font-size: 25px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .book-beauty-consultation .appointment{
+        padding: 15px 20px 0 20px ;
+        width: fit-content;
+        height: fit-content;
+        border-radius: 10px;
+    }
+
+    .featured-products-container{
+        padding-bottom: 20px;
+        margin-bottom: 50px;
+    }
+
+    .section-info{
+        text-align: center;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .section-info .head{
+        font-size: 30px;
+    }
+
+    .section-info .txt{
+        font-size: 18px;
+        color: gray;
+        width: 500px;
+        margin-bottom: 50px;
+    }
+
+    /* PRODUCTS STYLES */
+
+    .products-flex{
+        margin: 50px 25px;
+    }
+
+    .collection-flex{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 50px 25px;
+        gap: 10px;
+        position: relative;
+    }
+
+    .collection-flex .path{
+        left: 300px;
+        transform: translateX(100px);
+    }
+
+    .sale-section{
+        position: relative;
+        margin: 50px 0px;
+        overflow: hidden;
+    }
+
+    .sale-section .txt-overlay{
+        margin: 70px 0px 70px 25px;
+        width: 100%;
+    }
+
+    .sale-section .percent-off{
+        transform: translateX(0);
+        margin: 25px;
+    }
+
+    .sale-section .mega-txt{
+        font-size: 35px;
+    }
+
+    .sale-section .discount-types{
+        margin: 20px 0;
+    }
+
+    .sale-section .discount-types span{
+        width: fit-content;
     }
 
     .sale-section .shop-now-btn{
