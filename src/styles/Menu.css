@@ -73,4 +73,5 @@
 
 .menu-container .ourshop-ourshop, .menu-container .services-services, .menu-container .booking-booking, .menu-container .contact-contact, .menu-container .about-about{
     background-color: #FFC5E5;
+    border-left: 3px solid #FF008C;
 }
