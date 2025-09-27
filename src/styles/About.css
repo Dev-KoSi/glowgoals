@@ -141,14 +141,6 @@
     .about-container .top-display{
         height: 300px;
     }
-    
-    .about-container .overlay{
-        color: white;
-        text-align: center;
-        z-index: 10;
-        position: relative;
-        top: 10%;
-    }
 
     .about-container .overlay :first-child{
         font-size: 35px;
@@ -197,5 +189,54 @@
 
     .about-container .points{
         display: block;
+    }
+}
+
+/* FOR TABLET */
+
+@media screen and (min-width: 481px) and (max-width: 900px) {
+    .about-container .top-display{
+        height: 350px;
+    }
+
+    .about-container .overlay :first-child{
+        font-size: 40px;
+    }
+
+    .about-container .overlay .txt {
+        max-width: 600px;
+        font-size: 18px;
+    }
+
+    .about-container .our-story{
+        grid-template-columns: 1fr;
+        padding: 50px 15px;
+        gap: 30px;
+    }
+    
+    .about-container .story .head{
+        font-size: 25px;
+    }
+    
+    .about-container .our-values{
+        padding: 50px 15px;
+    }
+
+    .about-container .our-values #head{
+        font-size: 25px;
+        margin-bottom: 50px;
+    }
+
+    .about-container .value svg{
+        padding: 15px;
+    }
+
+    .about-container .why-us{
+        padding: 50px 15px;
+    }
+
+    .about-container .why-us #head{
+        font-size: 25px;
+        margin-bottom: 50px;
     }
 }
