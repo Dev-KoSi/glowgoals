@@ -404,15 +404,80 @@
     }
 
     .contact-container .suggestion{
-        background-color: #FF008C;
-        color: white;
-        text-align: center;
         padding: 30px 15px;
-        margin-bottom: 50px;
     }
 
     .contact-container .suggestion .head{
         font-size: 30px;
+    }
+
+    .contact-container .suggestion .txt{
+        font-size: 18px;
+    }
+
+    .contact-container .suggestion button{
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+/* FOR TABLET */
+
+@media screen and (min-width: 481px) and (max-width: 900px) {
+    .contact-container .top-display{
+        height: 300px;
+    }
+
+    .contact-container .overlay{
+        color: white;
+        text-align: center;
+        z-index: 10;
+        position: relative;
+        top: 10%;
+    }
+
+    .contact-container .overlay :first-child{
+        font-size: 40px;
+    }
+
+    .contact-container .overlay .txt {
+        max-width: 600px;
+        font-size: 19px;
+    }
+
+    .contact-container .contact-us{
+        padding: 50px 15px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contact-container .send-msg{
+        padding: 25px;
+    }
+
+    .contact-container .contact-info{
+        padding: 25px;
+    }
+
+    .contact-container .contact-info .info{
+        margin-bottom: 20px;
+    }
+
+    .contact-container .handles{
+        padding: 25px;
+    }
+
+    .contact-container .handles svg{
+        padding: 8px;
+    }
+
+    .contact-container .suggestion{
+        padding: 30px 15px;
+    }
+
+    .contact-container .suggestion .head{
+        font-size: 35px;
     }
 
     .contact-container .suggestion .txt{

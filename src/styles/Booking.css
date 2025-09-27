@@ -396,6 +396,10 @@
         padding: 15px;
     }
 
+    .booking-container .schedule-session .head{
+        font-size: 22px;
+    }
+
     .booking-container .schedule-session .name-phone,
     .booking-container .schedule-session .date-time{
         display: grid;
@@ -406,6 +410,14 @@
 
     .booking-container .the-service .options{
         width: 97%;
+    }
+
+    .booking-container .why .head{
+        font-size: 22px;
+    }
+
+    .booking-container .get-in-touch .head{
+        font-size: 22px;
     }
 
     .booking-container .track{
