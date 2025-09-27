@@ -134,3 +134,68 @@
 .about-container .point .txt{
     color: #555555;
 }
+
+/* FOR MOBILE */
+
+@media screen and (max-width: 480px) {
+    .about-container .top-display{
+        height: 300px;
+    }
+    
+    .about-container .overlay{
+        color: white;
+        text-align: center;
+        z-index: 10;
+        position: relative;
+        top: 10%;
+    }
+
+    .about-container .overlay :first-child{
+        font-size: 35px;
+    }
+
+    .about-container .overlay .txt {
+        max-width: 400px;
+        font-size: 16px;
+    }
+
+    .about-container .our-story{
+        grid-template-columns: 1fr;
+        padding: 30px 15px;
+    }
+
+    .about-container .story .head{
+        font-size: 22px;
+    }
+
+    .about-container .our-values{
+        padding: 20px 15px;
+    }
+
+    .about-container .our-values #head{
+        font-size: 22px;
+        margin-bottom: 50px;
+    }
+
+    .about-container .the-values{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+
+    .about-container .value svg{
+        padding: 15px;
+    }
+
+    .about-container .why-us{
+        padding: 50px 15px;
+    }
+
+    .about-container .why-us #head{
+        font-size: 22px;
+        margin-bottom: 50px;
+    }
+
+    .about-container .points{
+        display: block;
+    }
+}
