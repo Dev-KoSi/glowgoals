@@ -733,6 +733,46 @@
     transform: scale(1.1);
 }
 
+@media screen and (max-width: 900px) {
+    .trans-logo-app-name:hover,
+    .homepage-nav-links span,
+    .landingpage-btns button,
+    .landingpage-btns :first-child::before,
+    .landingpage-btns :nth-child(2)::before,
+    .book-beauty-consultation .appointment,
+    .collection-flex .collection,
+    .collection-flex .collection:hover,
+    .collection-flex img,
+    .collection-flex .collection:hover img,
+    .collection-flex .path,
+    .collection-flex .collection:hover .path,
+    .collection-flex .txt-overlay,
+    .collection-flex .collection:hover .txt-overlay,
+    .collection-flex .name,
+    .collection-flex .collection:hover .name,
+    .sale-section img,
+    .sale-section:hover img,
+    .sale-section .percent-off,
+    .sale-section:hover .percent-off,
+    .sale-section .shop-now-btn,
+    .sale-section .shop-now-btn:hover,
+    .products-flex .product,
+    .products-flex .product:hover,
+    .products-flex img,
+    .products-flex .product:hover img,
+    .products-flex .details,
+    .products-flex .btns button,
+    .products-flex button:hover,
+    .products-flex .btns svg,
+    .products-flex .btns svg:hover,
+    .view-all-btn button,
+    .view-all-btn button:hover {
+        transition: none !important;
+        transform: none !important;
+        animation: none !important;
+    }
+}
+
 
 /* FOR MOBILE */
 
@@ -846,6 +886,10 @@
         margin: 50px 15px;
     }
 
+    .products-flex .product:hover img{
+        filter: brightness(100%);
+    }
+
     .collection-flex{
         display: block;
         margin: 50px 15px;
@@ -858,7 +902,7 @@
     }
 
     .collection-flex .path{
-        left: 300px;
+        left: 340px;
         transform: translateX(100px);
     }
 
@@ -1041,6 +1085,10 @@
 
     .products-flex{
         margin: 50px 25px;
+    }
+
+    .products-flex .product:hover img{
+        filter: brightness(100%);
     }
 
     .collection-flex{

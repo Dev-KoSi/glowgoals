@@ -288,6 +288,16 @@
     transform: scale(1.02);
 }
 
+@media screen and (max-width: 900px) {
+    .services-container *,
+    .services-container *::before,
+    .services-container *::after {
+        transition: none !important;
+        animation: none !important;
+        transform: none !important;
+    }
+}
+
 /* FOR MOBILE */
 
 @media screen and (max-width: 480px) {

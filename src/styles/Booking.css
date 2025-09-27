@@ -366,6 +366,17 @@
     filter: brightness(90%);
 }
 
+@media screen and (max-width: 900px) {
+    .booking-container *,
+    .booking-container *::before,
+    .booking-container *::after {
+        transition: none !important;
+        animation: none !important;
+        transform: none !important;
+    }
+}
+
+
 /* FOR MOBILE */
 
 @media screen and (max-width: 480px) {

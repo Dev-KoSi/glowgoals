@@ -340,6 +340,18 @@
     color: #FF008C;
 }
 
+
+@media screen and (max-width: 900px) {
+    .contact-container *,
+    .contact-container *::before,
+    .contact-container *::after {
+        transition: none !important;
+        animation: none !important;
+        transform: none !important;
+    }
+}
+
+
 /* FOR MOBILE */
 
 @media screen and (max-width: 480px) {
