@@ -321,6 +321,7 @@
 .contact-container .suggestion .btns :first-child{
     border: 1px solid white;
     color: #FF008C;
+    background-color: white;
 }
 
 .contact-container .suggestion .btns :first-child:hover{
@@ -337,4 +338,89 @@
 .contact-container .suggestion .btns :nth-child(2):hover{
     background-color: white;
     color: #FF008C;
+}
+
+/* FOR MOBILE */
+
+@media screen and (max-width: 480px) {
+    .contact-container .top-display{
+        height: 300px;
+    }
+
+    .contact-container .overlay{
+        color: white;
+        text-align: center;
+        z-index: 10;
+        position: relative;
+        top: 10%;
+    }
+
+    .contact-container .overlay :first-child{
+        font-size: 35px;
+    }
+
+    .contact-container .overlay .txt {
+        max-width: 400px;
+        font-size: 18px;
+    }
+
+    .contact-container .contact-us{
+        padding: 50px 15px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contact-container .send-msg{
+        padding: 20px;
+    }
+
+    .contact-container .send-msg .head{
+        font-size: 22px;
+    }
+
+    .contact-container .contact-info{
+        padding: 20px;
+    }
+
+    .contact-container .contact-info .head{
+        font-size: 22px;
+    }
+
+    .contact-container .contact-info .info{
+        margin-bottom: 20px;
+    }
+
+    .contact-container .handles{
+        padding: 20px;
+    }
+
+    .contact-container .handles .head{
+        font-size: 22px;
+    }
+
+    .contact-container .handles svg{
+        padding: 5px;
+    }
+
+    .contact-container .suggestion{
+        background-color: #FF008C;
+        color: white;
+        text-align: center;
+        padding: 30px 15px;
+        margin-bottom: 50px;
+    }
+
+    .contact-container .suggestion .head{
+        font-size: 30px;
+    }
+
+    .contact-container .suggestion .txt{
+        font-size: 18px;
+    }
+
+    .contact-container .suggestion button{
+        font-size: 16px;
+        padding: 10px 20px;
+    }
 }
