@@ -190,3 +190,86 @@
     background: linear-gradient(to right, #c4026c, #FF008C);
     transform: scale(1.05);
 }
+
+
+@media screen and (max-width: 900px) {
+    .wishlist-container *,
+    .wishlist-container *::before,
+    .wishlist-container *::after {
+        transition: none !important;
+        animation: none !important;
+        transform: none !important;
+    }
+}
+
+
+
+/* FOR MOBILE */
+
+@media screen and (max-width: 480px) {
+    .wishlist-container .wishlist .top-display{
+        height: 300px;
+    }
+
+    .wishlist-container .wishlist .overlay :first-child{
+        font-size: 35px;
+    }
+
+    .wishlist-container .wishlist .overlay .txt {
+        max-width: 400px;
+        font-size: 16px;
+    }
+
+    .wishlist-container .wishlist .gist{
+        padding: 50px 15px;
+        margin-bottom: 50px;
+    }
+
+    .wishlist-container .gist .btn{
+        padding: 10px 20px;
+    }
+
+    .wishlist-container .all{
+        padding: 50px 15px 0 15px;
+    }
+
+    .wishlist-container .all .header{
+        padding: 20px;
+    }
+
+    .wishlist-container .all .header :first-child{
+        font-size: 25px;
+    }
+
+    .wishlist-container .all .header #amount{
+        font-size: 25px;
+    }
+
+    .wishlist-container .all .header :nth-child(2){        
+        font-size: 14px;
+    }
+
+    .wishlist-container .all .header .count{
+        font-size: 14px;
+    }
+
+    .wishlist-container #grid{
+        padding: 30px 0 0 0;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .wishlist-container #grid .product:hover #del{
+        display: none;
+    }
+
+    .wishlist-container #grid #hide-view{
+        display: none;
+    }
+
+    .wishlist-container .all .btn button{
+        padding: 15px 25px;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+}
