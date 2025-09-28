@@ -380,7 +380,7 @@
     }
 
     .checkout-container .personal-info .info-details{
-        gap: 10px;
+        display: block;
     }
 
     .checkout-container .personal-info .input :first-child{
@@ -403,6 +403,99 @@
 
     .checkout-container .personal-info .btns button{
         padding: 20px;
+    }
+
+    .checkout-container .personal-info .btns button:hover{
+        transform: scale(1);
+    }
+}
+
+/* FOR TABLET */
+
+@media screen and (min-width: 481px) and (max-width: 900px) {
+    .checkout-container .top-display{
+        height: 350px;
+    }
+
+    .checkout-container .top-display .overlay{
+        top: 20%;
+    }
+
+    .checkout-container .top-display .overlay :first-child{
+        font-size: 40px;
+    }
+
+    .checkout-container .top-display .overlay .txt {
+        max-width: 600px;
+        font-size: 18px;
+    }
+
+    .checkout-container .grid{
+        padding: 50px 15px;
+        display: block;
+        margin-bottom: 50px;
+    }
+
+    .checkout-container .order-summary{
+        width: auto;
+        margin-bottom: 50px;
+    }
+
+    .checkout-container .order-summary .head{
+        font-weight: 600;
+    }
+
+    .checkout-container .order-summary .details{
+        width: 100%;
+    }
+
+    .checkout-container .order-summary .img{
+        width: 250px;
+        height: 130px;
+    }
+
+    .checkout-container .order-summary .calc{
+        padding: 20px 0;
+    }
+
+    .checkout-container .order-summary .sub{
+        padding-bottom: 20px;
+    }
+
+    .checkout-container .order-summary .sub .txt{
+        font-size: 18px;
+    }
+
+    .checkout-container .order-summary .sub .amount{
+        font-size: 20px;
+    }
+
+    .checkout-container .order-summary .total{
+        font-size: 22px;
+    }
+
+    .checkout-container .personal-info{
+        width: auto;
+    }
+
+    .checkout-container .personal-info .head{
+        font-weight: 600;
+    }
+
+    .checkout-container .personal-info .head-2{
+        margin: 20px 0;
+    }
+
+    .checkout-container .personal-info .info-details{
+        display: block;
+    }
+
+    .checkout-container .personal-info .input :first-child{
+        gap: 5px;
+    }
+
+    .checkout-container .personal-info .geo{
+        display: block;
     }
 
     .checkout-container .personal-info .btns button:hover{
