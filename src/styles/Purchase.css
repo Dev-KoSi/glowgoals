@@ -373,6 +373,67 @@
         font-weight: 600;
     }
 
+    .purchase-container .customer-info select option{
+        font-size: 10px;
+    }
+
+    .purchase-container .customer-info .btn button:hover{
+        transform: translateY(0);
+    }
+}
+
+/* FOR TABLET */
+
+@media screen and (min-width: 481px) and (max-width: 900px) {
+    .purchase-container .top-display{
+        height: 300px;
+    }
+
+    .purchase-container .top-display .overlay :first-child{
+        font-size: 40px;
+    }
+
+    .purchase-container .top-display .overlay .txt {
+        font-size: 18px;
+    }
+
+    .purchase-container .purchase-grid{
+        padding: 30px 15px;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .purchase-container .product-details{
+        padding: 20px;
+        border-radius: 10px;
+        width: auto;
+        height: fit-content;
+    }
+
+    .purchase-container .product-details .head{
+        gap: 5px;
+        font-weight: 600;
+    }
+
+    .purchase-container .product-details .img{
+        width: 250px;
+        height: auto;
+    }
+
+    .purchase-container .customer-info{
+        padding: 20px;
+    }
+
+    .purchase-container .customer-info .head{
+        gap: 5px;
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    .purchase-container .customer-info select option{
+        font-size: 10px;
+    }
+
     .purchase-container .customer-info .btn button:hover{
         transform: translateY(0);
     }
