@@ -377,3 +377,104 @@
         transform: scale(1);
     }
 }
+
+/* FOR TABLET */
+
+@media screen and (min-width: 481px) and (max-width: 900px) {
+    
+    .viewservice{
+        margin-bottom: 50px;
+    }
+
+    .viewservice .the-service{
+        height: 500px;
+    }
+
+    .viewservice .the-service .contents{
+        top: 35%;
+        margin: 0 15px;
+    }
+
+
+    .viewservice .the-service .name{
+        font-size: 45px;
+        margin-bottom: 10px;
+    }
+
+    .viewservice .the-service .btns :first-child:hover{
+        transform: scale(1);
+    }
+
+    .viewservice .the-service .btns :nth-child(2){
+        margin-top: 10px;
+    }
+
+    .viewservice .the-service .btns :nth-child(2):hover{
+        transform: scale(1);
+    }
+
+    .viewservice  .about{
+        margin: 50px 15px;
+        gap: 30px;
+    }
+
+    .viewservice  .about .included{
+        padding: 20px;
+    }
+
+    .viewservice  .about .included .head{
+        gap: 10px;
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    .viewservice .included .list div{
+        font-size: 18px;
+        gap: 10px;
+    }
+
+    .viewservice .included .list div:hover svg{
+        transform: scale(1);
+    }
+
+    .viewservice  .about .benefits{
+        padding: 20px;
+    }
+
+    .viewservice  .about .benefits .head{
+        gap: 10px;
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    .viewservice .benefits .list div{
+        font-size: 18px;
+        gap: 10px;
+    }
+
+    .viewservice .benefits .list div:hover svg{
+        transform: scale(1);
+    }
+
+    .viewservice .suggestion{
+        padding: 40px 0;
+        margin-bottom: 50px;
+    }
+
+    .viewservice .suggestion .head{
+        font-size: 35px;
+    }
+
+    .viewservice .suggestion .txt{
+        font-size: 18px;
+        margin: 0 0 20px 0;
+    }
+
+    .viewservice .suggestion .btns :first-child:hover{
+        transform: scale(1);
+    }
+
+    .viewservice .suggestion .btns :nth-child(2):hover{
+        transform: scale(1);
+    }
+}
