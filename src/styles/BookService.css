@@ -393,7 +393,7 @@
     }
 
     .bookservice-container .overlay :first-child{
-        font-size: 30px;
+        font-size: 35px;
     }
 
     .bookservice-container .overlay .txt {
@@ -491,6 +491,104 @@
     .bookservice-container .suggestion button{
         padding: 15px 20px;
         font-weight: 500;
+    }
+
+    .bookservice-container .suggestion .btns button:hover{
+        transform: scale(1);
+    }
+}
+
+/* FOR TABLET */
+
+@media screen and (min-width: 481px) and (max-width: 900px) {
+    .bookservice-container .top-display{
+        height: 300px;
+    }
+
+    .bookservice-container .overlay :first-child{
+        font-size: 40px;
+    }
+
+    .bookservice-container .overlay .txt {
+        max-width: 600px;
+        font-size: 18px;
+    }
+
+    .bookservice-container .book{
+        padding: 50px 15px;
+        display: block;
+    }
+
+    .bookservice-container .schedule-session{
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+
+    .bookservice-container .schedule-session .head{
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    .bookservice-container .selection-prompt .head{
+        font-size: 14px;
+    }
+
+    .bookservice-container .schedule-session .booking-details :first-child{
+        gap: 5px;
+    }
+
+    .bookservice-container .the-service .options{
+        width: 98%;
+    }
+
+    .bookservice-container .why{
+        padding: 20px;
+    }
+
+    .bookservice-container .why .head{
+        font-weight: 600;
+    }
+
+    .bookservice-container .why .point{
+        gap: 5px;
+    }
+    
+    .bookservice-container .get-in-touch{
+        padding: 20px;
+    }
+
+    .bookservice-container .get-in-touch .head{
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    .bookservice-container .track{
+        padding: 30px 0;
+        margin-bottom: 30px;
+    }
+
+    .bookservice-container .track .head{
+        font-size: 35px;
+    }
+
+    .bookservice-container .track .txt{
+        font-size: 18px;
+    }
+
+    .bookservice-container .track .btns button:hover{
+        transform: scale(1);
+    }
+
+    .bookservice-container .suggestion{
+        padding: 30px 0;
+    }
+
+    .bookservice-container .suggestion .head{
+        font-size: 35px;
+    }
+
+    .bookservice-container .suggestion .txt{
+        font-size: 18px;
     }
 
     .bookservice-container .suggestion .btns button:hover{
