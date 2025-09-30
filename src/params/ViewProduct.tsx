@@ -308,7 +308,7 @@ export function ViewProduct() {
 
                     <div className="msg">
                         <div>
-                            Your Review (Optional) *
+                            Your Review (Optional)
                         </div>
 
                         <textarea value={review} onChange={(e) => {
