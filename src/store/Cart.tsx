@@ -36,7 +36,7 @@ export function Cart({setCart, cart}: Items) {
                             return cartItem ? sum + cartItem.price * c.quantity : sum
                         }, 0).toFixed(2);
 
-    let shipping = (addPrice/10).toFixed(2)
+    let shipping = addPrice >= 1000 ? 0 : (addPrice/10).toFixed(2)
 
     return (
         <div className="cart-container">
@@ -253,7 +253,7 @@ export function Cart({setCart, cart}: Items) {
 
                     {/* ORDER SUMMARY */}
 
-                    <div className="order-summary">
+                    {cart.length >= 1 && <div className="order-summary">
                         <div style={{fontFamily: 'Caveat'}} className="head">
                             Order Summary
                         </div>
@@ -323,7 +323,7 @@ export function Cart({setCart, cart}: Items) {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>}
                 </div>
             </div>}
         </div>

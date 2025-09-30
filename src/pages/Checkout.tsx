@@ -1,8 +1,18 @@
 import { useNavigate } from 'react-router-dom'
 import '../styles/Checkout.css'
+import type { Items } from '../types/Types';
+import { products } from '../types/Products';
 
-export function Checkout() {
+export function Checkout({cart}: Items) {
     const navigate = useNavigate();
+
+    let addPrice: any = cart.reduce((sum, c) => {
+        const cartItem = products.find((p) => p.id === c.productId);
+
+        return cartItem ? sum + cartItem.price * c.quantity : sum
+    }, 0).toFixed(2)
+
+    let shipping = addPrice >= 1000 ? 0 : (addPrice/10).toFixed(2)
 
     return (
         <div className="checkout-container">
@@ -27,53 +37,37 @@ export function Checkout() {
                             Order Summary
                         </div>
 
-                        <div className="flex">
-                            <div className="img">
-                                <img src="/perfume-spray-bottle-isolated_93675-123583.jpg" alt="" />
-                            </div>
+                        {cart?.map((c) => {
+                            const cartItem = products.find((p) => p.id === c.productId);
 
-                            <div className="details">
-                                <div className="name">
-                                    Luxury Foundation - Medium Coverage
-                                </div>
+                            if(cartItem) {
+                                return (
+                                    <div className="flex">
+                                        <div className="img">
+                                            <img src={`${cartItem.image}`} />
+                                        </div>
 
-                                <div className="brand">
-                                    GlowGoals
-                                </div>
+                                        <div className="details">
+                                            <div className="name">
+                                                {cartItem.name}
+                                            </div>
 
-                                <div className="quantity">
-                                    Qty: 1
-                                </div>
-                            </div>
+                                            <div className="brand">
+                                                {cartItem.brand}
+                                            </div>
 
-                            <div className="price">
-                                GHC 600
-                            </div>
-                        </div>
+                                            <div className="quantity">
+                                                Qty: {c.quantity}
+                                            </div>
+                                        </div>
 
-                        <div className="flex">
-                            <div className="img">
-                                <img src="/perfume-spray-bottle-isolated_93675-123583.jpg" alt="" />
-                            </div>
-
-                            <div className="details">
-                                <div className="name">
-                                    Luxury Foundation - Medium Coverage
-                                </div>
-
-                                <div className="brand">
-                                    GlowGoals
-                                </div>
-
-                                <div className="quantity">
-                                    Qty: 1
-                                </div>
-                            </div>
-
-                            <div className="price">
-                                GHC 600
-                            </div>
-                        </div>
+                                        <div className="price">
+                                            GHC {(cartItem.price).toFixed(2)}
+                                        </div>
+                                    </div>
+                                )
+                            }
+                        })}
 
                         <div className="calc">
                             <div className="sub">
@@ -82,17 +76,7 @@ export function Checkout() {
                                 </div>
 
                                 <div className="amount">
-                                    GHC 600
-                                </div>
-                            </div>
-
-                            <div className="sub">
-                                <div className="txt">
-                                    Tax(8%):
-                                </div>
-
-                                <div className="amount">
-                                    GHC 55
+                                    GHC {addPrice}
                                 </div>
                             </div>
 
@@ -102,7 +86,7 @@ export function Checkout() {
                                 </div>
 
                                 <div className="amount">
-                                    GHC 12
+                                    {addPrice >= 1000 ? 'FREE' : `GHC ${shipping}`}
                                 </div>
                             </div>
 
@@ -112,7 +96,7 @@ export function Checkout() {
                                 </div>
 
                                 <div className="amount">
-                                    GHC 667
+                                    GHC {(Number(addPrice) + Number(shipping)).toFixed(2)}
                                 </div>
                             </div>
                         </div>

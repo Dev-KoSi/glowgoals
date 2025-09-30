@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { Menu } from './Menu';
 import type { Items } from '../types/Types';
 
-export function Header({setCart, cart}: Items) {
+export function Header({cart}: Items) {
 
     const [toggleMenu, setToggleMenu] = useState<boolean>(false);
 

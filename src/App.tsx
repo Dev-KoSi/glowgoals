@@ -140,7 +140,7 @@ export function App() {
       element: (
         <div>
           <Header cart={cart} setCart={setCart}/>
-          <Checkout/>
+          <Checkout  cart={cart} setCart={setCart}/>
           <Footer/>
         </div>
       )
