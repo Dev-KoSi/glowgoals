@@ -2,8 +2,9 @@ import { useLocation } from 'react-router-dom'
 import '../styles/Header.css'
 import { useEffect, useState } from 'react';
 import { Menu } from './Menu';
+import type { Items } from '../types/Types';
 
-export function Header() {
+export function Header({setCart, cart}: Items) {
 
     const [toggleMenu, setToggleMenu] = useState<boolean>(false);
 
@@ -72,7 +73,7 @@ export function Header() {
                     <a className='header-cart' href="/cart">
                         <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
 
-                        <span className="header-cart-count">99+</span>
+                        <span className="header-cart-count">{cart.length}</span>
                     </a>
 
                     <a className='header-wishlist' href="/wishlist">

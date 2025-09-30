@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import '../styles/Shop.css'
 import { useNavigate } from 'react-router-dom';
 import { aZ, products } from '../types/Products';
-import type  { Cart, Product } from '../types/Types';
+import type  { Items, Product } from '../types/Types';
 import { wishlist } from '../store/Store';
 
-export function Shop() {
+export function Shop({setCart, cart}: Items) {
     const [sort, setSort] = useState<Product[]>(products);
 
     const [hideSort, setHideSort] = useState<boolean>(true);
@@ -33,19 +33,6 @@ export function Shop() {
     const [priceRangeMenu, setPriceRangeMenu] = useState<boolean>(false);
     const [priceRangeSelected, setPriceRangeSelected] = useState<string>('All');
     const [priceRangeOption, setPriceRangeOption] = useState<string>('');
-
-    const [cart, setCart] = useState<Cart[]>(() => {
-        try {
-            const saved = localStorage.getItem("cart")
-            return saved ? JSON.parse(saved) : [];
-        } catch {
-            return [];
-        }
-    })
-
-    useEffect(() => {
-        localStorage.setItem("cart", JSON.stringify(cart));
-    }, [cart]);
 
     return (
         <div className="shop-container">
@@ -437,7 +424,7 @@ export function Shop() {
                                     </div>
 
                                     <div className="price">
-                                        {`GHC ${p.price}`}
+                                        GHC {(p.price).toFixed(2)}
                                     </div>
 
                                     <div className="btns">
@@ -458,7 +445,7 @@ export function Shop() {
                                             const existing = wishlist.find((w) => w.productId === p.id)
 
                                             if(!existing) {
-                                                wishlist.push({productId: p.id})
+                                                wishlist.push()
                                             }
 
                                             console.log(wishlist);

@@ -4,8 +4,9 @@ import '../styles/Header.css'
 import { useNavigate } from 'react-router-dom';
 import { Menu } from '../components/Menu';
 import { products } from '../types/Products';
+import type { Items } from '../types/Types';
 
-export function HomePage() {
+export function HomePage({cart}: Items) {
 
     const [toggleMenu, setToggleMenu] = useState<boolean>(false);
 
@@ -14,21 +15,19 @@ export function HomePage() {
     const [toggleHeader, setToggleHeader] = useState<string>('homepage');
     
     useEffect(() => {
-    const handleScroll = () => {
-        const currentScroll = window.scrollY;
-        console.log(currentScroll)
+        const handleScroll = () => {
+            const currentScroll = window.scrollY;
 
-        if (currentScroll < 50) {
-            setToggleHeader('homepage');
-        } else {
-            setToggleHeader('header');
-        }
-    };
+            if (currentScroll < 50) {
+                setToggleHeader('homepage');
+            } else {
+                setToggleHeader('header');
+            }
+        };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-}, []);
-
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     return (
         <div className="homepage-container">
@@ -77,7 +76,7 @@ export function HomePage() {
                             <a className={`${toggleHeader}-cart`} href="/cart">
                                 <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
 
-                                <span className={`${toggleHeader}-cart-count`}>99+</span>
+                                <span className={`${toggleHeader}-cart-count`}>{cart.length}</span>
                             </a>
 
                             <a className={`${toggleHeader}-wishlist`} href="/wishlist">

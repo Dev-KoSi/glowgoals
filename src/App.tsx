@@ -16,15 +16,31 @@ import { Checkout } from './pages/Checkout'
 import { MyBooking } from './store/MyBooking'
 import { ViewService } from './params/ViewService'
 import { BookService } from './params/BookService'
+import { useEffect, useState } from 'react'
+import type { CartItem } from './types/Types'
 
 export function App() {
+
+    const [cart, setCart] = useState<CartItem[]>(() => {
+        try {
+            const saved = localStorage.getItem("cart")
+            return saved ? JSON.parse(saved) : [];
+        } catch (e) {
+            console.log(e)
+            return [];
+        }
+    })
+
+    useEffect(() => {
+        localStorage.setItem("cart", JSON.stringify(cart));
+    }, [cart]);
 
   const router = createBrowserRouter([
     {
       path: "/",
       element: (
         <div>
-          <HomePage/>
+          <HomePage cart={cart} setCart={setCart}/>
           <Footer/>
         </div>
       )
@@ -33,8 +49,8 @@ export function App() {
       path: '/cosmetics',
       element: (
         <div>
-          <Header/>
-          <Shop/>
+          <Header cart={cart} setCart={setCart}/>
+          <Shop cart={cart} setCart={setCart}/>
           <Footer/>
         </div>
       )
@@ -43,7 +59,7 @@ export function App() {
       path: '/services',
       element: (
         <div>
-          <Header/>
+          <Header cart={cart} setCart={setCart}/>
           <Services/>
           <Footer/>
         </div>
@@ -53,7 +69,7 @@ export function App() {
       path: '/booking',
       element: (
         <div>
-          <Header/>
+          <Header cart={cart} setCart={setCart}/>
           <Booking/>
           <Footer/>
         </div>
@@ -63,7 +79,7 @@ export function App() {
       path: '/contact',
       element: (
         <div>
-          <Header/>
+          <Header cart={cart} setCart={setCart}/>
           <Contact/>
           <Footer/>
         </div>
@@ -73,7 +89,7 @@ export function App() {
       path: '/about',
       element: (
         <div>
-          <Header/>
+          <Header cart={cart} setCart={setCart}/>
           <About/>
           <Footer/>
         </div>
@@ -83,8 +99,8 @@ export function App() {
       path: '/cart',
       element: (
         <div>
-          <Header/>
-          <Cart/>
+          <Header cart={cart} setCart={setCart}/>
+          <Cart cart={cart} setCart={setCart}/>
           <Footer/>
         </div>
       )
@@ -93,7 +109,7 @@ export function App() {
       path: '/wishlist',
       element: (
         <div>
-          <Header/>
+          <Header cart={cart} setCart={setCart}/>
           <Wishlist/>
           <Footer/>
         </div>
@@ -103,7 +119,7 @@ export function App() {
       path: '/cosmetics/:id',
       element: (
         <div>
-          <Header/>
+          <Header cart={cart} setCart={setCart}/>
           <ViewProduct/>
           <Footer/>
         </div>
@@ -113,7 +129,7 @@ export function App() {
       path: '/purchase/:id',
       element: (
         <div>
-          <Header/>
+          <Header cart={cart} setCart={setCart}/>
           <Purchase/>
           <Footer/>
         </div>
@@ -123,7 +139,7 @@ export function App() {
       path: '/checkout',
       element: (
         <div>
-          <Header/>
+          <Header cart={cart} setCart={setCart}/>
           <Checkout/>
           <Footer/>
         </div>
@@ -133,7 +149,7 @@ export function App() {
       path: '/my-booking',
       element: (
         <div>
-          <Header/>
+          <Header cart={cart} setCart={setCart}/>
           <MyBooking/>
           <Footer/>
         </div>
@@ -143,7 +159,7 @@ export function App() {
       path: '/services/:id',
       element: (
         <div>
-          <Header/>
+          <Header cart={cart} setCart={setCart}/>
           <ViewService/>
           <Footer/>
         </div>
@@ -153,7 +169,7 @@ export function App() {
       path: '/booking/:id',
       element: (
         <div>
-          <Header/>
+          <Header cart={cart} setCart={setCart}/>
           <BookService/>
           <Footer/>
         </div>

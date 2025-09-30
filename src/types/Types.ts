@@ -50,13 +50,19 @@ export type Contact = {
     message: string
 }
 
-export type Cart = {
+export type CartItem = {
     productId: string,
     quantity: number
 }
 
+export type Items = {
+    setCart: React.Dispatch<React.SetStateAction<CartItem[]>>,
+    cart: CartItem[]
+}
+
 export type Wishlist = {
-    productId: string
+    productId: string,
+    date: string
 }
 
 export type Review = {
