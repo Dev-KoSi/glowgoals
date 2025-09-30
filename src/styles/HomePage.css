@@ -886,6 +886,14 @@
         margin: 50px 15px;
     }
 
+    .products-flex .description{
+        display: none;
+    }
+
+    .products-flex #hide-view{
+        display: none;
+    }
+
     .products-flex .product:hover img{
         filter: brightness(100%);
     }
@@ -1085,6 +1093,14 @@
 
     .products-flex{
         margin: 50px 25px;
+    }
+
+    .products-flex .description{
+        display: none;
+    }
+
+    .products-flex #hide-view{
+        display: none;
     }
 
     .products-flex .product:hover img{

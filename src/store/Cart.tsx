@@ -49,7 +49,7 @@ export function Cart({setCart, cart}: Items) {
                         </div>
 
                         <div className="txt">
-                            {cart.length > 0 ? 'Your cart is empty. Start shopping to add some amazing beauty products to your collection.' : 'Your cart is empty. Start shopping to add some amazing beauty products to your collection.'}
+                            {cart.length < 1 ? 'Your cart is empty. Start shopping to add some amazing beauty products to your collection.' : 'Review your selected beauty products and proceed to checkout.'}
                         </div>
                     </div>
                 </div>
