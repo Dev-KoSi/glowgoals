@@ -18,7 +18,7 @@ export type Product = {
             five: number
         }
     },
-    reviews: []
+    reviews:string []
 }
 
 export type Service = {

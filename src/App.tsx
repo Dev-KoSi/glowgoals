@@ -134,7 +134,7 @@ export function App() {
       element: (
         <div>
           <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
-          <ViewProduct wishlist={wishlist} setWishlist={setWishlist}/>
+          <ViewProduct cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
           <Footer/>
         </div>
       )

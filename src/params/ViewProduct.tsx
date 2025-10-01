@@ -1,8 +1,10 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import '../styles/ViewProduct.css'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import { products } from '../types/Products';
+import type { CartWish } from '../types/Types';
 
-export function ViewProduct() {
+export function ViewProduct({setCart, setWishlist}: CartWish) {
 
     const navigate = useNavigate();
 
@@ -12,79 +14,90 @@ export function ViewProduct() {
 
     const stars = [1, 2, 3, 4, 5];
 
+    const param = useParams();
+
+    let product = products.find((p) => p.id === param.id);
+
+    let likeItems = products.filter((p) => p.category === product?.category);
+    
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [param]);
+
     return (
         <div className="viewproduct-container">
             <div className="viewproduct">
                 <div className="header">
-                    <div>Home<span>/</span></div>
+                    <div onClick={() => navigate('/')}>Home<span>/</span></div>
 
-                    <div>Cosmetics<span>/</span></div>
+                    <div onClick={() => navigate('/cosmetics')}>Cosmetics<span>/</span></div>
                     
-                    <div>Luxury Foundation - Medium Coverage</div>
+                    <div>{product?.name}</div>
                 </div>
 
                 <div className="overview">
                     <div className="pics">
                         <div className="main">
                             <span id='type'>
-                                All Types
+                                {product?.skinType}
                             </span>
 
                             <span>
                                 <svg id='wishlist-icon' fill="none" stroke="currentColor" width="24" height="24" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
                             </span>
 
-                            <img src="/perfume-spray-bottle-isolated_93675-123583.jpg" />
+                            <img src={`${product?.image}`}/>
                         </div>
 
                         <div className="subs">
-                            <img src="/perfume-spray-bottle-isolated_93675-123583.jpg" />
+                            <img src={`${product?.image}`}/>
 
-                            <img src="/perfume-spray-bottle-isolated_93675-123583.jpg" />
+                            <img src={`${product?.image}`}/>
 
-                            <img src="/perfume-spray-bottle-isolated_93675-123583.jpg" />
+                            <img src={`${product?.image}`}/>
 
-                            <img src="/perfume-spray-bottle-isolated_93675-123583.jpg" />
+                            <img src={`${product?.image}`}/>
                         </div>
                     </div>
 
                     <div className='info'>
                         <div className="type">
-                            MAKEUP
+                            {product?.category}
                         </div>
 
                         <div style={{fontFamily: 'Caveat'}} className="name">
-                            Luxury Foundation - Medium Coverage
+                            {product?.name}
                         </div>
 
                         <div className="by">
-                            by <span>GlowGoals</span>
+                            by <span>{product?.brand}</span>
                         </div>
 
                         <div className="ratings-reviews">
                             <div className="ratings">
-                                <svg fill="currentColor" width="24" height="24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-
-                                <svg fill="currentColor" width="24" height="24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-
-                                <svg fill="currentColor" width="24" height="24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-
-                                <svg fill="currentColor" width="24" height="24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-
-                                <svg fill="currentColor" width="24" height="24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                {stars.map((star) => {
+                                    return (
+                                        <svg 
+                                        
+                                        // RATE FUNC
+                                        style={{display: (product?.rating.rate ?? 0) < star ? 'none' : ''}}
+                                        
+                                        fill="currentColor" width="24" height="24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    )
+                                })}
                             </div>
 
                             <div className="reviews">
-                                4.6 (89 reviews)
+                                {product?.rating.rate} ({product?.reviews.length} reviews)
                             </div>
                         </div>
 
                         <div className="price">
-                            GHC 550
+                            GHC {product?.price.toFixed(2)}
                         </div>
 
                         <div className="description">
-                            Long-lasting foundation with SPF 30 for flawless, natural-looking coverage
+                            {product?.description}
                         </div>
 
                         <div className="details">
@@ -94,33 +107,66 @@ export function ViewProduct() {
 
                             <div className="sub">
                                 <div className="brand">
-                                    Brand: <span>GlowGoals</span>
+                                    Brand: <span>{product?.brand}</span>
                                 </div>
 
                                 <div>
-                                    Category: <span>Makeup</span>
+                                    Category: <span>{product?.category}</span>
                                 </div>
                             </div>
 
                             <div className="sub">
                                 <div className="brand">
-                                    Skin Type: <span>All Type</span>
+                                    Skin Type: <span>{product?.skinType}</span>
                                 </div>
 
                                 <div>
-                                    Stock: <span>18 units</span>
+                                    Stock: <span>{product?.stock} units</span>
                                 </div>
                             </div>
                         </div>
 
                         <div className="add-btn">
-                            <button>
+
+                            {/* MOVE TO CART FUNC */}
+
+                            <button onClick={() => {
+                                if(!product) return;
+
+                                setCart(cart => {
+                                    const cartItem = cart.find((c) => c.productId === product?.id);
+
+                                    if(cartItem) {
+                                        return cart.map((c) => 
+                                            c.productId === product?.id ? {...c, quantity: c.quantity + 1} : c
+                                        )
+                                    } else {
+                                        return [...cart, {productId: product?.id, quantity: 1}]
+                                    }
+                                })
+                                
+                            }}>
                                 Add to Cart
                             </button>
                         </div>
 
                         <div className="btns">
-                            <button id='wish'>
+
+                            {/* MOVE TO WISHLIST FUNC */}
+
+                            <button onClick={() => {
+                                if(!product) return;
+
+                                setWishlist(wish => {
+                                    const wishItem = wish.find((w) => w.productId === product?.id);
+
+                                    if(wishItem) {
+                                        return wish;
+                                    } else {
+                                        return [...wish, {productId: product?.id}]
+                                    }
+                                })
+                            }} id='wish'>
                                 <svg fill="none" stroke="currentColor" width="16" height="16" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
 
                                 Add to Wishlist
@@ -146,23 +192,24 @@ export function ViewProduct() {
                         <div className="ratings">
                             <div className="main">
                                 <div className="num">
-                                    4.6
+                                    {product?.rating.rate}
                                 </div>
                                 
                                 <div className="stars">
-                                    <svg fill="currentColor" width="24" height="24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-
-                                    <svg fill="currentColor" width="24" height="24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-
-                                    <svg fill="currentColor" width="24" height="24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-
-                                    <svg fill="currentColor" width="24" height="24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-
-                                    <svg fill="currentColor" width="24" height="24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    {stars.map((star) => {
+                                    return (
+                                        <svg 
+                                        
+                                        // RATE FUNC
+                                        style={{display: (product?.rating.rate ?? 0) < star ? 'none' : ''}}
+                                        
+                                        fill="currentColor" width="24" height="24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    )
+                                })}
                                 </div>
 
                                 <div className="txt">
-                                    89 reviews
+                                    {product?.reviews.length} reviews
                                 </div>
                             </div>
 
@@ -337,95 +384,73 @@ export function ViewProduct() {
 
                 <div className="products-flex">
 
-                    <div className="product">
-                        <div className="image">
-                            <span>ALL TYPES</span>
+                    {likeItems.map((l) => {
 
-                            <img style={{width: '100%'}} src="/perfume-spray-bottle-isolated_93675-123583.jpg" alt="" />
-                        </div>
+                        return (
+                            <div onClick={() => navigate(`/cosmetics/${l.id}`)} className="product">
+                                <div className="image">
+                                    <span>{l.skinType}</span>
 
-                        <div className="details">
-                            <div className="type">
-                                SKINCARE
+                                    <img style={{width: '100%'}} src={`${l.image}`}/>
+                                </div>
+
+                                <div className="details">
+                                    <div className="type">
+                                        {l.category}
+                                    </div>
+
+                                    <div style={{fontFamily: 'Caveat'}} className="name">
+                                        {l.name}
+                                    </div>
+
+                                    <div className="price">
+                                        GHC 
+                                        {l.price.toFixed(2)}
+                                    </div>
+
+                                    <div onClick={(e) => e.stopPropagation()} className="btns">
+
+                                        {/* MOVE TO CART FUNC */}
+
+                                        <button onClick={() => {
+
+                                        setCart(cart => {
+                                            const cartItem = cart.find((c) => c.productId === l.id);
+
+                                            if(cartItem) {
+                                                return cart.map((c) => 
+                                                    c.productId === l.id ? {...c, quantity: c.quantity + 1} : c
+                                                )
+                                            } else {
+                                                return [...cart, {productId: l.id, quantity: 1}]
+                                            }
+                                        })
+                                        
+                                    }} className='add-to-cart'>Add to Cart</button>
+
+                                    {/* MOVE TO WISHLIST FUNC */}
+
+                                        <svg onClick={() => {
+
+                                            setWishlist(wish => {
+                                                const wishItem = wish.find((w) => w.productId === l.id);
+
+                                                if(wishItem) {
+                                                    return wish;
+                                                } else {
+                                                    return [...wish, {productId: l.id}]
+                                                }
+                                            })
+                                        }}
+                                        fill="none" stroke="currentColor" width="24" height="24" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+
+                                        <svg id='hide-view' onClick={() => navigate('/cosmetics/id')} fill="none" width="24" height="24" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                    </div>
+                                </div>
                             </div>
-
-                            <div style={{fontFamily: 'Caveat'}} className="name">
-                                Luxury Anti-Aging Serum
-                            </div>
-
-                            <div className="price">
-                                GHC 450.00
-                            </div>
-
-                            <div className="btns">
-                                <button className='add-to-cart'>Add to Cart</button>
-
-                                <svg fill="none" stroke="currentColor" width="24" height="24" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-
-                                <svg id='hide-view' onClick={() => navigate('/cosmetics/id')} fill="none" width="24" height="24" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="product">
-                        <div className="image">
-                            <span>ALL TYPES</span>
-
-                            <img style={{width: '100%'}} src="/bottle-perfume_266732-14623.jpg" alt="" />
-                        </div>
-
-                        <div className="details">
-                            <div className="type">
-                                FRAGRANCE
-                            </div>
-
-                            <div style={{fontFamily: 'Caveat'}} className="name">
-                                Rose Gold Perfume
-                            </div>
-
-                            <div className="price">
-                                GHC 750.00
-                            </div>
-
-                            <div className="btns">
-                                <button className='add-to-cart'>Add to Cart</button>
-
-                                <svg fill="none" stroke="currentColor" width="24" height="24" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-
-                                <svg id='hide-view' fill="none" width="24" height="24" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="product">
-                        <div className="image">
-                            <span>ALL TYPES</span>
-
-                            <img style={{width: '100%'}} src="/high-angle-view-pen-table_1048944-18511898.jpg" alt="" />
-                        </div>
-
-                        <div className="details">
-                            <div className="type">
-                                MAKEUP
-                            </div>
-
-                            <div style={{fontFamily: 'Caveat'}} className="name">
-                                Matte Liquid Lipstick
-                            </div>
-
-                            <div className="price">
-                                GHC 250.00
-                            </div>
-
-                            <div className="btns">
-                                <button className='add-to-cart'>Add to Cart</button>
-
-                                <svg fill="none" stroke="currentColor" width="24" height="24" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-
-                                <svg id='hide-view' fill="none" width="24" height="24" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                            </div>
-                        </div>
-                    </div>
+                        )
+                    })}
+                    
                 </div>
             </div>
         </div>
