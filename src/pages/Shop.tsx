@@ -2,10 +2,9 @@ import { useState } from 'react'
 import '../styles/Shop.css'
 import { useNavigate } from 'react-router-dom';
 import { aZ, products } from '../types/Products';
-import type  { Items, Product } from '../types/Types';
-import { wishlist } from '../store/Store';
+import type  { CartWish, Product } from '../types/Types';
 
-export function Shop({setCart, cart}: Items) {
+export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
     const [sort, setSort] = useState<Product[]>(products);
 
     const [hideSort, setHideSort] = useState<boolean>(true);
@@ -441,12 +440,18 @@ export function Shop({setCart, cart}: Items) {
                                             console.log(cart)
                                         }} className='add-to-cart'>Add to Cart</button>
 
-                                        <svg onClick={() => {
-                                            const existing = wishlist.find((w) => w.productId === p.id)
+                                        {/* ADD TO WISHLIST */}
 
-                                            if(!existing) {
-                                                wishlist.push()
-                                            }
+                                        <svg onClick={() => {
+                                            setWishlist(wish => {
+                                                const wishItem = wish.find((w) => w.productId === p.id)
+    
+                                                if(wishItem) {
+                                                    return wish
+                                                } 
+                                                
+                                                return [...wish, {productId: p.id}]
+                                            })
 
                                             console.log(wishlist);
 

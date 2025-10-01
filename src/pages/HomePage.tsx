@@ -4,9 +4,9 @@ import '../styles/Header.css'
 import { useNavigate } from 'react-router-dom';
 import { Menu } from '../components/Menu';
 import { products } from '../types/Products';
-import type { Items } from '../types/Types';
+import type { CartWish } from '../types/Types';
 
-export function HomePage({setCart, cart}: Items) {
+export function HomePage({setCart, cart, wishlist, setWishlist}: CartWish) {
 
     const [toggleMenu, setToggleMenu] = useState<boolean>(false);
 
@@ -82,7 +82,7 @@ export function HomePage({setCart, cart}: Items) {
                             <a className={`${toggleHeader}-wishlist`} href="/wishlist">
                                 <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
 
-                                <span className={`${toggleHeader}-wishlist-count`}>1</span>
+                                <span className={`${toggleHeader}-wishlist-count`}>{wishlist.length}</span>
                             </a>
 
                             <div className={`${toggleHeader}-menu`}>
@@ -212,7 +212,22 @@ export function HomePage({setCart, cart}: Items) {
                                             })
                                         }} className='add-to-cart'>Add to Cart</button>
 
-                                        <svg fill="none" stroke="currentColor" width="24" height="24" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                        {/* ADD TO WISHLIST */}
+
+                                        <svg onClick={() => {
+                                            setWishlist(wish => {
+                                                const wishItem = wish.find((w) => w.productId === p.id);
+
+                                                if(wishItem) {
+                                                    return wish
+                                                }
+
+                                                return [...wish, {productId: p.id}]
+                                            })
+
+                                            console.log(wishlist);
+
+                                        }} fill="none" stroke="currentColor" width="24" height="24" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
 
                                         <svg id='hide-view' onClick={() => navigate('/cosmetics/id')} fill="none" width="24" height="24" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
                                     </div>

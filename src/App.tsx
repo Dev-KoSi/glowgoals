@@ -17,7 +17,7 @@ import { MyBooking } from './store/MyBooking'
 import { ViewService } from './params/ViewService'
 import { BookService } from './params/BookService'
 import { useEffect, useState } from 'react'
-import type { CartItem } from './types/Types'
+import type { CartItem, Wish } from './types/Types'
 
 export function App() {
 
@@ -35,12 +35,26 @@ export function App() {
         localStorage.setItem("cart", JSON.stringify(cart));
     }, [cart]);
 
+    const [wishlist, setWishlist] = useState<Wish[]>(() => {
+        try {
+            const saved = localStorage.getItem("wish")
+            return saved ? JSON.parse(saved) : [];
+        } catch (e) {
+            console.log(e)
+            return [];
+        }
+    })
+
+    useEffect(() => {
+        localStorage.setItem("wish", JSON.stringify(wishlist));
+    }, [wishlist]);
+
   const router = createBrowserRouter([
     {
       path: "/",
       element: (
         <div>
-          <HomePage cart={cart} setCart={setCart}/>
+          <HomePage cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
           <Footer/>
         </div>
       )
@@ -49,8 +63,8 @@ export function App() {
       path: '/cosmetics',
       element: (
         <div>
-          <Header cart={cart} setCart={setCart}/>
-          <Shop cart={cart} setCart={setCart}/>
+          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
+          <Shop cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
           <Footer/>
         </div>
       )
@@ -59,7 +73,7 @@ export function App() {
       path: '/services',
       element: (
         <div>
-          <Header cart={cart} setCart={setCart}/>
+          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
           <Services/>
           <Footer/>
         </div>
@@ -69,7 +83,7 @@ export function App() {
       path: '/booking',
       element: (
         <div>
-          <Header cart={cart} setCart={setCart}/>
+          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
           <Booking/>
           <Footer/>
         </div>
@@ -79,7 +93,7 @@ export function App() {
       path: '/contact',
       element: (
         <div>
-          <Header cart={cart} setCart={setCart}/>
+          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
           <Contact/>
           <Footer/>
         </div>
@@ -89,7 +103,7 @@ export function App() {
       path: '/about',
       element: (
         <div>
-          <Header cart={cart} setCart={setCart}/>
+          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
           <About/>
           <Footer/>
         </div>
@@ -99,8 +113,8 @@ export function App() {
       path: '/cart',
       element: (
         <div>
-          <Header cart={cart} setCart={setCart}/>
-          <Cart cart={cart} setCart={setCart}/>
+          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
+          <Cart cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
           <Footer/>
         </div>
       )
@@ -109,8 +123,8 @@ export function App() {
       path: '/wishlist',
       element: (
         <div>
-          <Header cart={cart} setCart={setCart}/>
-          <Wishlist/>
+          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
+          <Wishlist cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
           <Footer/>
         </div>
       )
@@ -119,8 +133,8 @@ export function App() {
       path: '/cosmetics/:id',
       element: (
         <div>
-          <Header cart={cart} setCart={setCart}/>
-          <ViewProduct/>
+          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
+          <ViewProduct wishlist={wishlist} setWishlist={setWishlist}/>
           <Footer/>
         </div>
       )
@@ -129,7 +143,7 @@ export function App() {
       path: '/purchase/:id',
       element: (
         <div>
-          <Header cart={cart} setCart={setCart}/>
+          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
           <Purchase/>
           <Footer/>
         </div>
@@ -139,7 +153,7 @@ export function App() {
       path: '/checkout',
       element: (
         <div>
-          <Header cart={cart} setCart={setCart}/>
+          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
           <Checkout  cart={cart} setCart={setCart}/>
           <Footer/>
         </div>
@@ -149,7 +163,7 @@ export function App() {
       path: '/my-booking',
       element: (
         <div>
-          <Header cart={cart} setCart={setCart}/>
+          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
           <MyBooking/>
           <Footer/>
         </div>
@@ -159,7 +173,7 @@ export function App() {
       path: '/services/:id',
       element: (
         <div>
-          <Header cart={cart} setCart={setCart}/>
+          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
           <ViewService/>
           <Footer/>
         </div>
@@ -169,7 +183,7 @@ export function App() {
       path: '/booking/:id',
       element: (
         <div>
-          <Header cart={cart} setCart={setCart}/>
+          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
           <BookService/>
           <Footer/>
         </div>

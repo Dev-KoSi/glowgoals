@@ -60,9 +60,21 @@ export type Items = {
     cart: CartItem[]
 }
 
-export type Wishlist = {
+export type CartWish = {
+    setCart: React.Dispatch<React.SetStateAction<CartItem[]>>,
+    cart: CartItem[],
+    setWishlist: React.Dispatch<React.SetStateAction<Wish[]>>,
+    wishlist: Wish[]
+}
+
+export type Wish = {
     productId: string,
-    date: string
+    date?: string
+}
+
+export type Wishes = {
+    setWishlist: React.Dispatch<React.SetStateAction<Wish[]>>,
+    wishlist: Wish[]
 }
 
 export type Review = {

@@ -2,10 +2,10 @@
 import { useNavigate } from 'react-router-dom'
 import '../styles/Cart.css'
 import { products } from '../types/Products';
-import type { Items, Wishlist } from '../types/Types';
+import type { CartWish, Wish } from '../types/Types';
 import { useEffect, useState } from 'react';
 
-export function Cart({setCart, cart}: Items) {
+export function Cart({setCart, cart, wishlist, setWishlist}: CartWish) {
     const now = new Date();
     const parts = now.toString().split(" "); 
 
@@ -15,7 +15,7 @@ export function Cart({setCart, cart}: Items) {
 
     const navigate = useNavigate();
     
-    const [later, setLater] = useState<Wishlist[]>(() => {
+    const [later, setLater] = useState<Wish[]>(() => {
         try {
             const saved = localStorage.getItem("later")
             return saved ? JSON.parse(saved) : [];
@@ -237,7 +237,22 @@ export function Cart({setCart, cart}: Items) {
                                                     Move to Cart
                                                 </button>
 
-                                                <button id='wish'>
+                                                {/* MOVE TO WISHLIST & REMOVE ITEM FUNC*/}
+
+                                                <button onClick={() => {
+                                                    setWishlist(wish => {
+                                                        const wishItem = wish.find((w) => w.productId === l.productId);
+
+                                                        if(wishItem) return wish;
+
+                                                        return [...wish, {productId: l.productId}]
+                                                    })
+
+                                                    setLater(later => later.filter((l) => l.productId !== laterItems.id));
+
+                                                    console.log(wishlist)
+                                                    
+                                                }} id='wish'>
                                                     <svg fill="none" stroke="currentColor" width="16" height="16" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
 
                                                     Add to Wishlist
