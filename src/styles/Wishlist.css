@@ -76,7 +76,7 @@
 
 .wishlist-container .gist .btn{
     color: white;
-    background-color: #FF008C;
+    background: linear-gradient(to right, #FF008C, #FF66B3);
     width: fit-content;
     margin: 0 auto;
     padding: 15px 30px;
@@ -87,7 +87,7 @@
 }
 
 .wishlist-container .gist .btn:hover{
-    background-color: #c4026c;
+    background: linear-gradient(to right, #c4026c, #FF008C);
     transform: scale(1.05);
 }
 

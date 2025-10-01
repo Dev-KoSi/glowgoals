@@ -24,7 +24,7 @@ export function Wishlist({setCart, wishlist, setWishlist}: CartWish) {
                     </div>
                 </div>
 
-                {/* <div className="gist">
+                {wishlist.length < 1 && <div className="gist">
                     <div className="emoji">
                         💔
                     </div>
@@ -40,9 +40,9 @@ export function Wishlist({setCart, wishlist, setWishlist}: CartWish) {
                     <a href="/cosmetics"><div className="btn">
                         BROWSE PRODUCTS
                     </div></a>
-                </div> */}
+                </div>}
 
-                <div className="all">
+                {wishlist.length > 0 && <div className="all">
                     
                     {<div className="header">
                         <div style={{fontFamily: 'Caveat'}}>
@@ -132,7 +132,7 @@ export function Wishlist({setCart, wishlist, setWishlist}: CartWish) {
                             Continue Shopping
                         </button>
                     </div>
-                </div>
+                </div>}
             </div>
         </div>
     )
