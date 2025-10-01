@@ -97,7 +97,7 @@ export function Cart({setCart, cart, wishlist, setWishlist}: CartWish) {
                                 if(!cartItem) return null;
 
                                 return (
-                                    <div className="item">
+                                    <div onClick={() => navigate(`/cosmetics/${cartItem.id}`)} className="item">
                                         <div className="img">
                                             <img src={`${cartItem.image}`} alt="" />
                                         </div>
@@ -108,7 +108,7 @@ export function Cart({setCart, cart, wishlist, setWishlist}: CartWish) {
                                                     {cartItem.name}
                                                 </div>
 
-                                                <div className="cmds">
+                                                <div onClick={(e) => e.stopPropagation()} className="cmds">
 
                                                     {/* SAVE FOR LATER FUNC */}
 
@@ -139,7 +139,7 @@ export function Cart({setCart, cart, wishlist, setWishlist}: CartWish) {
                                                     Quantity:
                                                 </div>
 
-                                                <div className="adjustment">
+                                                <div onClick={(e) => e.stopPropagation()} className="adjustment">
 
                                                     {/* ADD UP QUANTITY FUNC */}
 
@@ -186,51 +186,51 @@ export function Cart({setCart, cart, wishlist, setWishlist}: CartWish) {
                             </div>
 
                             {later?.map((l) => {
-                                const laterItems = products.find((p) => p.id === l.productId);
+                                const laterItem = products.find((p) => p.id === l.productId);
 
-                                if(!laterItems) return null;
+                                if(!laterItem) return null;
 
                                 return (
-                                    <div className="item">
+                                    <div onClick={() => navigate(`/cosmetics/${laterItem.id}`)} className="item">
                                         <div className="img">
-                                            <img src={`${laterItems.image}`} />
+                                            <img src={`${laterItem.image}`} />
                                         </div>
 
                                         <div className="details">
                                             <div style={{fontFamily: 'Caveat'}} className="name-cmds">
                                                 <div className="name">
-                                                    {laterItems.name}
+                                                    {laterItem.name}
                                                 </div>
 
-                                                <div className="cmds">
+                                                <div onClick={(e) => e.stopPropagation()} className="cmds">
 
                                                     {/* REVOME ITEM FUNC */}
 
                                                     <svg onClick={() => {
-                                                        setLater(later => later.filter(l => l.productId !== laterItems.id))
+                                                        setLater(later => later.filter(l => l.productId !== laterItem.id))
                                                     }} height="16" width="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                                                 </div>
                                             </div>
 
                                             <div className="category">
-                                                {laterItems.brand} • {laterItems.category} • {laterItems.skinType}
+                                                {laterItem.brand} • {laterItem.category} • {laterItem.skinType}
                                             </div>
 
                                             <div style={{fontFamily: 'Caveat'}} className="price">
-                                                    GHC {laterItems.price}
+                                                    GHC {laterItem.price}
                                             </div>
 
                                             <div className="date">{l.date}
                                             </div>
 
-                                            <div className="btns">
+                                            <div onClick={(e) => e.stopPropagation()} className="btns">
 
                                                 {/* MOVE TO CART & REMOVE ITEM FUNC*/}
 
                                                 <button onClick={() => {
                                                     setCart(cart => [...cart, {productId: l.productId, quantity: 1}])
 
-                                                    setLater(later => later.filter((l) => l.productId !== laterItems.id))
+                                                    setLater(later => later.filter((l) => l.productId !== laterItem.id))
                                                 }} id='cart'>
                                                     <svg fill="none" stroke="currentColor" width="16" height="16" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
 
@@ -248,7 +248,7 @@ export function Cart({setCart, cart, wishlist, setWishlist}: CartWish) {
                                                         return [...wish, {productId: l.productId}]
                                                     })
 
-                                                    setLater(later => later.filter((l) => l.productId !== laterItems.id));
+                                                    setLater(later => later.filter((l) => l.productId !== laterItem.id));
 
                                                     console.log(wishlist)
                                                     

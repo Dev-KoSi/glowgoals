@@ -1,8 +1,11 @@
+import { useNavigate } from 'react-router-dom';
 import '../styles/Wishlist.css'
 import { products } from '../types/Products';
 import type { CartWish } from '../types/Types'
 
 export function Wishlist({setCart, wishlist, setWishlist}: CartWish) {
+
+    const navigate = useNavigate();
 
     let addPrice: any = wishlist.reduce((sum, w) => {
         const wishItem = products.find((p) => p.id === w.productId);
@@ -71,7 +74,7 @@ export function Wishlist({setCart, wishlist, setWishlist}: CartWish) {
                             const wishItem = products.find((p) => p.id === wish.productId);
 
                             return (
-                                <div className="product">
+                                <div onClick={() => navigate(`/cosmetics/${wishItem?.id}`)} className="product">
                                     <div className="image">
                                         <span>{wishItem?.skinType}</span>
 
@@ -93,7 +96,7 @@ export function Wishlist({setCart, wishlist, setWishlist}: CartWish) {
                                             GHC {(wishItem?.price)?.toFixed(2)}
                                         </div>
 
-                                        <div className="btns">
+                                        <div onClick={(e) => e.stopPropagation()} className="btns">
 
                                             {/* MOVE TO CART & REMOVE ITEM FUNC*/}
                                             

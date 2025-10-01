@@ -42,7 +42,7 @@ export function Checkout({cart}: Items) {
 
                             if(cartItem) {
                                 return (
-                                    <div className="flex">
+                                    <div onClick={() => navigate(`/cosmetics/${cartItem.id}`)} className="flex">
                                         <div className="img">
                                             <img src={`${cartItem.image}`} />
                                         </div>

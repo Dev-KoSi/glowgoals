@@ -402,7 +402,7 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
                 <div id={`${shopLayout}`}>
 
                         {sort?.map((p) => (
-                            <div className="product">
+                            <div onClick={() => navigate(`/cosmetics/${p.id}`)} className="product">
                                 <div className="image">
                                     <span>{p.skinType}</span>
 
@@ -426,7 +426,7 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
                                         GHC {(p.price).toFixed(2)}
                                     </div>
 
-                                    <div className="btns">
+                                    <div onClick={(e) => e.stopPropagation()} className="btns">
                                         <button onClick={() => {
                                             setCart( cart => {
                                                 const existing = cart.find((c) => c.productId === p.id);
