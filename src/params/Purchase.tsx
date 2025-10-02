@@ -1,6 +1,17 @@
+import { useParams } from 'react-router-dom';
 import '../styles/Purchase.css'
+import { products } from '../types/Products';
+import { useEffect } from 'react';
 
 export function Purchase() {
+
+    const param = useParams();
+    
+    let product = products.find((p) => p.id === param.id);
+        
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <div className="purchase-container">
@@ -26,46 +37,44 @@ export function Purchase() {
 
                         <div className="flex">
                             <div className="img">
-                                <img src="/perfume-spray-bottle-isolated_93675-123583.jpg" alt="" />
+                                <img src={`${product?.image}`}/>
                             </div>
                             
                             <div className="details">
                                 <div style={{fontFamily: 'Caveat'}} className="name">
-                                    Luxury Foundation - Medium Coverage
+                                    {product?.name}
                                 </div>
 
                                 <div className="description">
-                                    Long-lasting foundation with SPF 30 for flawless, natural-looking coverage
+                                    {product?.description}
                                 </div>
 
                                 <div className="category">
                                     <div className="sub">
                                         <div>
-                                            <span>Brand:</span> GlowGoals
+                                            <span>Brand:</span> 
+                                            {product?.brand}
                                         </div>
 
                                         <div>
-                                            <span>Skin Type:</span> All Types
+                                            <span>Skin Type:</span>{product?.skinType}
                                         </div>
                                     </div>
                                     
                                     <div className="sub">
                                         <div>
-                                            <span>Category:</span> Makeup
-                                        </div>
-
-                                        <div>
-                                            <span>SKU:</span> GB-FD001
+                                            <span>Category:</span> 
+                                            {product?.category}
                                         </div>
                                     </div>
                                 </div>
 
                                 <div className="price">
-                                    GHC 600
+                                    GHC {product?.price.toFixed(2)}
                                 </div>
 
                                 <div className="in-stock">
-                                    18 in stock
+                                    {product?.stock} in stock
                                 </div>
                             </div>
                         </div>
@@ -189,17 +198,7 @@ export function Purchase() {
                                 </div>
 
                                 <div className="amount">
-                                    GHC 600
-                                </div>
-                            </div>
-
-                            <div className="sub">
-                                <div className="txt">
-                                    Tax(8%):
-                                </div>
-
-                                <div className="amount">
-                                    GHC 55
+                                    GHC {product?.price.toFixed(2)}
                                 </div>
                             </div>
 
@@ -209,7 +208,7 @@ export function Purchase() {
                                 </div>
 
                                 <div className="amount">
-                                    GHC 12
+                                    GHC {(Number(product?.price)/10).toFixed(2)}
                                 </div>
                             </div>
 
@@ -219,7 +218,7 @@ export function Purchase() {
                                 </div>
 
                                 <div className="amount">
-                                    GHC 667
+                                    GHC {(Number(product?.price) + (Number(product?.price)/10)).toFixed(2)}
                                 </div>
                             </div>
                         </div>
