@@ -52,7 +52,7 @@
     border-radius: 20px;
 }
 
-.viewproduct .overview .pics .main #wishlist-icon{
+.viewproduct .overview .pics .main .wishlist-icon{
     position: absolute;
     right: 0;
     z-index: 10;
@@ -62,6 +62,11 @@
     color: #555555;
     padding: 10px;
     border-radius: 50%;
+}
+
+.viewproduct .overview #colored{
+    color: #FF008C;
+    background-color: #FFE6F2;
 }
 
 .viewproduct .overview .pics .subs{
@@ -648,6 +653,14 @@
         gap: 20%;
     }
 
+    .viewproduct .overview .info .add-btn  button:hover{
+        transform: scale(1);
+    }
+
+    .viewproduct .overview .info #wish:hover, .viewproduct .overview .info #cart:hover{
+        transform: scale(1);
+    }
+
     .viewproduct .reviewboard{
         padding: 20px ;
         margin-bottom: 30px;
@@ -779,6 +792,14 @@
     .viewproduct .overview .info .details .sub{
         display: grid;
         gap: 20%;
+    }
+
+    .viewproduct .overview .info .add-btn  button:hover{
+        transform: scale(1);
+    }
+
+    .viewproduct .overview .info #wish:hover, .viewproduct .overview .info #cart:hover{
+        transform: scale(1);
     }
     
     .viewproduct .reviewboard .flex button{

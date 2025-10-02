@@ -181,7 +181,7 @@ export function HomePage({setCart, cart, wishlist, setWishlist}: CartWish) {
 
                                 <div className="details">
                                     <div className="type">
-                                        {p.category}
+                                        {p.category.toLocaleUpperCase()}
                                     </div>
 
                                     <div style={{fontFamily: 'Caveat'}} className="name">

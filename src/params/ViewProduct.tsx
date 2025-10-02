@@ -20,6 +20,8 @@ export function ViewProduct({setCart, wishlist, setWishlist}: CartWish) {
 
     let likeItems = products.filter((p) => p.category === product?.category);
     
+    const inWish = wishlist.find((w) => w.productId === param.id);
+    
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [param]);
@@ -55,7 +57,7 @@ export function ViewProduct({setCart, wishlist, setWishlist}: CartWish) {
                                         return [...wish, {productId: product?.id}]
                                     }
                                 })
-                            }} id='wishlist-icon' fill="none" stroke="currentColor" width="24" height="24" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                            }} id={inWish ? 'colored' : ''} className='wishlist-icon' fill="none" stroke="currentColor" width="24" height="24" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
                             </span>
 
                             <img src={`${product?.image}`}/>
@@ -74,7 +76,7 @@ export function ViewProduct({setCart, wishlist, setWishlist}: CartWish) {
 
                     <div className='info'>
                         <div className="type">
-                            {product?.category}
+                            {product?.category.toLocaleUpperCase()}
                         </div>
 
                         <div style={{fontFamily: 'Caveat'}} className="name">
@@ -166,7 +168,7 @@ export function ViewProduct({setCart, wishlist, setWishlist}: CartWish) {
 
                             {/* MOVE TO WISHLIST FUNC */}
 
-                            <button onClick={() => {
+                            {!inWish && <button onClick={() => {
                                 if(!product) return;
 
                                 setWishlist(wish => {
@@ -182,7 +184,7 @@ export function ViewProduct({setCart, wishlist, setWishlist}: CartWish) {
                                 <svg fill="none" stroke="currentColor" width="16" height="16" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
 
                                 Add to Wishlist
-                            </button>
+                            </button>}
 
                             <button onClick={() => navigate('/purchase/id')} id='cart'>
                                 <svg fill="none" stroke="currentColor" width="16" height="16" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
@@ -408,7 +410,7 @@ export function ViewProduct({setCart, wishlist, setWishlist}: CartWish) {
 
                                 <div className="details">
                                     <div className="type">
-                                        {l.category}
+                                        {l.category.toLocaleUpperCase()}
                                     </div>
 
                                     <div style={{fontFamily: 'Caveat'}} className="name">

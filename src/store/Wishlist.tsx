@@ -85,7 +85,7 @@ export function Wishlist({setCart, wishlist, setWishlist}: CartWish) {
 
                                     <div className="details">
                                         <div className="type">
-                                            {wishItem?.category}
+                                            {wishItem?.category.toLocaleUpperCase()}
                                         </div>
 
                                         <div style={{fontFamily: 'Caveat'}} className="name">
