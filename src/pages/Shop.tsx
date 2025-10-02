@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import '../styles/Shop.css'
 import { useNavigate } from 'react-router-dom';
-import { aZ, products } from '../types/Products';
+import { aZ, filterCategory, highestRated, highToLow, lowToHigh, products } from '../types/Products';
 import type  { CartWish, Product } from '../types/Types';
 
 export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
@@ -92,6 +92,8 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
 
                                     setFilterMenu((f) => !f);
 
+                                    setSort(lowToHigh)
+
                                 }} id={`second-option-${filterOption}`}>
                                     Price: Low to High
                                     
@@ -108,6 +110,8 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
 
                                     setFilterMenu((f) => !f);
 
+                                    setSort(highToLow)
+
                                 }} id={`third-option-${filterOption}`}>
                                     Price: High to Low
                                     
@@ -123,6 +127,8 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
                                     setFilterOption('4');
 
                                     setFilterMenu((f) => !f);
+
+                                    setSort(highestRated)
 
                                 }} id={`fourth-option-${filterOption}`}>
                                     Highest Rated
@@ -184,37 +190,107 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
                     <div className="category">
                         <div className="txt">Category</div>
                         <div className='select'>
+
                             <button onClick={() => {
                                 setCategoryMenu((c) => !c)
+
                                 setPriceRangeMenu(false)
+
                                 setSkinTypeMenu(false)
+
                                 setBrandMenu(false)
+
                                 }} className='default'>
                                 {categorySelected}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
                             </button>
 
                             {categoryMenu && <div className="options">
-                                <button onClick={() => { setCategorySelected('All'); setCategoryOption('1'); setCategoryMenu((c) => !c); }} id={`first-category-option-${categoryOption}`}>
+
+                                <button onClick={() => { 
+
+                                    setCategorySelected('All');
+                                    
+                                    setCategoryOption('1'); 
+                                    
+                                    setCategoryMenu((c) => !c);
+
+                                    setSort(products) 
+                                }} id={`first-category-option-${categoryOption}`}>
+
                                     All
+
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none"><path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
                                 </button>
-                                <button onClick={() => { setCategorySelected('Skincare'); setCategoryOption('2'); setCategoryMenu((c) => !c); }} id={`second-category-option-${categoryOption}`}>
+
+                                <button onClick={() => { 
+                                    
+                                    setCategorySelected('Skincare');
+                                    
+                                    setCategoryOption('2'); 
+                                    
+                                    setCategoryMenu((c) => !c); 
+
+                                    setSort(filterCategory('Skincare'))
+
+                                }} id={`second-category-option-${categoryOption}`}>
+
                                     Skincare
+                                    
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none"><path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
                                 </button>
-                                <button onClick={() => { setCategorySelected('Makeup'); setCategoryOption('3'); setCategoryMenu((c) => !c); }} id={`third-category-option-${categoryOption}`}>
+
+                                <button onClick={() => { 
+
+                                    setCategorySelected('Makeup');
+                                    
+                                    setCategoryOption('3'); 
+                                    
+                                    setCategoryMenu((c) => !c); 
+
+                                    setSort(filterCategory('Makeup')) 
+                                    
+                                }} id={`third-category-option-${categoryOption}`}>
+
                                     Makeup
+
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none"><path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
                                 </button>
-                                <button onClick={() => { setCategorySelected('Fragrance'); setCategoryOption('4'); setCategoryMenu((c) => !c); }} id={`fourth-category-option-${categoryOption}`}>
+
+                                <button onClick={() => {
+                                    
+                                    setCategorySelected('Fragrance');
+                                    
+                                    setCategoryOption('4'); 
+                                    
+                                    setCategoryMenu((c) => !c);  
+
+                                    setSort(filterCategory('Fragrance'))
+
+                                }} id={`fourth-category-option-${categoryOption}`}>
+
                                     Fragrance
+
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none"><path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
                                 </button>
-                                <button onClick={() => { setCategorySelected('Hair Care'); setCategoryOption('5'); setCategoryMenu((c) => !c); }} id={`fifth-category-option-${categoryOption}`}>
+
+                                <button onClick={() => { 
+                                    
+                                    setCategorySelected('Hair Care'); 
+                                    
+                                    setCategoryOption('5'); 
+                                    
+                                    setCategoryMenu((c) => !c);  
+
+                                    setSort(filterCategory('Hair Care'))
+                                    
+                                }} id={`fifth-category-option-${categoryOption}`}>
+
                                     Hair Care
+
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none"><path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
                                 </button>
+
                             </div>}
                         </div>
                     </div>

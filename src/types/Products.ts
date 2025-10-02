@@ -2,27 +2,6 @@ import type { Product } from "./Types";
 
 export const products: Product[] = [
     {
-        id: "x9F2aK7Lm0Qz",
-        image: "/serum1.jpg",
-        name: "Hydrating Hyaluronic Serum",
-        price: 374.88,
-        description: "Deeply hydrates and plumps skin with pure hyaluronic acid.",
-        stock: 45,
-        skinType: "All",
-        category: "Skincare",
-        brand: "GlowCare",
-        rating: {
-            rate: 4.6,
-            count: { one: 3, two: 5, three: 8, four: 22, five: 62 }
-        },
-        reviews: [
-            "My skin feels instantly hydrated after using this serum!",
-            "Lightweight and absorbs quickly. No sticky feeling.",
-            "Helped reduce my fine lines and dryness.",
-            "Best serum I’ve used so far, highly recommend."
-        ]
-    },
-    {
         id: "w7Tr8QmZ5B2L",
         image: "/cleanser1.webp",
         name: "Gentle Foaming Cleanser",
@@ -191,6 +170,22 @@ export const products: Product[] = [
         ]
     },
     {
+        id: "x9F2aK7Lm0Qz",
+        image: "/serum1.jpg",
+        name: "Hydrating Hyaluronic Serum",
+        price: 374.88,
+        description: "Deeply hydrates and plumps skin with pure hyaluronic acid.",
+        stock: 45,
+        skinType: "All",
+        category: "Skincare",
+        brand: "GlowCare",
+        rating: {
+            rate: 4.6,
+            count: { one: 3, two: 5, three: 8, four: 22, five: 62 }
+        },
+        reviews: []
+    },
+    {
         id: "r7Kx3E0uL4Hp",
         image: "/perfume1.avif",
         name: "Bloom Eau de Parfum",
@@ -204,30 +199,266 @@ export const products: Product[] = [
             rate: 4.9,
             count: { one: 0, two: 2, three: 3, four: 12, five: 90 }
         },
+        reviews: []
+    },
+    {
+        id: "h6Pn2X4dW9Rc",
+        image: "/perfume2.avif",
+        name: "Midnight Oud",
+        price: 1000.0,
+        description: "A deep, luxurious fragrance with oud and amber.",
+        stock: 25,
+        skinType: "N/A",
+        category: "Fragrance",
+        brand: "Elixir",
+        rating: {
+            rate: 4.8,
+            count: { one: 1, two: 2, three: 6, four: 15, five: 80 }
+        },
         reviews: [
-            "So fresh and elegant, lasts all day.",
-            "Compliments every time I wear this.",
-            "Beautiful floral scent, not overpowering.",
-            "My new signature fragrance."
+            "Smells luxurious and lasts the whole day.",
+            "The oud and amber mix beautifully, very rich fragrance.",
+            "Perfect for evenings — gets me compliments every time.",
+            "Strong at first but mellows into something elegant.",
+            "Worth the price if you love deep perfumes."
         ]
     },
-    // 🔥 Continue in same pattern for the rest of products...
+    {
+        id: "n3Vt5Z8qS1Fk",
+        image: "/facemask1.webp",
+        name: "Clay Detox Face Mask",
+        price: 249.88,
+        description: "Purifies pores and reduces excess oil.",
+        stock: 55,
+        skinType: "Oily",
+        category: "Skincare",
+        brand: "EarthGlow",
+        rating: {
+            rate: 4.4,
+            count: { one: 2, two: 7, three: 10, four: 25, five: 50 }
+        },
+        reviews: [
+            "Leaves my skin feeling fresh and tight.",
+            "Really helps with oily skin and breakouts.",
+            "A bit drying if used too often, but effective.",
+            "Pores look smaller after one use.",
+            "Smells natural and works great."
+        ]
+    },
+    {
+        id: "f2Qw7Y1mN8Zp",
+        image: "/sunscreen1.webp",
+        name: "SPF 50 Mineral Sunscreen",
+        price: 306.25,
+        description: "Broad spectrum sun protection with zinc oxide.",
+        stock: 65,
+        skinType: "Sensitive",
+        category: "Skincare",
+        brand: "SafeSun",
+        rating: {
+            rate: 4.5,
+            count: { one: 1, two: 4, three: 15, four: 30, five: 65 }
+        },
+        reviews: [
+            "Finally, a sunscreen that doesn’t irritate my skin.",
+            "Goes on smoothly and doesn’t leave a white cast.",
+            "Works well under makeup, no greasy feel.",
+            "My go-to daily sunscreen now.",
+            "Great for sensitive skin!"
+        ]
+    },
+    {
+        id: "g9Jk4T6rB2Lp",
+        image: "/eyeshadow1.webp",
+        name: "Eyeshadow Palette - 12-Colors",
+        price: 337.5,
+        description: "Highly pigmented colors for every look.",
+        stock: 85,
+        skinType: "All",
+        category: "Makeup",
+        brand: "ColorPop",
+        rating: {
+            rate: 4.6,
+            count: { one: 3, two: 5, three: 12, four: 30, five: 70 }
+        },
+        reviews: [
+            "The pigments are incredible and blend easily.",
+            "Perfect variety of shades for both day and night looks.",
+            "Very little fallout, amazing quality for the price.",
+            "Love the shimmer shades, they really pop.",
+            "Compact but packed with colors!"
+        ]
+    },
+    {
+        id: "u5Rm1L8yV7Ns",
+        image: "/highlighter1.jpg",
+        name: "Shimmer Glow Highlighter",
+        price: 250.0,
+        description: "Adds a radiant, luminous glow to your look.",
+        stock: 70,
+        skinType: "All",
+        category: "Makeup",
+        brand: "GlowCare",
+        rating: {
+            rate: 4.3,
+            count: { one: 2, two: 6, three: 14, four: 28, five: 50 }
+        },
+        reviews: [
+            "Gives such a natural glow, not too glittery.",
+            "Buildable shine — perfect for my cheekbones.",
+            "Stays on all day without fading.",
+            "Looks amazing in pictures.",
+            "My favorite highlighter now."
+        ]
+    },
+    {
+        id: "a4Bn7M3xK5Vz",
+        image: "/hairserum1.jpg",
+        name: "Keratin Hair Serum",
+        price: 281.25,
+        description: "Repairs split ends and smooths frizz instantly.",
+        stock: 90,
+        skinType: "N/A",
+        category: "Hair Care",
+        brand: "SilkStrands",
+        rating: {
+            rate: 4.4,
+            count: { one: 3, two: 4, three: 11, four: 32, five: 60 }
+        },
+        reviews: [
+            "My hair feels silky smooth instantly.",
+            "Helps a lot with frizz control.",
+            "Smells amazing and doesn’t weigh my hair down.",
+            "A little goes a long way, very effective.",
+            "Great for damaged hair — I see improvement."
+        ]
+    },
+    {
+        id: "e1Xv6J9oC8Tf",
+        image: "/bodylotion1.webp",
+        name: "Coconut Body Lotion",
+        price: 200.0,
+        description: "Moisturizes deeply with coconut oil and shea butter.",
+        stock: 100,
+        skinType: "Dry",
+        category: "Skincare",
+        brand: "AquaDerm",
+        rating: {
+            rate: 4.7,
+            count: { one: 1, two: 3, three: 7, four: 20, five: 85 }
+        },
+        reviews: [
+            "The coconut scent is heavenly.",
+            "Moisturizes without being greasy.",
+            "My skin feels so soft after using this.",
+            "Absorbs quickly, perfect for daily use.",
+            "Best lotion I’ve tried in years."
+        ]
+    },
+    {
+        id: "j0Zc8P5hW2Qr",
+        image: "/foundation2.webp",
+        name: "Glowy Foundation",
+        price: 412.5,
+        description: "Lightweight foundation with radiant finish.",
+        stock: 75,
+        skinType: "Normal",
+        category: "Makeup",
+        brand: "LuxeBeauty",
+        rating: {
+            rate: 4.5,
+            count: { one: 2, two: 5, three: 13, four: 27, five: 65 }
+        },
+        reviews: [
+            "Lightweight with a beautiful radiant finish.",
+            "Medium coverage but buildable.",
+            "Doesn’t cake up and looks natural.",
+            "Perfect for my normal skin type.",
+            "Stays put for hours with a dewy glow."
+        ]
+    },
+    {
+        id: "o8Hl2S7dK6Mp",
+        image: "/eyeliner1.avif",
+        name: "Precision Liquid Eyeliner",
+        price: 187.5,
+        description: "Smudge-proof eyeliner for perfect wings.",
+        stock: 130,
+        skinType: "All",
+        category: "Makeup",
+        brand: "LashLux",
+        rating: {
+            rate: 4.6,
+            count: { one: 2, two: 4, three: 9, four: 28, five: 75 }
+        },
+        reviews: [
+            "Super easy to apply, even for beginners.",
+            "The tip is precise and sharp.",
+            "Stays on all day without smudging.",
+            "Intense black, exactly what I wanted.",
+            "Best liquid eyeliner I’ve owned."
+        ]
+    },
+    {
+        id: "s6Ck3V1nR9Xp",
+        image: "/facemist1.jpg",
+        name: "Rose Hydrating Face Mist",
+        price: 187.38,
+        description: "Refreshes and hydrates throughout the day.",
+        stock: 115,
+        skinType: "All",
+        category: "Skincare",
+        brand: "GlowCare",
+        rating: {
+            rate: 4.4,
+            count: { one: 3, two: 6, three: 15, four: 28, five: 65 }
+        },
+        reviews: [
+            "Very refreshing throughout the day.",
+            "Hydrates my skin instantly.",
+            "The rose scent is light and pleasant.",
+            "Great for setting makeup too.",
+            "Keeps my skin glowing and fresh."
+        ]
+    }
 ];
 
+// GlowCare
 
+// PureSkin
 
-export let aZ: Product[] = [];
+// LuxeBeauty
 
-const letters: any = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+// ColorPop
 
-let count: number = 0;
+// LashLux
 
-for (let alpha = 0; alpha < 27; alpha ++) {
-    
-    products.map((p) => {
-        if(p.name[0].toLocaleLowerCase() == letters[count]) {
-            aZ.push(p);
-        }
-    })
-    count ++;
-}
+// AquaDerm
+
+// C-Glow
+
+// SilkStr
+
+// A to Z sorting
+
+export let aZ: Product[] = [...products].sort((a, b) => a.name.localeCompare(b.name));
+
+// HIGH to LOW price sorting
+
+export let highToLow: Product[] = [...products].sort((a, b) => b.price - a.price);
+
+// LOW to HIGH price sorting
+
+export let lowToHigh: Product[] = [...products].sort((a, b) => a.price - b.price);
+
+// HIGHEST RATED sorting
+
+export let highestRated: Product[] = [...products].sort((a, b) => b.rating.rate - a.rating.rate);
+
+// CATEGORY filtering
+
+export let filterCategory = (cat: string) => [...products].filter((p) => p.category === cat);
+
+// BRAND filtering
+
+export let filterBrand = (brand: string) => [...products].filter((p) => p.brand === brand);
