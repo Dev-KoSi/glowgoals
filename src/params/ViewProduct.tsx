@@ -52,7 +52,7 @@ export function ViewProduct({setCart, wishlist, setWishlist}: CartWish) {
                                     const wishItem = wish.find((w) => w.productId === product?.id);
 
                                     if(wishItem) {
-                                        return wish;
+                                        return wish.filter((w) => w.productId !== wishItem.productId);
                                     } else {
                                         return [...wish, {productId: product?.id}]
                                     }
