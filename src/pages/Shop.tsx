@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import '../styles/Shop.css'
 import { useNavigate } from 'react-router-dom';
-import { aZ, filterCategory, highestRated, highToLow, lowToHigh, products } from '../types/Products';
+import { products } from '../types/Products';
 import type  { CartWish, Product } from '../types/Types';
 
 export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
@@ -32,6 +32,30 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
     const [priceRangeMenu, setPriceRangeMenu] = useState<boolean>(false);
     const [priceRangeSelected, setPriceRangeSelected] = useState<string>('All');
     const [priceRangeOption, setPriceRangeOption] = useState<string>('');
+
+    // A to Z sorting
+
+    let aZ: Product[] = [...sort].sort((a, b) => a.name.localeCompare(b.name));
+
+    // HIGH to LOW price sorting
+
+    let highToLow: Product[] = [...sort].sort((a, b) => b.price - a.price);
+
+    // LOW to HIGH price sorting
+
+    let lowToHigh: Product[] = [...sort].sort((a, b) => a.price - b.price);
+
+    // HIGHEST RATED sorting
+
+    let highestRated: Product[] = [...sort].sort((a, b) => b.rating.rate - a.rating.rate);
+
+    // CATEGORY filtering
+
+    let filterCategory = (cat: string) => [...sort].filter((p) => p.category === cat);
+
+    // BRAND filtering
+
+    // let filterBrand = (brand: string) => [...sort].filter((p) => p.brand === brand);
 
     return (
         <div className="shop-container">
@@ -74,7 +98,9 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
 
                                     setFilterMenu((f) => !f);  
 
-                                    setSort(products) 
+                                    setSort(products);
+
+                                    setSort(sort => [...sort].filter((p) => p.category === categorySelected))
 
                                 }} id={`first-option-${filterOption}`}>
                                     Featured
@@ -215,7 +241,18 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
                                     
                                     setCategoryMenu((c) => !c);
 
-                                    setSort(products) 
+                                    setSort(products);
+                                    
+                                    if(filterSelected === 'Price: High to Low') {
+                                        setSort(prev => [...prev].sort((a, b) => b.price - a.price));
+                                    } else if(filterSelected === 'Price: Low to High') {
+                                        setSort(prev => [...prev].sort((a, b) => a.price - b.price));
+                                    } else if(filterSelected === 'Highest Rated') {
+                                        setSort(prev => [...prev].sort((a, b) => b.rating.rate - a.rating.rate));
+                                    } else if(filterSelected === 'Name A-Z') {
+                                        setSort(prev => [...prev].sort((a, b) => a.name.localeCompare(b.name)));
+                                    }
+
                                 }} id={`first-category-option-${categoryOption}`}>
 
                                     All

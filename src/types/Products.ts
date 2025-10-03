@@ -438,27 +438,3 @@ export const products: Product[] = [
 // C-Glow
 
 // SilkStr
-
-// A to Z sorting
-
-export let aZ: Product[] = [...products].sort((a, b) => a.name.localeCompare(b.name));
-
-// HIGH to LOW price sorting
-
-export let highToLow: Product[] = [...products].sort((a, b) => b.price - a.price);
-
-// LOW to HIGH price sorting
-
-export let lowToHigh: Product[] = [...products].sort((a, b) => a.price - b.price);
-
-// HIGHEST RATED sorting
-
-export let highestRated: Product[] = [...products].sort((a, b) => b.rating.rate - a.rating.rate);
-
-// CATEGORY filtering
-
-export let filterCategory = (cat: string) => [...products].filter((p) => p.category === cat);
-
-// BRAND filtering
-
-export let filterBrand = (brand: string) => [...products].filter((p) => p.brand === brand);
