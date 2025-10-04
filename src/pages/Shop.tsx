@@ -451,11 +451,17 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
                     <div className="skin-type">
                         <div className="txt">Skin Type</div>
                         <div className="select">
+
                             <button onClick={() => {
+
                                 setSkinTypeMenu((s) => !s)
+
                                 setPriceRangeMenu(false)
+
                                 setBrandMenu(false)
+
                                 setCategoryMenu(false)
+                                
                             }} className="default">
                                 {skinTypeSelected}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -465,57 +471,148 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
 
                             {skinTypeMenu && (
                                 <div className="options">
-                                    <button onClick={() => { setSkinTypeSelected('All'); setSkinTypeOption('1'); setSkinTypeMenu((s) => !s); }} id={`first-skin-type-option-${skinTypeOption}`}>
+                                    <button onClick={() => { 
+                                        
+                                        setSkinTypeSelected('All');
+                                        
+                                        setSkinTypeOption('1'); 
+                                        
+                                        setSkinTypeMenu((s) => !s);
+
+                                        setSort(products);
+
+                                        setFilterSelected('All') 
+                                    
+                                    }} id={`first-skin-type-option-${skinTypeOption}`}>
+
                                         All
+
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none">
                                             <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                                         </svg>
                                     </button>
 
-                                    <button onClick={() => { setSkinTypeSelected('All Types'); setSkinTypeOption('2'); setSkinTypeMenu((s) => !s); }} id={`second-skin-type-option-${skinTypeOption}`}>
-                                        All Types
+                                    <button onClick={() => { 
+                                        
+                                        setSkinTypeSelected('All');
+                                        
+                                        setSkinTypeOption('2');
+                                        
+                                        setSkinTypeMenu((s) => !s); 
+
+                                        setSort(sort => [...sort].filter((p) => p.skinType === 'All'));
+
+                                        setFilterSelected('All') 
+                                        
+                                    }} id={`second-skin-type-option-${skinTypeOption}`}>
+
+                                        All
+
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none">
                                             <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                                         </svg>
                                     </button>
 
-                                    <button onClick={() => { setSkinTypeSelected('Oily Skin'); setSkinTypeOption('3'); setSkinTypeMenu((s) => !s); }} id={`third-skin-type-option-${skinTypeOption}`}>
-                                        Oily Skin
+                                    <button onClick={() => {
+                                        
+                                        setSkinTypeSelected('Oily');
+                                        
+                                        setSkinTypeOption('3');
+                                        
+                                        setSkinTypeMenu((s) => !s);
+
+                                        setSort(sort => [...sort].filter((p) => p.skinType === 'Oily'));
+
+                                        setFilterSelected('All') 
+                                        
+                                    }} id={`third-skin-type-option-${skinTypeOption}`}>
+
+                                        Oily
+
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none">
                                             <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                                         </svg>
                                     </button>
 
-                                    <button onClick={() => { setSkinTypeSelected('Dry Skin'); setSkinTypeOption('4'); setSkinTypeMenu((s) => !s); }} id={`fourth-skin-type-option-${skinTypeOption}`}>
-                                        Dry Skin
+                                    <button onClick={() => {
+                                        
+                                        setSkinTypeSelected('Dry');
+                                        
+                                        setSkinTypeOption('4');
+                                        
+                                        setSkinTypeMenu((s) => !s);
+
+                                        setSort(sort => [...sort].filter((p) => p.skinType === 'Dry'));
+
+                                        setFilterSelected('All') 
+                                        
+                                    }} id={`fourth-skin-type-option-${skinTypeOption}`}>
+
+                                        Dry
+
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none">
                                             <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                                         </svg>
                                     </button>
 
-                                    <button onClick={() => { setSkinTypeSelected('Combination Skin'); setSkinTypeOption('5'); setSkinTypeMenu((s) => !s); }} id={`fifth-skin-type-option-${skinTypeOption}`}>
-                                        Combination Skin
+                                    <button onClick={() => {
+                                        
+                                        setSkinTypeSelected('Sensitive');
+                                        
+                                        setSkinTypeOption('5'); 
+                                        
+                                        setSkinTypeMenu((s) => !s);
+
+                                        setSort(sort => [...sort].filter((p) => p.skinType === 'Sensitive'));
+
+                                        setFilterSelected('All')
+                                        
+                                    }} id={`fifth-skin-type-option-${skinTypeOption}`}>
+
+                                        Sensitive
+                                        
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none">
                                             <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                                         </svg>
                                     </button>
 
-                                    <button onClick={() => { setSkinTypeSelected('Acne-Prone Skin'); setSkinTypeOption('6'); setSkinTypeMenu((s) => !s); }} id={`sixth-skin-type-option-${skinTypeOption}`}>
-                                        Acne-Prone Skin
+                                    <button onClick={() => { 
+                                        
+                                        setSkinTypeSelected('N/A'); 
+                                        
+                                        setSkinTypeOption('6');
+                                        
+                                        setSkinTypeMenu((s) => !s); 
+
+                                        setSort(sort => [...sort].filter((p) => p.skinType === 'N/A'));
+
+                                        setFilterSelected('All') 
+                                        
+                                    }} id={`sixth-skin-type-option-${skinTypeOption}`}>
+
+                                        N/A
+
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none">
                                             <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                                         </svg>
                                     </button>
 
-                                    <button onClick={() => { setSkinTypeSelected('Sensitive Skin'); setSkinTypeOption('7'); setSkinTypeMenu((s) => !s); }} id={`seventh-skin-type-option-${skinTypeOption}`}>
-                                        Sensitive Skin
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none">
-                                            <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                                        </svg>
-                                    </button>
+                                    <button onClick={() => {
+                                        
+                                        setSkinTypeSelected('Normal'); 
+                                        
+                                        setSkinTypeOption('7');
+                                        
+                                        setSkinTypeMenu((s) => !s); 
 
-                                    <button onClick={() => { setSkinTypeSelected('Matured Skin'); setSkinTypeOption('8'); setSkinTypeMenu((s) => !s); }} id={`eighth-skin-type-option-${skinTypeOption}`}>
-                                        Matured Skin
+                                        setSort(sort => [...sort].filter((p) => p.skinType === 'Normal'));
+
+                                        setFilterSelected('All') 
+                                        
+                                    }} id={`seventh-skin-type-option-${skinTypeOption}`}>
+                                        
+                                        Normal
+
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none">
                                             <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                                         </svg>
