@@ -9,6 +9,7 @@ svg{
 
 a{
   text-decoration: none;
+  cursor: pointer;
 }
 
 button{
