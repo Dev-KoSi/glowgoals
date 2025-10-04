@@ -260,8 +260,6 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
                                     
                                     setCategoryMenu((c) => !c);
 
-                                    setSort(products); 
-
                                     setSort(sort => [...sort].filter((p) => p.category === 'Skincare'));
 
                                     setFilterSelected('All')
@@ -279,9 +277,7 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
                                     
                                     setCategoryOption('3'); 
                                     
-                                    setCategoryMenu((c) => !c); 
-
-                                    setSort(products); 
+                                    setCategoryMenu((c) => !c);
 
                                     setSort(sort => [...sort].filter((p) => p.category === 'Makeup'));
 
@@ -303,12 +299,9 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
                                     setCategoryMenu((c) => !c);  
 
                                     setSort(filterCategory('Fragrance'));
-
-                                    setFilterSelected('All')
-
-                                    setSort(products); 
-
+                                    
                                     setSort(sort => [...sort].filter((p) => p.category === 'Fragrance'))
+                                                                                                        setFilterSelected('All')
 
                                 }} id={`fourth-category-option-${categoryOption}`}>
 
@@ -325,9 +318,7 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
                                     
                                     setCategoryMenu((c) => !c);  
 
-                                    setSort(filterCategory('Hair Care'))
-
-                                    setSort(products); 
+                                    setSort(filterCategory('Hair Care')); 
 
                                     setSort(sort => [...sort].filter((p) => p.category === 'Hair Care'));
 
@@ -348,35 +339,109 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
                         <div className="txt">Brand</div>
                         <div className='select'>
                             <button onClick={() => {
+
                                 setBrandMenu((b) => !b)
+
                                 setPriceRangeMenu(false)
+
                                 setSkinTypeMenu(false)
+                                
                                 setCategoryMenu(false)
+
                             }} className='default'>
                                 {brandSelected}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
                             </button>
 
                             {brandMenu && <div className="options">
-                                <button onClick={() => { setBrandSelected('All'); setBrandOption('1'); 
-                                setBrandMenu((b) => !b); }} id={`first-brand-option-${brandOption}`}>
+                                <button onClick={() => { 
+                                    
+                                    setBrandSelected('All'); 
+                                    
+                                    setBrandOption('1'); 
+                                    
+                                    setBrandMenu((b) => !b);
+
+                                    setSort(products);
+                                    
+                                }} id={`first-brand-option-${brandOption}`}>
                                     All
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none"><path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
                                 </button>
-                                <button onClick={() => { setBrandSelected('Luxe Beauty'); setBrandOption('2'); setBrandMenu((b) => !b); }} id={`second-brand-option-${brandOption}`}>
-                                    Luxe Beauty
+
+                                <button onClick={() => { 
+                                    
+                                    setBrandSelected('GlowCare');
+                                    
+                                    setBrandOption('2'); 
+                                    
+                                    setBrandMenu((b) => !b);
+
+                                    setSort(sort => [...sort].filter((p) => p.brand === 'GlowCare'));
+
+                                    setFilterSelected('All')
+                                    
+                                }} id={`second-brand-option-${brandOption}`}>
+
+                                    GlowCare
+
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none"><path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
                                 </button>
-                                <button onClick={() => { setBrandSelected('Nature Glow'); setBrandOption('3'); setBrandMenu((b) => !b); }} id={`third-brand-option-${brandOption}`}>
-                                    Nature Glow
+
+                                <button onClick={() => {
+                                    
+                                    setBrandSelected('PureSkin');
+                                    
+                                    setBrandOption('3');
+                                    
+                                    setBrandMenu((b) => !b); 
+
+                                    setSort(sort => [...sort].filter((p) => p.brand === 'PureSkin'));
+
+                                    setFilterSelected('All')
+                                    
+                                }} id={`third-brand-option-${brandOption}`}>
+
+                                    PureSkin
+
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none"><path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
                                 </button>
-                                <button onClick={() => { setBrandSelected('Urban Chic'); setBrandOption('4'); setBrandMenu((b) => !b); }} id={`fourth-brand-option-${brandOption}`}>
-                                    Urban Chic
+
+                                <button onClick={() => {
+                                    
+                                    setBrandSelected('LuxeBeauty');
+                                    
+                                    setBrandOption('4'); 
+                                    
+                                    setBrandMenu((b) => !b); 
+
+                                    setSort(sort => [...sort].filter((p) => p.brand === 'LuxeBeauty'));
+
+                                    setFilterSelected('All')
+                                    
+                                }} id={`fourth-brand-option-${brandOption}`}>
+
+                                    LuxeBeauty
+
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none"><path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
                                 </button>
-                                <button onClick={() => { setBrandSelected('Glow Essence'); setBrandOption('5'); setBrandMenu((b) => !b); }} id={`fifth-brand-option-${brandOption}`}>
-                                    Glow Essence
+
+                                <button onClick={() => {
+                                    
+                                    setBrandSelected('ColorSkin');
+                                    
+                                    setBrandOption('5');
+                                    
+                                    setBrandMenu((b) => !b); 
+
+                                    setSort(sort => [...sort].filter((p) => p.brand === 'ColorPop'));
+
+                                    setFilterSelected('All')
+                                    
+                                }} id={`fifth-brand-option-${brandOption}`}>
+
+                                    ColorPop
+
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none"><path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
                                 </button>
                             </div>}

@@ -73,7 +73,7 @@ export const products: Product[] = [
         stock: 95,
         skinType: "All",
         category: "Makeup",
-        brand: "LashLux",
+        brand: "LuxeBeauty",
         rating: {
             rate: 4.5,
             count: { one: 3, two: 5, three: 15, four: 25, five: 70 }
@@ -94,7 +94,7 @@ export const products: Product[] = [
         stock: 75,
         skinType: "Dry",
         category: "Skincare",
-        brand: "AquaDerm",
+        brand: "ColorPop",
         rating: {
             rate: 4.3,
             count: { one: 4, two: 6, three: 18, four: 40, five: 48 }
@@ -115,7 +115,7 @@ export const products: Product[] = [
         stock: 50,
         skinType: "All",
         category: "Skincare",
-        brand: "C-Glow",
+        brand: "GlowCare",
         rating: {
             rate: 4.2,
             count: { one: 5, two: 10, three: 12, four: 28, five: 35 }
@@ -135,7 +135,7 @@ export const products: Product[] = [
         description: "Repairs damaged hair and strengthens from root to tip.",
         stock: 110,
         skinType: "N/A",
-        category: "Hair Care",
+        category: "GlowCare",
         brand: "SilkStrands",
         rating: {
             rate: 4.6,
@@ -157,7 +157,7 @@ export const products: Product[] = [
         stock: 95,
         skinType: "N/A",
         category: "Hair Care",
-        brand: "SilkStrands",
+        brand: "ColordPop",
         rating: {
             rate: 4.5,
             count: { one: 1, two: 3, three: 14, four: 30, five: 72 }
@@ -194,7 +194,7 @@ export const products: Product[] = [
         stock: 40,
         skinType: "N/A",
         category: "Fragrance",
-        brand: "Fleuré",
+        brand: "LuxeBeauty",
         rating: {
             rate: 4.9,
             count: { one: 0, two: 2, three: 3, four: 12, five: 90 }
@@ -210,7 +210,7 @@ export const products: Product[] = [
         stock: 25,
         skinType: "N/A",
         category: "Fragrance",
-        brand: "Elixir",
+        brand: "PureSkin",
         rating: {
             rate: 4.8,
             count: { one: 1, two: 2, three: 6, four: 15, five: 80 }
@@ -232,7 +232,7 @@ export const products: Product[] = [
         stock: 55,
         skinType: "Oily",
         category: "Skincare",
-        brand: "EarthGlow",
+        brand: "PureSkin",
         rating: {
             rate: 4.4,
             count: { one: 2, two: 7, three: 10, four: 25, five: 50 }
@@ -254,7 +254,7 @@ export const products: Product[] = [
         stock: 65,
         skinType: "Sensitive",
         category: "Skincare",
-        brand: "SafeSun",
+        brand: "PureSkin",
         rating: {
             rate: 4.5,
             count: { one: 1, two: 4, three: 15, four: 30, five: 65 }
@@ -320,7 +320,7 @@ export const products: Product[] = [
         stock: 90,
         skinType: "N/A",
         category: "Hair Care",
-        brand: "SilkStrands",
+        brand: "GlowCare",
         rating: {
             rate: 4.4,
             count: { one: 3, two: 4, three: 11, four: 32, five: 60 }
@@ -342,7 +342,7 @@ export const products: Product[] = [
         stock: 100,
         skinType: "Dry",
         category: "Skincare",
-        brand: "AquaDerm",
+        brand: "LuxeBeauty",
         rating: {
             rate: 4.7,
             count: { one: 1, two: 3, three: 7, four: 20, five: 85 }
@@ -386,7 +386,7 @@ export const products: Product[] = [
         stock: 130,
         skinType: "All",
         category: "Makeup",
-        brand: "LashLux",
+        brand: "ColorPop",
         rating: {
             rate: 4.6,
             count: { one: 2, two: 4, three: 9, four: 28, five: 75 }
@@ -422,19 +422,3 @@ export const products: Product[] = [
         ]
     }
 ];
-
-// GlowCare
-
-// PureSkin
-
-// LuxeBeauty
-
-// ColorPop
-
-// LashLux
-
-// AquaDerm
-
-// C-Glow
-
-// SilkStr
