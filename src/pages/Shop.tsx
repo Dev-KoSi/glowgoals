@@ -242,16 +242,8 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
                                     setCategoryMenu((c) => !c);
 
                                     setSort(products);
-                                    
-                                    if(filterSelected === 'Price: High to Low') {
-                                        setSort(prev => [...prev].sort((a, b) => b.price - a.price));
-                                    } else if(filterSelected === 'Price: Low to High') {
-                                        setSort(prev => [...prev].sort((a, b) => a.price - b.price));
-                                    } else if(filterSelected === 'Highest Rated') {
-                                        setSort(prev => [...prev].sort((a, b) => b.rating.rate - a.rating.rate));
-                                    } else if(filterSelected === 'Name A-Z') {
-                                        setSort(prev => [...prev].sort((a, b) => a.name.localeCompare(b.name)));
-                                    }
+
+                                    setFilterSelected('All')
 
                                 }} id={`first-category-option-${categoryOption}`}>
 
@@ -266,9 +258,13 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
                                     
                                     setCategoryOption('2'); 
                                     
-                                    setCategoryMenu((c) => !c); 
+                                    setCategoryMenu((c) => !c);
 
-                                    setSort(filterCategory('Skincare'))
+                                    setSort(products); 
+
+                                    setSort(sort => [...sort].filter((p) => p.category === 'Skincare'));
+
+                                    setFilterSelected('All')
 
                                 }} id={`second-category-option-${categoryOption}`}>
 
@@ -285,7 +281,11 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
                                     
                                     setCategoryMenu((c) => !c); 
 
-                                    setSort(filterCategory('Makeup')) 
+                                    setSort(products); 
+
+                                    setSort(sort => [...sort].filter((p) => p.category === 'Makeup'));
+
+                                    setFilterSelected('All')
                                     
                                 }} id={`third-category-option-${categoryOption}`}>
 
@@ -302,7 +302,13 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
                                     
                                     setCategoryMenu((c) => !c);  
 
-                                    setSort(filterCategory('Fragrance'))
+                                    setSort(filterCategory('Fragrance'));
+
+                                    setFilterSelected('All')
+
+                                    setSort(products); 
+
+                                    setSort(sort => [...sort].filter((p) => p.category === 'Fragrance'))
 
                                 }} id={`fourth-category-option-${categoryOption}`}>
 
@@ -320,6 +326,12 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
                                     setCategoryMenu((c) => !c);  
 
                                     setSort(filterCategory('Hair Care'))
+
+                                    setSort(products); 
+
+                                    setSort(sort => [...sort].filter((p) => p.category === 'Hair Care'));
+
+                                    setFilterSelected('All')
                                     
                                 }} id={`fifth-category-option-${categoryOption}`}>
 
