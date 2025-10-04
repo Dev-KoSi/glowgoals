@@ -626,10 +626,15 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
                         <div className="txt">Price Range</div>
                         <div className="select">
                             <button onClick={() => {
+
                                 setPriceRangeMenu((p) => !p)
+
                                 setSkinTypeMenu(false)
+
                                 setBrandMenu(false)
+
                                 setCategoryMenu(false)
+
                             }} className="default">
                                 {priceRangeSelected}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -639,43 +644,127 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
 
                             {priceRangeMenu && (
                                 <div className="options">
-                                    <button onClick={() => { setPriceRangeSelected('All'); setPriceRangeOption('1'); setPriceRangeMenu((p) => !p); }} id={`first-price-range-option-${priceRangeOption}`}>
+                                    <button onClick={() => { 
+                                        
+                                        setPriceRangeSelected('All');
+                                        
+                                        setPriceRangeOption('1');
+                                        
+                                        setPriceRangeMenu((p) => !p);  
+
+                                        setSort(sort => [...sort].filter((p) => p.price > 0));
+
+                                        setFilterSelected('All')
+                                        
+                                    }} id={`first-price-range-option-${priceRangeOption}`}>
+
                                         All
+
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none">
                                             <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                                         </svg>
                                     </button>
 
-                                    <button onClick={() => { setPriceRangeSelected('Under GHC 100'); setPriceRangeOption('2'); setPriceRangeMenu((p) => !p); }} id={`second-price-range-option-${priceRangeOption}`}>
+                                    <button onClick={() => { 
+                                        
+                                        setPriceRangeSelected('Under GHC 100'); 
+                                        
+                                        setPriceRangeOption('2');
+                                        
+                                        setPriceRangeMenu((p) => !p);  
+
+                                        setSort(sort => [...sort].filter((p) => p.price < 100));
+
+                                        setFilterSelected('All')
+                                        
+                                    }} id={`second-price-range-option-${priceRangeOption}`}>
+
                                         Under GHC 100
+
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none">
                                             <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                                         </svg>
                                     </button>
 
-                                    <button onClick={() => { setPriceRangeSelected('GHC 100 - GHC 500'); setPriceRangeOption('3'); setPriceRangeMenu((p) => !p); }} id={`third-price-range-option-${priceRangeOption}`}>
+                                    <button onClick={() => { 
+                                        
+                                        setPriceRangeSelected('GHC 100 - GHC 500'); 
+                                        
+                                        setPriceRangeOption('3');
+                                        
+                                        setPriceRangeMenu((p) => !p);  
+
+                                        setSort(sort => [...sort].filter((p) => p.price >= 100 && p.price <= 500));
+
+                                        setFilterSelected('All')
+                                        
+                                    }} id={`third-price-range-option-${priceRangeOption}`}>
+
                                         GHC 100 - GHC 500
+
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none">
                                             <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                                         </svg>
                                     </button>
 
-                                    <button onClick={() => { setPriceRangeSelected('GHC 500 - GHC 1,000'); setPriceRangeOption('4'); setPriceRangeMenu((p) => !p); }} id={`fourth-price-range-option-${priceRangeOption}`}>
+                                    <button onClick={() => {
+                                        
+                                        setPriceRangeSelected('GHC 500 - GHC 1,000'); 
+                                        
+                                        setPriceRangeOption('4');
+                                        
+                                        setPriceRangeMenu((p) => !p); 
+
+                                        setSort(sort => [...sort].filter((p) => p.price >= 500 && p.price <= 1000));
+
+                                        setFilterSelected('All')
+                                        
+                                    }} id={`fourth-price-range-option-${priceRangeOption}`}>
+
                                         GHC 500 - GHC 1,000
+
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none">
                                             <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                                         </svg>
                                     </button>
 
-                                    <button onClick={() => { setPriceRangeSelected('GHC 1,000 - GHC 5,000'); setPriceRangeOption('5'); setPriceRangeMenu((p) => !p); }} id={`fifth-price-range-option-${priceRangeOption}`}>
+                                    <button onClick={() => { 
+                                        
+                                        setPriceRangeSelected('GHC 1,000 - GHC 5,000');
+                                        
+                                        setPriceRangeOption('5');
+                                        
+                                        setPriceRangeMenu((p) => !p); 
+
+                                        setSort(sort => [...sort].filter((p) => p.price >= 1000 && p.price <= 5000));
+
+                                        setFilterSelected('All')
+                                        
+                                    }} id={`fifth-price-range-option-${priceRangeOption}`}>
+
                                         GHC 1,000 - GHC 5,000
+
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none">
                                             <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                                         </svg>
                                     </button>
 
-                                    <button onClick={() => { setPriceRangeSelected('Above GHC 5,000'); setPriceRangeOption('6'); setPriceRangeMenu((p) => !p); }} id={`sixth-price-range-option-${priceRangeOption}`}>
+                                    <button onClick={() => {
+                                        
+                                        setPriceRangeSelected('Above GHC 5,000');
+                                        
+                                        setPriceRangeOption('6');
+                                        
+                                        setPriceRangeMenu((p) => !p); 
+
+                                        setSort(sort => [...sort].filter((p) => p.price > 5000));
+
+                                        setFilterSelected('All')
+                                        
+                                    }} id={`sixth-price-range-option-${priceRangeOption}`}>
+
                                         Above GHC 5,000
+                                        
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none">
                                             <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                                         </svg>
