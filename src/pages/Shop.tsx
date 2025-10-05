@@ -53,10 +53,6 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
 
     let filterCategory = (cat: string) => [...sort].filter((p) => p.category === cat);
 
-    // BRAND filtering
-
-    // let filterBrand = (brand: string) => [...sort].filter((p) => p.brand === brand);
-
     return (
         <div className="shop-container">
             <div className="shop">
