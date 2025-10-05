@@ -1,4 +1,3 @@
-// import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import '../styles/Cart.css'
 import { products } from '../types/Products';
