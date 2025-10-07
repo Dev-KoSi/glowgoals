@@ -56,7 +56,7 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
     // let filterCategory = (cat: string) => [...sort].filter((p) => p.category === cat);
 
 
-    // COLLECTIONS NAVIGATIONS
+    // COLLECTIONS QUERIES INTEGRATION
     const [searchParams] = useSearchParams();
 
     const collection = searchParams.get('category');
