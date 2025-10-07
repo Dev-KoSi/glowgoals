@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import '../styles/Shop.css'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { products } from '../types/Products';
 import type  { CartWish, Product } from '../types/Types';
 
@@ -54,6 +54,23 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
     // CATEGORY filtering
 
     // let filterCategory = (cat: string) => [...sort].filter((p) => p.category === cat);
+
+
+    // COLLECTIONS NAVIGATIONS
+    const [searchParams] = useSearchParams();
+
+    const collection = searchParams.get('category');
+
+    useEffect(() => {
+
+        window.scrollTo(0, 0);
+
+        if(collection) {
+            setSort(sort => sort.filter((s) => s.category.toLocaleLowerCase() === collection.toLocaleLowerCase()));
+        } else {
+            setSort(products);
+        }
+    }, [collection]);
 
     return (
         <div className="shop-container">
