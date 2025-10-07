@@ -135,7 +135,7 @@ export const products: Product[] = [
         description: "Repairs damaged hair and strengthens from root to tip.",
         stock: 110,
         skinType: "N/A",
-        category: "GlowCare",
+        category: "Hair Care",
         brand: "SilkStrands",
         rating: {
             rate: 4.6,

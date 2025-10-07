@@ -910,8 +910,7 @@
     }
 
     .collection-flex .path{
-        left: 340px;
-        transform: translateX(100px);
+        display: none;
     }
 
     .sale-section{
@@ -1109,15 +1108,15 @@
 
     .collection-flex{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         margin: 50px 25px;
         gap: 10px;
         position: relative;
     }
 
     .collection-flex .path{
-        left: 300px;
-        transform: translateX(100px);
+        display: none;
+
     }
 
     .sale-section{

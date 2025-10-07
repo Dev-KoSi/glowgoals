@@ -254,7 +254,7 @@ export function HomePage({setCart, cart, wishlist, setWishlist}: CartWish) {
                     </div>
 
                     <div className="collection-flex">
-                        <div className="collection">
+                        <div className="collection" onClick={() => navigate('/cosmetics?category=Skincare')}>
                             <img style={{width: '100%'}} src="/perfume-spray-bottle-isolated_93675-123583.jpg"/>
 
                             <svg className='path' fill="none" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
@@ -269,48 +269,51 @@ export function HomePage({setCart, cart, wishlist, setWishlist}: CartWish) {
                                 </div>
                             </div>
                         </div>
-                        <div className="collection">
-                            <img style={{width: '100%'}} src="/perfume-spray-bottle-isolated_93675-123583.jpg"/>
+
+                        <div className="collection" onClick={() => navigate('/cosmetics?category=Makeup')}>
+                            <img style={{width: '100%'}} src="/high-angle-view-pen-table_1048944-18511898.jpg"/>
 
                             <svg className='path' fill="none" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
 
                             <div className="txt-overlay">
                                 <div style={{fontFamily: 'Caveat'}} className="name">
-                                    Skin Care
+                                    Makeup
                                 </div>
 
                                 <div className="txt">
-                                    Premium skincare products for all skin types and concerns
+                                    Professional makeup products for every occasion and style
                                 </div>
                             </div>
                         </div>
-                        <div className="collection">
-                            <img style={{width: '100%'}} src="/perfume-spray-bottle-isolated_93675-123583.jpg"/>
+
+                        <div className="collection" onClick={() => navigate('/cosmetics?category=Fragrance')}>
+                            <img style={{width: '100%'}} src="/perfume-bottles-isolated-against-white_127657-12258.jpg"/>
 
                             <svg className='path' fill="none" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
 
                             <div className="txt-overlay">
                                 <div style={{fontFamily: 'Caveat'}} className="name">
-                                    Skin Care
+                                    Fragrance
                                 </div>
 
                                 <div className="txt">
-                                    Premium skincare products for all skin types and concerns
+                                    Luxury perfumes and fragrances for men and women
                                 </div>
                             </div>
                         </div>
-                        <div className="collection">
-                            <img style={{width: '100%'}} src="/perfume-spray-bottle-isolated_93675-123583.jpg"/>
+
+                        <div className="collection" onClick={() => navigate('/cosmetics?category=Hair%20Care')}>
+                            <img style={{width: '100%'}} src="/closeup-three-women39s-faces-with-long-wavy-hair_1353244-12770.jpg"/>
 
                             <svg className='path' fill="none" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
 
                             <div className="txt-overlay">
                                 <div style={{fontFamily: 'Caveat'}} className="name">
-                                    Skin Care
+                                    Hair Care
                                 </div>
 
                                 <div className="txt">
-                                    Premium skincare products for all skin types and concerns
+                                    Nourishing shampoos, conditioners, oils, and treatments for healthy, beautiful hair
                                 </div>
                             </div>
                         </div>
