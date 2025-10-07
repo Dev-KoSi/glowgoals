@@ -552,6 +552,12 @@
     background-color: #FFE6F2;
 }
 
+#list .btns #colored{
+    color: #FF008C;
+    border: 1px solid #FF008C;
+    background-color: #FFE6F2;
+}
+
 #grid{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -688,6 +694,12 @@
 #grid .btns svg:hover{
     border: 1px solid #FF008C;
     color: #FF008C;
+    background-color: #FFE6F2;
+}
+
+#grid .btns #colored{
+    color: #FF008C;
+    border: 1px solid #FF008C;
     background-color: #FFE6F2;
 }
 
