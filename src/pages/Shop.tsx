@@ -6,32 +6,32 @@ import type  { CartWish, Product } from '../types/Types';
 
 export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
     const [sort, setSort] = useState<Product[]>(products);
-
-    const [hideSort, setHideSort] = useState<boolean>(true);
-
+    
     const navigate = useNavigate();
-
+    
     const [shopLayout, setShopLayout] = useState<string>('grid');
     
     const [filterMenu, setFilterMenu] = useState<boolean>(false);
     const [filterSelected, setFilterSelected] = useState<string>('Featured');
     const [filterOption, setFilterOption] = useState<string>('');
+    
+    // const [hideSort, setHideSort] = useState<boolean>(true);
+    
+    // const [categoryMenu, setCategoryMenu] = useState<boolean>(false);
+    // const [categorySelected, setCategorySelected] = useState<string>('All');
+    // const [categoryOption, setCategoryOption] = useState<string>('');
 
-    const [categoryMenu, setCategoryMenu] = useState<boolean>(false);
-    const [categorySelected, setCategorySelected] = useState<string>('All');
-    const [categoryOption, setCategoryOption] = useState<string>('');
+    // const [brandMenu, setBrandMenu] = useState<boolean>(false);
+    // const [brandSelected, setBrandSelected] = useState<string>('All');
+    // const [brandOption, setBrandOption] = useState<string>('');
 
-    const [brandMenu, setBrandMenu] = useState<boolean>(false);
-    const [brandSelected, setBrandSelected] = useState<string>('All');
-    const [brandOption, setBrandOption] = useState<string>('');
+    // const [skinTypeMenu, setSkinTypeMenu] = useState<boolean>(false);
+    // const [skinTypeSelected, setSkinTypeSelected] = useState<string>('All');
+    // const [skinTypeOption, setSkinTypeOption] = useState<string>('');
 
-    const [skinTypeMenu, setSkinTypeMenu] = useState<boolean>(false);
-    const [skinTypeSelected, setSkinTypeSelected] = useState<string>('All');
-    const [skinTypeOption, setSkinTypeOption] = useState<string>('');
-
-    const [priceRangeMenu, setPriceRangeMenu] = useState<boolean>(false);
-    const [priceRangeSelected, setPriceRangeSelected] = useState<string>('All');
-    const [priceRangeOption, setPriceRangeOption] = useState<string>('');
+    // const [priceRangeMenu, setPriceRangeMenu] = useState<boolean>(false);
+    // const [priceRangeSelected, setPriceRangeSelected] = useState<string>('All');
+    // const [priceRangeOption, setPriceRangeOption] = useState<string>('');
 
     // A to Z sorting
 
@@ -51,7 +51,7 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
 
     // CATEGORY filtering
 
-    let filterCategory = (cat: string) => [...sort].filter((p) => p.category === cat);
+    // let filterCategory = (cat: string) => [...sort].filter((p) => p.category === cat);
 
     return (
         <div className="shop-container">
@@ -96,7 +96,7 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
 
                                     setSort(products);
 
-                                    setSort(sort => [...sort].filter((p) => p.category === categorySelected))
+                                    // setSort(sort => [...sort].filter((p) => p.category === categorySelected))
 
                                 }} id={`first-option-${filterOption}`}>
                                     Featured
@@ -198,17 +198,17 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
                             </button>
                         </div>
 
-                        <div className='filter'>
+                        {/* <div className='filter'>
                             <button onClick={() => setHideSort((h) => !h)}>
                                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M880.1 154H143.9c-24.5 0-39.8 26.7-27.5 48L349 597.4V838c0 17.7 14.2 32 31.8 32h262.4c17.6 0 31.8-14.3 31.8-32V597.4L907.7 202c12.2-21.3-3.1-48-27.6-48zM603.4 798H420.6V642h182.9v156zm9.6-236.6l-9.5 16.6h-183l-9.5-16.6L212.7 226h598.6L613 561.4z"></path></svg>
 
                                 Filter
                             </button>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 
-                <div className="sort" id={`${hideSort ? 'hide-sort' : ''}`}>
+                {/* <div className="sort" id={`${hideSort ? 'hide-sort' : ''}`}>
                     <div className="category">
                         <div className="txt">Category</div>
                         <div className='select'>
@@ -769,7 +769,7 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
                             )}
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 <div id={`${shopLayout}`}>
 
@@ -857,13 +857,13 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
 
                                 setFilterSelected('All');
 
-                                setCategorySelected('All');
+                                // setCategorySelected('All');
 
-                                setBrandSelected('All')
+                                // setBrandSelected('All')
 
-                                setSkinTypeSelected('All');
+                                // setSkinTypeSelected('All');
 
-                                setPriceRangeSelected('All');
+                                // setPriceRangeSelected('All');
 
                             }}><div className="btn">
                                 Clear All Filters
