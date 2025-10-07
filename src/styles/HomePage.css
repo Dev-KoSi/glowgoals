@@ -478,6 +478,12 @@
     background-color: #FFE6F2;
 }
 
+.products-flex #colored{
+    color: #FF008C;
+    border: 1px solid #FF008C;
+    background-color: #FFE6F2;
+}
+
 .view-all-btn{
     text-align: center;
     margin: 50px 35px;
