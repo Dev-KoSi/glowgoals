@@ -6,6 +6,8 @@ import type  { CartWish, Product } from '../types/Types';
 
 export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
     const [sort, setSort] = useState<Product[]>(products);
+
+    const [search, setSearch] = useState<string>('');
     
     const navigate = useNavigate();
     
@@ -69,7 +71,13 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
                 <div className="filters">
                     <div className="search-container">
                         <div className='search'>
-                            <input type="text" placeholder='Search beauty products...' />
+                            <input type="text" placeholder='Search beauty products...' value={search} onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                                setSearch(e.target.value)
+
+                                setSort(products);
+
+                                setSort(sort => sort.filter((s) => s.name.toLocaleLowerCase().includes(e.target.value)))
+                            }}/>
 
                             <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                         </div>
