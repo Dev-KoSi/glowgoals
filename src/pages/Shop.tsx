@@ -72,7 +72,11 @@ export function Shop({setCart, cart, wishlist, setWishlist}: CartWish) {
                     <div className="search-container">
                         <div className='search'>
                             <input type="text" placeholder='Search beauty products...' value={search} onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                                setSearch(e.target.value)
+                                setSearch(e.target.value);
+
+                                setFilterSelected('Featured');
+
+                                setFilterOption('1');
 
                                 setSort(products);
 
