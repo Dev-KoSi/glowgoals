@@ -46,7 +46,7 @@ export function ViewProduct({setCart, wishlist, setWishlist}: CartWish) {
 
                             <span>
 
-                                {/* ADD OR REMOVE FRPM WISHLIST FUNC */}
+                                {/* ADD OR REMOVE FROM WISHLIST FUNC */}
 
                                 <svg onClick={() => {
                                 if(!product) return;
