@@ -3,7 +3,7 @@ import '../styles/Wishlist.css'
 import { products } from '../types/Products';
 import type { CartWish } from '../types/Types'
 
-export function Wishlist({setCart, wishlist, setWishlist}: CartWish) {
+export function Wishlist({cart, setCart, wishlist, setWishlist, setNotification}: CartWish) {
 
     const navigate = useNavigate();
 
@@ -98,26 +98,36 @@ export function Wishlist({setCart, wishlist, setWishlist}: CartWish) {
 
                                         <div onClick={(e) => e.stopPropagation()} className="btns">
 
-                                            {/* MOVE TO CART & REMOVE ITEM FUNC*/}
+                                            {/* MOVE TO CART FUNC*/}
                                             
                                             <button onClick={() => {
                                                 setCart(cart => {
                                                     const cartItem = cart.find((c) => c.productId === wishItem?.id);
 
                                                     if(cartItem) {
-                                                        return cart.map((c) => c.productId === cartItem.productId ? {...c, quantity: c.quantity + 1} : c)
+                                                        // TRIGGER NOTICE FUNC
+
+                                                        setNotification?.('removed');
+
+                                                        return cart.filter((c) => c.productId !== cartItem.productId)
                                                     } else {
+                                                        // TRIGGER NOTICE FUNC
+
+                                                        setNotification?.('added');
+
                                                         return [...cart, {productId: wish.productId, quantity: 1}]
                                                     }
                                                 })
 
-                                                setWishlist(wish => wish.filter((w) => w.productId !== wishItem?.id));
-
-                                            }} className='add-to-cart'>Add to Cart</button>
+                                            }} id={cart.find((c) => c.productId === wishItem?.id) ? 'colored' : ''} className='add-to-cart'>{cart.find((w) => w.productId === wishItem?.id) ? 'Remove Item' : 'Add to Cart'}</button>
 
                                             {/*REMOVE ITEM FUNC*/}
 
                                             <svg onClick={() => {
+                                                // TRIGGER NOTICE FUNC
+
+                                                setNotification?.('removed');
+
                                                 setWishlist(wish => wish.filter((w) => w.productId !== wishItem?.id));
 
                                             }} id='wish-icon' fill="none" stroke="currentColor" width="24" height="24" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
