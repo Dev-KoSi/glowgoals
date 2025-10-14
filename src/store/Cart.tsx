@@ -4,7 +4,7 @@ import { products } from '../types/Products';
 import type { CartWish, Wish } from '../types/Types';
 import { useEffect, useState } from 'react';
 
-export function Cart({setCart, cart, wishlist, setWishlist}: CartWish) {
+export function Cart({setCart, cart, wishlist, setWishlist, setNotification}: CartWish) {
     const now = new Date();
     const parts = now.toString().split(" "); 
 
@@ -120,6 +120,10 @@ export function Cart({setCart, cart, wishlist, setWishlist}: CartWish) {
                                                     {/* REMOVE ITEM FUNc */}
 
                                                     <svg onClick={() => {
+                                                    // TRIGGER NOTICE FUNC
+
+                                                    setNotification?.('removed');
+
                                                         setCart(cart => cart.filter(c => c.productId !== cartItem.id))
                                                     }} height="16" width="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                                                 </div>
@@ -206,6 +210,10 @@ export function Cart({setCart, cart, wishlist, setWishlist}: CartWish) {
                                                     {/* REVOME ITEM FUNC */}
 
                                                     <svg onClick={() => {
+                                                    // TRIGGER NOTICE FUNC
+
+                                                        setNotification?.('removed');
+
                                                         setLater(later => later.filter(l => l.productId !== laterItem.id))
                                                     }} height="16" width="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                                                 </div>
@@ -227,6 +235,10 @@ export function Cart({setCart, cart, wishlist, setWishlist}: CartWish) {
                                                 {/* MOVE TO CART & REMOVE ITEM FUNC*/}
 
                                                 <button onClick={() => {
+                                                    // TRIGGER NOTICE FUNC
+
+                                                    setNotification?.('added');
+
                                                     setCart(cart => [...cart, {productId: l.productId, quantity: 1}])
 
                                                     setLater(later => later.filter((l) => l.productId !== laterItem.id))
@@ -239,6 +251,10 @@ export function Cart({setCart, cart, wishlist, setWishlist}: CartWish) {
                                                 {/* MOVE TO WISHLIST & REMOVE ITEM FUNC*/}
 
                                                 <button onClick={() => {
+                                                    // TRIGGER NOTICE FUNC
+
+                                                    setNotification?.('added');
+
                                                     setWishlist(wish => {
                                                         const wishItem = wish.find((w) => w.productId === l.productId);
 

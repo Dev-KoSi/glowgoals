@@ -827,8 +827,7 @@ export function Shop({setCart, cart, wishlist, setWishlist, setNotification}: Ca
                                     GHC {(p.price).toFixed(2)}
                                 </div>
 
-                                <div onClick={(e) => e.stopPropagation()} className="btns">
-                                    
+                                <div onClick={(e) => e.stopPropagation()} className="btns"> 
 
                                         {/* ADD AND REMOVE FROM CART FUNC*/}
 
