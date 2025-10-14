@@ -4,7 +4,8 @@ import { useEffect, useState } from 'react';
 import { Menu } from './Menu';
 import type { CartWish } from '../types/Types';
 
-export function Header({cart, wishlist}: CartWish) {
+
+export function Header({cart, wishlist, notification}: CartWish) {
 
     const [toggleMenu, setToggleMenu] = useState<boolean>(false);
 
@@ -30,6 +31,16 @@ export function Header({cart, wishlist}: CartWish) {
 
     return (
         <div className="header-container">
+            <div className="notification">
+                {notification === 'added' && <div className="added">
+                    Item added successfully.
+                </div>}
+
+                {notification === 'removed' && <div className="removed">
+                    Item removed successfully.
+                </div>}
+            </div>
+
             <div className="header-header">
                 <div className="header-logo-app-name">
                     <a style={{width: 'fit-content'}} href="/"><div className="trans-logo-app-name">

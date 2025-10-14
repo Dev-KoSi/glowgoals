@@ -49,12 +49,24 @@ export function App() {
         localStorage.setItem("wish", JSON.stringify(wishlist));
     }, [wishlist]);
 
+    // NOTIFICATIONS
+
+    const [notification, setNotification] = useState<string>('');
+    console.log(notification);
+    
+
+    useEffect(() => {
+        const timer = setTimeout(() => setNotification(''), 2000);
+        
+        return () => clearTimeout(timer);
+    }, [notification]);
+
   const router = createBrowserRouter([
     {
       path: "/",
       element: (
         <div>
-          <HomePage cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
+          <HomePage cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist} notification={notification} setNotification={setNotification}/>
           <Footer/>
         </div>
       )
@@ -63,7 +75,7 @@ export function App() {
       path: '/cosmetics',
       element: (
         <div>
-          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
+          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist} notification={notification}/>
           <Shop cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
           <Footer/>
         </div>
@@ -73,7 +85,7 @@ export function App() {
       path: '/services',
       element: (
         <div>
-          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
+          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist} notification={notification}/>
           <Services/>
           <Footer/>
         </div>
@@ -83,7 +95,7 @@ export function App() {
       path: '/booking',
       element: (
         <div>
-          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
+          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist} notification={notification}/>
           <Booking/>
           <Footer/>
         </div>
@@ -93,7 +105,7 @@ export function App() {
       path: '/contact',
       element: (
         <div>
-          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
+          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist} notification={notification}/>
           <Contact/>
           <Footer/>
         </div>
@@ -103,7 +115,7 @@ export function App() {
       path: '/about',
       element: (
         <div>
-          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
+          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist} notification={notification}/>
           <About/>
           <Footer/>
         </div>
@@ -113,7 +125,7 @@ export function App() {
       path: '/cart',
       element: (
         <div>
-          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
+          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist} notification={notification}/>
           <Cart cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
           <Footer/>
         </div>
@@ -123,7 +135,7 @@ export function App() {
       path: '/wishlist',
       element: (
         <div>
-          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
+          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist} notification={notification}/>
           <Wishlist cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
           <Footer/>
         </div>
@@ -133,7 +145,7 @@ export function App() {
       path: '/cosmetics/:id',
       element: (
         <div>
-          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
+          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist} notification={notification}/>
           <ViewProduct cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
           <Footer/>
         </div>
@@ -143,7 +155,7 @@ export function App() {
       path: '/purchase/:id',
       element: (
         <div>
-          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
+          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist} notification={notification}/>
           <Purchase/>
           <Footer/>
         </div>
@@ -153,7 +165,7 @@ export function App() {
       path: '/checkout',
       element: (
         <div>
-          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
+          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist} notification={notification}/>
           <Checkout  cart={cart} setCart={setCart}/>
           <Footer/>
         </div>
@@ -163,7 +175,7 @@ export function App() {
       path: '/my-booking',
       element: (
         <div>
-          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
+          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist} notification={notification}/>
           <MyBooking/>
           <Footer/>
         </div>
@@ -173,7 +185,7 @@ export function App() {
       path: '/services/:id',
       element: (
         <div>
-          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
+          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist} notification={notification}/>
           <ViewService/>
           <Footer/>
         </div>
@@ -183,7 +195,7 @@ export function App() {
       path: '/booking/:id',
       element: (
         <div>
-          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
+          <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist} notification={notification}/>
           <BookService/>
           <Footer/>
         </div>

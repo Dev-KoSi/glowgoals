@@ -1,3 +1,53 @@
+.header-container .notification{
+    position: relative;
+    background-color: red;
+    z-index: 99999;
+}
+
+.header-container .notification div{
+    position: fixed;
+    right: 0;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+    animation: notice 0.3s ease-in-out;
+    display: block;
+}
+
+@keyframes notice {
+    0% {
+        transform: scale(0);
+    }
+    20% {
+        transform: scale(0.6);
+    }
+    40% {
+        transform: scale(0.7);
+    }
+    60% {
+        transform: scale(0.8);
+    }
+    80% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+.header-container .notification .added{
+    background-color:  #f0fdf4;
+    border: 1px solid #bbf7d0;
+    color: #16A34A;
+}
+
+.header-container .notification .removed{
+    background-color:  #FFF5FA;
+    border: 1px solid #FFC5E5;
+    color: #FF008C;
+}
+
 .header-header{
     background-color: rgba(255, 255, 255, 0.941);
     display: flex;

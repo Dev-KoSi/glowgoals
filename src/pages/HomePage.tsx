@@ -6,7 +6,7 @@ import { Menu } from '../components/Menu';
 import { products } from '../types/Products';
 import type { CartWish } from '../types/Types';
 
-export function HomePage({setCart, cart, wishlist, setWishlist}: CartWish) {
+export function HomePage({setCart, cart, wishlist, setWishlist, notification, setNotification}: CartWish) {
 
     const [toggleMenu, setToggleMenu] = useState<boolean>(false);
 
@@ -34,6 +34,16 @@ export function HomePage({setCart, cart, wishlist, setWishlist}: CartWish) {
             <div className="homepage">
                 <div className="landingpage">
                     <div className={`${toggleHeader}-header`}>
+                        <div className="notification">
+                            {notification === 'added' && <div className="added">
+                                Item added successfully.
+                            </div>}
+
+                            {notification === 'removed' && <div className="removed">
+                                Item removed successfully.
+                            </div>}
+                        </div>
+
                         <div className={`${toggleHeader}-logo-app-name`}>
                             <a style={{width: 'fit-content'}} href="/"><div className="trans-logo-app-name">
                                 <div className="logo">
@@ -198,34 +208,49 @@ export function HomePage({setCart, cart, wishlist, setWishlist}: CartWish) {
 
                                     <div onClick={(e) => e.stopPropagation()} className="btns">
 
-                                        {/* ADD ITEM FUNC */}
+                                        {/* ADD AND REMOVE FROM CART FUNC*/}
 
                                         <button onClick={() => {
+                                            
                                             setCart(cart => {
+
                                                 const cartItem = cart.find((c) => c.productId === p.id)
 
                                                 if(cartItem) {
-                                                    return cart.map(c => c.productId === p.id ? {...c, quantity: c.quantity + 1} : c)
+                                            // TRIGGER NOTICE FUNC
+
+                                                    setNotification?.('removed');
+
+                                                    return cart.filter((w) => w.productId !== p.id)
                                                 } else {
+                                            // TRIGGER NOTICE FUNC
+
+                                                    setNotification?.('added');
+
                                                     return [...cart, {productId: p.id, quantity: 1}]
                                                 }
                                             })
-                                        }} className='add-to-cart'>Add to Cart</button>
+                                        }} id={cart.find((w) => w.productId === p.id) ? 'colored' : ''} className='add-to-cart'>{cart.find((w) => w.productId === p.id) ? 'Remove from Cart' : 'Add to Cart'}</button>
 
-                                        {/* ADD TO WISHLIST */}
+                                        {/* ADD AND REMOVE FROM WISHLIST FUNC*/}
 
                                         <svg onClick={() => {
                                             setWishlist(wish => {
                                                 const wishItem = wish.find((w) => w.productId === p.id);
 
                                                 if(wishItem) {
+                                            // TRIGGER NOTICE FUNC
+
+                                                    setNotification?.('removed');
+
                                                     return wish.filter((w) => w.productId !== p.id)
                                                 }
+                                            // TRIGGER NOTICE FUNC
+
+                                                    setNotification?.('added');
 
                                                 return [...wish, {productId: p.id}]
                                             })
-
-                                            console.log(wishlist);
 
                                         }} id={wishlist.find((w) => w.productId === p.id) ? 'colored' : ''} fill="none" stroke="currentColor" width="24" height="24" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
 

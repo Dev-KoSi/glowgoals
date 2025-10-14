@@ -64,7 +64,9 @@ export type CartWish = {
     setCart: React.Dispatch<React.SetStateAction<CartItem[]>>,
     cart: CartItem[],
     setWishlist: React.Dispatch<React.SetStateAction<Wish[]>>,
-    wishlist: Wish[]
+    wishlist: Wish[],
+    setNotification?: React.Dispatch<React.SetStateAction<string>>,
+    notification?: string
 }
 
 export type Wish = {
