@@ -76,7 +76,7 @@ export function App() {
       element: (
         <div>
           <Header cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist} notification={notification}/>
-          <Shop cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist}/>
+          <Shop cart={cart} setCart={setCart} wishlist={wishlist} setWishlist={setWishlist} setNotification={setNotification}/>
           <Footer/>
         </div>
       )

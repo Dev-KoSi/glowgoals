@@ -230,7 +230,7 @@ export function HomePage({setCart, cart, wishlist, setWishlist, notification, se
                                                     return [...cart, {productId: p.id, quantity: 1}]
                                                 }
                                             })
-                                        }} id={cart.find((w) => w.productId === p.id) ? 'colored' : ''} className='add-to-cart'>{cart.find((w) => w.productId === p.id) ? 'Remove from Cart' : 'Add to Cart'}</button>
+                                        }} id={cart.find((w) => w.productId === p.id) ? 'colored' : ''} className='add-to-cart'>{cart.find((w) => w.productId === p.id) ? 'Remove Item' : 'Add to Cart'}</button>
 
                                         {/* ADD AND REMOVE FROM WISHLIST FUNC*/}
 
