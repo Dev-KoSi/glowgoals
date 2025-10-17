@@ -753,6 +753,10 @@
         border-radius: 5px;
     }
 
+    .shop-container .customize .grid{
+        display: none;
+    }
+
     /* SORTING */
 
     .shop-container #hide-sort{
@@ -794,46 +798,6 @@
 
     .shop-container .gist .btn{
         padding: 10px 20px;
-    }
-
-    #list{
-        display: block;
-        padding: 50px 15px;
-    }
-
-    #list .product{
-        margin-bottom: 20px;
-    }
-
-    #list .product .image{
-        width: 500px;
-    }
-
-    #list .product img{
-        width: 500px;
-        border-radius: 5px 5px 0 0 ;
-        transition: 0.5s ease-in-out;
-    }
-
-    #list .product:hover img{
-        filter: brightness(100%)
-    }
-
-    #list .product span{
-        font-size: 12px;
-    }
-
-    #list .price{
-        font-size: 20px;
-        font-weight: 500;
-    }
-
-    #list .btns svg{
-        margin: 0 0 0 5px;
-    }
-
-    #list .btns #view{
-        display: none;
     }
 
     #grid{
