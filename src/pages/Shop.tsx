@@ -97,7 +97,7 @@ export function Shop({setCart, cart, wishlist, setWishlist, setNotification}: Ca
 
                                 setSort(products);
 
-                                setSort(sort => sort.filter((s) => s.name.toLowerCase().includes(e.target.value)))
+                                setSort(sort => sort.filter((s) => s.name.toLowerCase().includes(e.target.value.toLowerCase())));
                             }}/>
 
                             <svg fill="none" stroke="currentColor" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
