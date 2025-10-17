@@ -149,6 +149,7 @@
     display: flex;
     border-bottom: lightgray 1px solid;
     padding: 20px;
+    position: relative;
 }
 
 .cart-container .header .head{
@@ -169,6 +170,47 @@
 
 .cart-container .header .clear:hover{
     color: #c4026c;
+}
+
+.cart-container .cart-display .header .clear-cart-prompt{
+    background-color: white;
+    position: absolute;
+    right: 0;
+    margin: 0 10px;
+    border: 1px solid #FF008C;
+    padding: 10px 20px;
+    z-index: 9999;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.cart-container .cart-display .header .clear-cart-prompt .btns{
+    gap: 5px;
+    display: flex;
+    margin-top: 10px;
+}
+
+.cart-container .cart-display .header .clear-cart-prompt button{
+    width: 50%;
+    border-radius: 5px;
+    padding: 5px 0;
+    border: 1px solid transparent;
+}
+
+.cart-container .cart-display .header .clear-cart-prompt .btns :nth-child(2){
+    color: white;
+    background-color: #FF008C;
+    transition: 0.3s ease-in-out;
+}
+
+.cart-container .cart-display .header .clear-cart-prompt .btns :nth-child(2):hover{
+    background-color: #c4026c;
+}
+
+.cart-container .cart-display .header .clear-cart-prompt .btns :first-child:hover{
+    background-color: white;
+    border: 1px solid lightgray;
 }
 
 .cart-container .cart-display .item{

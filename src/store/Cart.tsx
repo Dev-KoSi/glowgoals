@@ -5,6 +5,8 @@ import type { CartWish, Wish } from '../types/Types';
 import { useEffect, useState } from 'react';
 
 export function Cart({setCart, cart, wishlist, setWishlist, setNotification}: CartWish) {
+    const [clearPrompt, setClearPrompt] = useState<boolean>(false);
+
     const now = new Date();
     const parts = now.toString().split(" "); 
 
@@ -85,9 +87,31 @@ export function Cart({setCart, cart, wishlist, setWishlist, setNotification}: Ca
                                     Cart {cart.length <= 1 ? `Item (${cart.length})` : `Items (${cart.length})`}
                                 </div>
 
-                                <div className="clear">
+                                <div onClick={() => setClearPrompt(true)} className="clear">
                                     Clear Cart
                                 </div>
+
+                                {clearPrompt && <div className="clear-cart-prompt">
+                                    <div className="txt">
+                                        Do you want to clear the Cart?
+                                    </div>
+
+                                    <div className="btns">
+                                        <button onClick={() => setClearPrompt(false)}>
+                                            NO
+                                        </button>
+
+                                        <button onClick={() => {
+                                            setClearPrompt(false);
+                                            
+                                            localStorage.removeItem('cart');
+
+                                            return setCart([]);
+                                        }}>
+                                            YES
+                                        </button>
+                                    </div>
+                                </div>}
                             </div>
 
                             {cart?.map((c) => {
