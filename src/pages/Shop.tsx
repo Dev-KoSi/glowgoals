@@ -903,7 +903,9 @@ export function Shop({setCart, cart, wishlist, setWishlist, setNotification}: Ca
 
                                 setFilterSelected('All');
 
-                                setSort(products)
+                                setSort(products);
+
+                                setSearch('');
 
                                 // setCategorySelected('All');
 
