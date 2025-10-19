@@ -98,14 +98,14 @@ export function Booking() {
 
                                     <button onClick={() => {
 
-                                        setServiceSelected('Makeup Services - 250 - GHC 600');
+                                        setServiceSelected('Makeup Services - 250 - GHC 500');
 
                                         setServiceOption('2');
 
                                         setServiceMenu((f) => !f);
 
                                     }} id={`second-option-${serviceOption}`}>
-                                        Makeup Services - 250 - GHC 600
+                                        Makeup Services - 250 - GHC 500
                                         
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
                                             <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -114,14 +114,14 @@ export function Booking() {
 
                                     <button onClick={() => {
 
-                                        setServiceSelected('Skincare Consultation - 150 - GHC 250');
+                                        setServiceSelected('Skincare Consultation - 150 - GHC 300');
 
                                         setServiceOption('3');
 
                                         setServiceMenu((f) => !f);
 
                                     }} id={`third-option-${serviceOption}`}>
-                                        Skincare Consultation - 150 - GHC 250
+                                        Skincare Consultation - 150 - GHC 300
                                         
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
                                             <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -130,14 +130,14 @@ export function Booking() {
 
                                     <button onClick={() => {
 
-                                        setServiceSelected('Body Treatments - 500 - GHC 1,200');
+                                        setServiceSelected('Body Treatments - 500 - GHC 1,000');
 
                                         setServiceOption('4');
 
                                         setServiceMenu((f) => !f);
 
                                     }} id={`fourth-option-${serviceOption}`}>
-                                        Body Treatments - 500 - GHC 1,200
+                                        Body Treatments - 500 - GHC 1,000
                                         
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
                                             <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -146,14 +146,14 @@ export function Booking() {
 
                                     <button onClick={() => {
 
-                                        setServiceSelected('Nail Services - 100 - GHC 500');
+                                        setServiceSelected('Nail Services - 100 - GHC 200');
 
                                         setServiceOption('5');
 
                                         setServiceMenu((f) => !f);
 
                                     }} id={`fifth-option-${serviceOption}`}>
-                                        Nail Services - 100 - GHC 500
+                                        Nail Services - 100 - GHC 200
                                         
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
                                             <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -162,7 +162,7 @@ export function Booking() {
 
                                     <button onClick={() => {
 
-                                        setServiceSelected('Hair Treatments - 400 - GHC 1,000');
+                                        setServiceSelected('Hair Treatments - 400 - GHC 800');
 
                                         setServiceOption('6');
 
