@@ -109,3 +109,23 @@ export type Checkout = {
     },
     quantity?: number
 }
+
+// SERVICES TYPE
+
+export type ServiceItem = {
+    id: string;
+    name: string;
+    image: string;
+    duration: string;
+    price: string;
+    description: string;
+    included: string[];
+    benefits: string[];
+    category:
+        | "Facial Treatments"
+        | "Makeup Services"
+        | "Skincare Consultation"
+        | "Body Treatments"
+        | "Nail Services"
+        | "Hair Treatments";
+};
