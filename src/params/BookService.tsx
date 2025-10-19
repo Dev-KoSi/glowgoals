@@ -1,9 +1,16 @@
 import { useState } from 'react';
 import '../styles/BookService.css'
+import { services } from '../types/Services';
+import { useParams } from 'react-router-dom';
 
 export function BookService() {
+
+    const param = useParams();
+    
+    const book = services.find((s) => s.id === param.id);
+
     const [serviceMenu, setServiceMenu] = useState<boolean>(false);
-    const [serviceSelected, setServiceSelected] = useState<string>('Facial Treatment - 500 - GHC 1,000');
+    const [serviceSelected, setServiceSelected] = useState<string>(`${book?.name} - GHC ${(book?.price)?.toFixed(2)}`);
     const [serviceOption, setServiceOption] = useState<string>('1');
 
     return (
@@ -37,11 +44,11 @@ export function BookService() {
                             </div>
 
                             <div className="txt">
-                                Signature Facial Treatment
+                                {book?.name}
                             </div>
 
                             <div className="price-time">
-                                GHA 500 - 60 minutes
+                                GHA {(book?.price)?.toFixed(2)} - {book?.duration}
                             </div>
                         </div>
 
@@ -96,14 +103,15 @@ export function BookService() {
                                 {serviceMenu && <div className="options">
                                     <button onClick={() => {
 
-                                        setServiceSelected('Facial Treatments - 500 - GHC 1,000');
+                                        setServiceSelected(`${book?.name} - GHC ${book?.price}`);
 
                                         setServiceOption('1');
 
                                         setServiceMenu((f) => !f);   
 
                                     }} id={`first-option-${serviceOption}`}>
-                                        Facial Treatments - 500 - GHC 1,000
+                                        
+                                        {serviceSelected}
                                         
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" color="#000000" fill="none">
                                             <path d="M5 14L8.5 17.5L19 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>

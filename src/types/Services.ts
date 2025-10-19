@@ -35,7 +35,7 @@ export const services: ServiceItem[] = [
         name: "Makeup Services",
         image: "/makeup.webp",
         duration: "45-90 MINS",
-        price: 450,
+        price: 250,
         description:
             "Luxurious bridal makeup to enhance your natural beauty on your special day.",
         included: [
@@ -60,7 +60,7 @@ export const services: ServiceItem[] = [
         name: "Skincare Consultation",
         image: "/skincare-cons.avif",
         duration: "30-45 MINS",
-        price: 250,
+        price: 150,
         description:
             "One-on-one session with our skincare expert to analyze your skin and recommend a personalized care routine.",
         included: [
@@ -85,7 +85,7 @@ export const services: ServiceItem[] = [
         name: "Body Treatments",
         image: "/body-treat.jpg",
         duration: "90-120 MINS",
-        price: 480,
+        price: 500,
         description:
             "An exfoliating body treatment that leaves your skin smooth, soft, and refreshed.",
         included: [
@@ -110,7 +110,7 @@ export const services: ServiceItem[] = [
         name: "Nail Services",
         image: "/nails-serv.jpg",
         duration: "45-90 MINS",
-        price: 350,
+        price: 100,
         description:
             "Complete hand and foot care treatment that includes cleaning, trimming, and polishing.",
         included: [
