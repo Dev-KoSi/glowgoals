@@ -117,7 +117,7 @@ export type ServiceItem = {
     name: string;
     image: string;
     duration: string;
-    price: string;
+    price: number;
     description: string;
     included: string[];
     benefits: string[];
