@@ -1,34 +1,40 @@
+import { useParams } from 'react-router-dom';
 import '../styles/ViewService.css'
+import { services } from '../types/Services';
 
 export function ViewService() {
+
+    const param = useParams();
+    
+    const service = services.find((s) => s.id === param.id);
 
     return (
         <div className="viewservice-container">
             <div className="viewservice">
                 <div className="the-service">
-                    <img src="/skin-treatment.webp" />
+                    <img src={service?.image}/>
 
                     <div className="contents">
                         <div className="time-price">
                             <div className="time">
-                                60 MINS
+                                {service?.duration}
                             </div>
 
                             <div className="price">
-                                GHC 600
+                                GHC {service?.price}
                             </div>
                         </div>
 
                         <div style={{fontFamily: 'Caveat'}} className="name">
-                            Deep Tissue Massage
+                            {service?.name}
                         </div>
 
                         <div className="description">
-                            Therapeutic massage to relieve muscle tension and promote relaxation
+                            {service?.description}
                         </div>
 
                         <div className="btns">
-                            <button onClick={() => window.location.href = '/booking/id'}>
+                            <button onClick={() => window.location.href = `/booking/${service?.id}`}>
                                 Book Appointment Now
                             </button>
 
@@ -48,35 +54,15 @@ export function ViewService() {
                         </div>
 
                         <div className="list">
-                            <div>
-                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
 
-                                Deep tissue techniques
-                            </div>
-                            
-                            <div>
-                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            {service?.included?.map((i) => (
+                                <div>
+                                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
 
-                                Muscle tension relief
+                                    {i}
                             </div>
-                            
-                            <div>
-                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            ))}
 
-                                Relaxation
-                            </div>
-                            
-                            <div>
-                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-
-                                Aromatherapy
-                            </div>
-                            
-                            <div>
-                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-
-                                Hot stones
-                            </div>
                         </div>
                     </div>
                     
@@ -88,29 +74,15 @@ export function ViewService() {
                         </div>
 
                         <div className="list">
-                            <div>
-                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
 
-                                Pain relief
+                            {service?.benefits?.map((i) => (
+                                <div>
+                                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+
+                                    {i}
                             </div>
+                            ))}
                             
-                            <div>
-                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-
-                                Stress reduction
-                            </div>
-                            
-                            <div>
-                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-
-                                Improved circulation
-                            </div>
-                            
-                            <div>
-                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-
-                                Better sleep
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -125,7 +97,7 @@ export function ViewService() {
                     </div>
 
                     <div className="btns">
-                        <button onClick={() => window.location.href = '/booking/id'}>
+                        <button onClick={() => window.location.href = `/booking/${service?.id}`}>
                             Book Appointment Now
                         </button>
 
