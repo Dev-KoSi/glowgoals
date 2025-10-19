@@ -9,7 +9,7 @@ export const services: ServiceItem[] = [
         id: "svc_xY72Gh90KsP",
         name: "Facial Treatments",
         image: "/skin-treatment.webp",
-        duration: "60 MINS",
+        duration: "60-90 MINS",
         price: 500,
         description:
             "A deeply hydrating treatment that rejuvenates dry and tired skin for a radiant glow.",
@@ -34,7 +34,7 @@ export const services: ServiceItem[] = [
         id: "svc_Ak28Hr65NcD",
         name: "Makeup Services",
         image: "/makeup.webp",
-        duration: "90 MINS",
+        duration: "45-90 MINS",
         price: 450,
         description:
             "Luxurious bridal makeup to enhance your natural beauty on your special day.",
@@ -58,8 +58,8 @@ export const services: ServiceItem[] = [
     {
         id: "svc_Px47Ln92RqT",
         name: "Skincare Consultation",
-        image: "/skincare-consultation.webp",
-        duration: "45 MINS",
+        image: "/skincare-cons.avif",
+        duration: "30-45 MINS",
         price: 250,
         description:
             "One-on-one session with our skincare expert to analyze your skin and recommend a personalized care routine.",
@@ -84,7 +84,7 @@ export const services: ServiceItem[] = [
         id: "svc_Nd57Lp38QsZ",
         name: "Body Treatments",
         image: "/body-treat.jpg",
-        duration: "50 MINS",
+        duration: "90-120 MINS",
         price: 480,
         description:
             "An exfoliating body treatment that leaves your skin smooth, soft, and refreshed.",
@@ -109,7 +109,7 @@ export const services: ServiceItem[] = [
         id: "svc_Vk61Ro25HwC",
         name: "Nail Services",
         image: "/nails-serv.jpg",
-        duration: "90 MINS",
+        duration: "45-90 MINS",
         price: 350,
         description:
             "Complete hand and foot care treatment that includes cleaning, trimming, and polishing.",
@@ -134,7 +134,7 @@ export const services: ServiceItem[] = [
         id: "svc_Jr22Df73OpK",
         name: "Hair Treatments",
         image: "/hair-treat.jpg",
-        duration: "60 MINS",
+        duration: "60-120 MINS",
         price: 400,
         description:
             "Nourishing treatment that restores moisture and shine to dry or damaged hair.",
