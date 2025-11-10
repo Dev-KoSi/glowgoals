@@ -28,6 +28,40 @@ export function HomePage({setCart, cart, wishlist, setWishlist, notification, se
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+    
+
+    const [time, setTime] = useState({ hour: 23, min: 59, sec: 59 });
+
+    useEffect(() => {
+        const id = setInterval(() => {
+            setTime((prev) => {
+                let { hour, min, sec } = prev;
+
+                if (hour === 0 && min === 0 && sec === 0) {
+                    clearInterval(id);
+                    return prev;
+                }
+
+                if (sec > 0) {
+                    sec -= 1;
+                } else {
+                    sec = 59;
+                    if (min > 0) {
+                        min -= 1;
+                    } else {
+                        min = 59;
+                        hour = Math.max(0, hour - 1);
+                    }
+                }
+
+                return { hour, min, sec };
+            });
+        }, 1000);
+
+        return () => clearInterval(id);
+    }, []);
+
+    const { hour, min, sec } = time;
 
     return (
         <div className="homepage-container">
@@ -360,11 +394,11 @@ export function HomePage({setCart, cart, wishlist, setWishlist, notification, se
                                 </div>
 
                                 <div className="count-down">
-                                    <span id='num'>23</span>
+                                    <span id='num'>{hour}</span>
                                     <span id='colon'>:</span>
-                                    <span id='num'>59</span>
+                                    <span id='num'>{min}</span>
                                     <span id='colon'>:</span>
-                                    <span id='num'>59</span>
+                                    <span id='num'>{sec}</span>
                                 </div>
                             </div>
 
